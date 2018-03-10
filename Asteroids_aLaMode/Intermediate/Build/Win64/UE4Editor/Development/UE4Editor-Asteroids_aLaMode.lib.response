@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Asteroids_aLaMode.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\Edward\Documents\Unreal Projects\Asteroids_aLaMode\Intermediate\Build\Win64\UE4Editor\Development\Asteroids_aLaMode\Asteroids_aLaMode.cpp.obj"
+"C:\Users\Edward\Documents\Unreal Projects\Asteroids_aLaMode\Intermediate\Build\Win64\UE4Editor\Development\Asteroids_aLaMode\Asteroids_aLaModeGameModeBase.cpp.obj"
+"C:\Users\Edward\Documents\Unreal Projects\Asteroids_aLaMode\Intermediate\Build\Win64\UE4Editor\Development\Asteroids_aLaMode\Asteroids_aLaMode.init.gen.cpp.obj"
+"C:\Users\Edward\Documents\Unreal Projects\Asteroids_aLaMode\Intermediate\Build\Win64\UE4Editor\Development\Asteroids_aLaMode\Asteroids_aLaModeGameModeBase.gen.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Asteroids_aLaMode\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"C:\Users\Edward\Documents\Unreal Projects\Asteroids_aLaMode\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Asteroids_aLaMode.lib"
