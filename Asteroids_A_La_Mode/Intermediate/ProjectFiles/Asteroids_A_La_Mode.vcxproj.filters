@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\Asteroids_A_La_Mode.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{5E7FAD63-18A5-41F5-9AE4-E71CF63D4350}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Asteroids_A_La_Mode.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\Asteroids_A_La_ModeEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{575300E0-4D56-42BE-82A3-39507B04E2D4}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\Asteroids_A_La_Mode">
+			<UniqueIdentifier>{55709C2F-EAEE-4D4A-B1C0-25576DC98BA7}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Asteroids_A_La_Mode\Asteroids_A_La_Mode.Build.cs">
+			<Filter>Source\Asteroids_A_La_Mode</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\Asteroids_A_La_Mode\Asteroids_A_La_Mode.cpp">
+			<Filter>Source\Asteroids_A_La_Mode</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Asteroids_A_La_Mode\Asteroids_A_La_Mode.h">
+			<Filter>Source\Asteroids_A_La_Mode</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Asteroids_A_La_Mode\Asteroids_A_La_ModeGameModeBase.cpp">
+			<Filter>Source\Asteroids_A_La_Mode</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Asteroids_A_La_Mode\Asteroids_A_La_ModeGameModeBase.h">
+			<Filter>Source\Asteroids_A_La_Mode</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
