@@ -1,4 +1,4 @@
-// Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
+// Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -60,7 +60,7 @@ void EmptyLinkFunctionForGeneratedCodeAsteroids_A_La_ModeGameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsteroids_A_La_ModeGameModeBase, 3103188584);
+	IMPLEMENT_CLASS(AAsteroids_A_La_ModeGameModeBase, 790112172);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AAsteroids_A_La_ModeGameModeBase(Z_Construct_UClass_AAsteroids_A_La_ModeGameModeBase, &AAsteroids_A_La_ModeGameModeBase::StaticClass, TEXT("/Script/Asteroids_A_La_Mode"), TEXT("AAsteroids_A_La_ModeGameModeBase"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAsteroids_A_La_ModeGameModeBase);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,4 +1,4 @@
-// Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
+// Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -19,7 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeAsteroids_A_La_Mode_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Asteroids_A_La_Mode",
 				PKG_CompiledIn | 0x00000000,
-				0x258AE674,
+				0x660D710C,
 				0x481FB06B,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
