@@ -1,3 +1,0 @@
-C:\Users\Edward\Documents\Unreal Projects\Asteroids_aLaMode\Source\Asteroids_aLaMode\Asteroids_aLaMode.Build.cs
-C:\Users\Edward\Documents\Unreal Projects\Asteroids_aLaMode\Source\Asteroids_aLaMode.Target.cs
-C:\Users\Edward\Documents\Unreal Projects\Asteroids_aLaMode\Source\Asteroids_aLaModeEditor.Target.cs
