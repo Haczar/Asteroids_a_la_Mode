@@ -1,3 +1,3 @@
-C:\Users\Edward\Desktop\Asteroids_a_la_Mode\Asteroids_A_La_Mode\Source\Asteroids_A_La_Mode\Asteroids_A_La_Mode.Build.cs
-C:\Users\Edward\Desktop\Asteroids_a_la_Mode\Asteroids_A_La_Mode\Source\Asteroids_A_La_Mode.Target.cs
-C:\Users\Edward\Desktop\Asteroids_a_la_Mode\Asteroids_A_La_Mode\Source\Asteroids_A_La_ModeEditor.Target.cs
+C:\Users\Cosmotron\Documents\Unreal Projects\Asteroids_A_La_Mode\Source\Asteroids_A_La_Mode\Asteroids_A_La_Mode.Build.cs
+C:\Users\Cosmotron\Documents\Unreal Projects\Asteroids_A_La_Mode\Source\Asteroids_A_La_Mode.Target.cs
+C:\Users\Cosmotron\Documents\Unreal Projects\Asteroids_A_La_Mode\Source\Asteroids_A_La_ModeEditor.Target.cs
