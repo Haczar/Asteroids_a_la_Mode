@@ -1,4 +1,4 @@
-﻿Log file open, 03/30/18 04:48:41
+﻿Log file open, 03/31/18 16:05:20
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VSPerf140.dll' (GetLastError=126)
@@ -9,12 +9,12 @@ LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
 LogWindows: File 'VtuneApi32e.dll' does not exist
 LogInit: Display: Running engine for game: Asteroids_A_La_Mode
 LogPlatformFile: Not using cached read wrapper
-LogInit: Display: RandInit(-1106704053) SRandInit(-1106704053).
+LogInit: Display: RandInit(1220123321) SRandInit(1220123322).
 LogInit: Read version file with build ID '3944462'
 LogInit: Overriding engine version to CL 3944462, compatible CL 3944462
 LogInit: Registered custom module enumerator with build ID '3944462'
 LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.454349
+LogStats: Stats thread started at 0.583309
 LogD3D11RHI: Aftermath initialized
 LogICUInternationalization: Display: ICU TimeZone Detection - Raw Offset: -5:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -86,8 +86,8 @@ LogPluginManager: Mounting plugin ProceduralMeshComponent
 LogPluginManager: Mounting plugin RuntimePhysXCooking
 LogPluginManager: Mounting plugin SteamVR
 LogPluginManager: Mounting plugin WindowsMoviePlayer
-LogStreaming: Display: Took  0.474s to configure plugins.
-LogModuleManager: Display: Found up-to-date module file C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Binaries/Win64/UE4Editor-Asteroids_A_La_Mode.dll (API version 3944462).
+LogStreaming: Display: Took  0.152s to configure plugins.
+LogModuleManager: Display: Found up-to-date module file ../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Binaries/Win64/UE4Editor-Asteroids_A_La_Mode.dll (API version 3944462).
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2D.dll (API version 3944462).
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2DEditor.dll (API version 3944462).
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-PaperSpriteSheetImporter.dll (API version 3944462).
@@ -191,8 +191,7 @@ LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured
 LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
 LogInit:  - LocalHostAddr = Default
 LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
-LogInit: WinSock: I am EdsRedDesktop (10.0.0.65:0)
-LogHMD: Failed initializing OVRPlugin 1.21.0
+LogInit: WinSock: I am DESKTOP-TVE1Q8K (192.168.1.160:0)
 LogInit: Build: ++UE4+Release-4.19-CL-3944462
 LogInit: Engine Version: 4.19.0-3944462+++UE4+Release-4.19
 LogInit: Compatible Engine Version: 4.19.0-3944462+++UE4+Release-4.19
@@ -221,188 +220,1113 @@ LogInit: Compiled with Visual C++: 19.00.24215.01
 LogInit: Build Configuration: Development
 LogInit: Branch Name: ++UE4+Release-4.19
 LogInit: Command Line:  
-LogInit: Base Directory: E:/Development/Epic Games/UE_4.19/Engine/Binaries/Win64/
+LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.19/Engine/Binaries/Win64/
 LogInit: Installed Engine Build: 1
-LogStreaming: Display: Took  0.002s to delete old logs.
+LogStreaming: Display: Took  0.003s to delete old logs.
 LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
 LogInit: Object subsystem initialized
-[2018.03.30-08.48.53:999][  0]LogInit: Selected Device Profile: [Windows]
-[2018.03.30-08.48.53:999][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
-[2018.03.30-08.48.54:194][  0]LogInit: Computer: EDSREDDESKTOP
-[2018.03.30-08.48.54:194][  0]LogInit: User: Edward
-[2018.03.30-08.48.54:194][  0]LogInit: CPU Page size=4096, Cores=4
-[2018.03.30-08.48.54:194][  0]LogInit: High frequency timer resolution =4.101656 MHz
-[2018.03.30-08.48.54:207][  0]LogMemory: Memory total: Physical=7.9GB (8GB approx)
-[2018.03.30-08.48.54:207][  0]LogMemory: Platform Memory Stats for Windows
-[2018.03.30-08.48.54:207][  0]LogMemory: Process Physical Memory: 279.64 MB used, 279.64 MB peak
-[2018.03.30-08.48.54:207][  0]LogMemory: Process Virtual Memory: 275.48 MB used, 275.48 MB peak
-[2018.03.30-08.48.54:207][  0]LogMemory: Physical Memory: 5294.25 MB used,  2846.01 MB free, 8140.26 MB total
-[2018.03.30-08.48.54:207][  0]LogMemory: Virtual Memory: 719.76 MB used,  2846.01 MB free, 134217728.00 MB total
-[2018.03.30-08.48.56:379][  0]LogInit: Using OS detected language (en-US).
-[2018.03.30-08.48.56:379][  0]LogInit: Using OS detected locale (en-US).
-[2018.03.30-08.48.57:136][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
-[2018.03.30-08.48.58:957][  0]LogStreaming: Display: Took  2.580s to EndInitTextLocalization.
-[2018.03.30-08.48.59:058][  0]LogInit: Setting process to per monitor DPI aware
-[2018.03.30-08.49.00:695][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
-[2018.03.30-08.49.00:695][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
-[2018.03.30-08.49.04:201][  0]LogD3D11RHI: D3D11 adapters:
-[2018.03.30-08.49.04:299][  0]LogD3D11RHI:    0. 'AMD Radeon (TM) R9 390 Series' (Feature Level 11_0)
-[2018.03.30-08.49.04:299][  0]LogD3D11RHI:       8168/0/4070 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x1002
-[2018.03.30-08.49.04:303][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
-[2018.03.30-08.49.04:303][  0]LogD3D11RHI:       0/0/4070 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
-[2018.03.30-08.49.04:303][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
-[2018.03.30-08.49.04:369][  0]LogD3D11RHI: Creating new Direct3DDevice
-[2018.03.30-08.49.04:370][  0]LogD3D11RHI:     GPU DeviceId: 0x67b1 (for the marketing name, search the web for "GPU Device Id")
-[2018.03.30-08.49.04:370][  0]LogWindows: EnumDisplayDevices:
-[2018.03.30-08.49.04:370][  0]LogWindows:    0. 'AMD Radeon (TM) R9 390 Series' (P:1 D:1)
-[2018.03.30-08.49.04:371][  0]LogWindows:    1. 'AMD Radeon (TM) R9 390 Series' (P:0 D:1)
-[2018.03.30-08.49.04:371][  0]LogWindows:    2. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:372][  0]LogWindows:    3. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:372][  0]LogWindows:    4. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:372][  0]LogWindows:    5. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:373][  0]LogWindows:    6. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:373][  0]LogWindows:    7. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:374][  0]LogWindows:    8. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:374][  0]LogWindows:    9. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:375][  0]LogWindows:    10. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:375][  0]LogWindows:    11. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:376][  0]LogWindows:    12. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:376][  0]LogWindows:    13. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:377][  0]LogWindows:    14. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:377][  0]LogWindows:    15. 'AMD Radeon (TM) R9 390 Series' (P:0 D:0)
-[2018.03.30-08.49.04:378][  0]LogWindows: DebugString: FoundDriverCount:16 
-[2018.03.30-08.49.04:378][  0]LogD3D11RHI:     Adapter Name: AMD Radeon (TM) R9 390 Series
-[2018.03.30-08.49.04:378][  0]LogD3D11RHI:   Driver Version: Adrenalin 18.2.2 (internal:23.20.15017.4003, unified:23.20.15017.4003)
-[2018.03.30-08.49.04:378][  0]LogD3D11RHI:      Driver Date: 2-6-2018
-[2018.03.30-08.49.04:378][  0]LogRHI: Texture pool is 5717 MB (70% of 8168 MB)
-[2018.03.30-08.49.04:475][  0]LogD3D11RHI: Async texture creation enabled
-[2018.03.30-08.49.05:490][  0]LogD3D11RHI: GPU Timing Frequency: 27.000000 (Debug: 2 1)
-[2018.03.30-08.49.05:668][  0]LogShaderCompilers: Guid format shader working directory is 3 characters bigger than the processId version (C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Shaders/WorkingDirectory/11316/).
-[2018.03.30-08.49.05:737][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Edward/AppData/Local/Temp/UnrealShaderWorkingDir/892B2F424412B0055CA24E98EFA58480/'.
-[2018.03.30-08.49.07:765][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
-[2018.03.30-08.49.07:801][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
-[2018.03.30-08.49.07:836][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
-[2018.03.30-08.49.07:866][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
-[2018.03.30-08.49.08:043][  0]LogTemp: Display: Loaded TP MacTargetPlatform
-[2018.03.30-08.49.08:080][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
-[2018.03.30-08.49.08:112][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
-[2018.03.30-08.49.08:144][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
-[2018.03.30-08.49.08:164][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
-[2018.03.30-08.49.08:195][  0]LogTemp: Display: Loaded TP Android_ASTCTargetPlatform
-[2018.03.30-08.49.08:228][  0]LogTemp: Display: Loaded TP Android_ATCTargetPlatform
-[2018.03.30-08.49.08:261][  0]LogTemp: Display: Loaded TP Android_DXTTargetPlatform
-[2018.03.30-08.49.08:290][  0]LogTemp: Display: Loaded TP Android_ETC1aTargetPlatform
-[2018.03.30-08.49.08:323][  0]LogTemp: Display: Loaded TP Android_ETC1TargetPlatform
-[2018.03.30-08.49.08:352][  0]LogTemp: Display: Loaded TP Android_ETC2TargetPlatform
-[2018.03.30-08.49.08:414][  0]LogTemp: Display: Loaded TP Android_MultiTargetPlatform
-[2018.03.30-08.49.08:415][  0]LogTemp: Display: Loaded TP Android_PVRTCTargetPlatform
-[2018.03.30-08.49.08:460][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.03.30-08.49.08:479][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
-[2018.03.30-08.49.08:608][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
-[2018.03.30-08.49.08:632][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
-[2018.03.30-08.49.08:661][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
-[2018.03.30-08.49.08:690][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
-[2018.03.30-08.49.08:722][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
-[2018.03.30-08.49.08:790][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
-[2018.03.30-08.49.08:790][  0]LogTargetPlatformManager: Display: Building Assets For Windows
-[2018.03.30-08.49.10:554][  0]LogXGEController: Cleaning working directory: C:/Users/Edward/AppData/Local/Temp/UnrealXGEWorkingDir/
-[2018.03.30-08.49.10:555][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
-[2018.03.30-08.49.10:633][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
-[2018.03.30-08.49.10:633][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
-[2018.03.30-08.49.18:599][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
-[2018.03.30-08.49.20:913][  0]LogDerivedDataCache: Loaded boot cache 2.31s 74MB C:/Users/Edward/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
-[2018.03.30-08.49.20:913][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/Edward/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc
-[2018.03.30-08.49.20:913][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file C:/Users/Edward/Desktop/Asteroids_A_La_Mode/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
-[2018.03.30-08.49.20:913][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
-[2018.03.30-08.49.20:914][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file C:/Users/Edward/Desktop/Asteroids_A_La_Mode/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2018.03.30-08.49.20:914][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
-[2018.03.30-08.49.21:001][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
-[2018.03.30-08.49.21:017][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Edward/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
-[2018.03.30-08.49.21:226][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
-[2018.03.30-08.49.21:435][  0]LogSlate: Using Freetype 2.6.0
-[2018.03.30-08.49.21:719][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2018.03.30-08.49.21:719][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2018.03.30-08.49.33:707][  0]LogAssetRegistry: FAssetRegistry took 0.0506 seconds to start up
-[2018.03.30-08.49.47:582][  0]LogInit: Selected Device Profile: [Windows]
-[2018.03.30-08.49.50:939][  0]LogSimplygon: Simplygon DLL not present - disabling.
-[2018.03.30-08.49.51:100][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
-[2018.03.30-08.49.51:101][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
-[2018.03.30-08.49.51:102][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
-[2018.03.30-08.49.51:102][  0]LogMeshReduction: No automatic mesh merging module available
-[2018.03.30-08.49.51:102][  0]LogMeshMerging: No automatic mesh merging module available
-[2018.03.30-08.49.52:520][  0]LogNetVersion: Asteroids_A_La_Mode , NetCL: 3944462, EngineNetVer: 2, GameNetVer: 0 (Checksum: 515911077)
-[2018.03.30-08.50.06:214][  0]LogPackageLocalizationCache: Processed 9 localized package path(s) for 2 prioritized culture(s) in 0.383392 seconds
-[2018.03.30-08.50.06:330][  0]LogUObjectArray: 36728 objects as part of root set at end of initial load.
-[2018.03.30-08.50.06:330][  0]LogUObjectAllocator: 7314304 out of 0 bytes used by permanent object pool.
-[2018.03.30-08.50.06:330][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2018.03.30-08.51.02:714][  0]LogTcpMessaging: Initializing TcpMessaging bridge
-[2018.03.30-08.51.02:804][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
-[2018.03.30-08.51.06:572][  0]SourceControl: Source control is disabled
-[2018.03.30-08.51.06:580][  0]SourceControl: Source control is disabled
-[2018.03.30-08.51.06:840][  0]SourceControl: Source control is disabled
-[2018.03.30-08.51.07:031][  0]SourceControl: Source control is disabled
-[2018.03.30-08.51.11:241][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
-[2018.03.30-08.51.12:262][  0]LogOcInput: OculusInput pre-init called
-[2018.03.30-08.51.14:199][  0]LogEngine: Initializing Engine...
-[2018.03.30-08.51.15:210][  0]LogHMD: Failed to initialize OpenVR with code 126
-[2018.03.30-08.51.15:258][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
-[2018.03.30-08.51.15:265][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
-[2018.03.30-08.51.18:481][  0]LogAIModule: Creating AISystem for world Untitled
-[2018.03.30-08.51.19:577][  0]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2018.03.30-08.51.19:663][  0]LogInit: FAudioDevice initialized.
-[2018.03.30-08.51.19:948][  0]LogDerivedDataCache: Saved boot cache 0.23s 74MB C:/Users/Edward/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
-[2018.03.30-08.51.19:992][  0]LogInit: Texture streaming: Enabled
-[2018.03.30-08.51.20:415][  0]LogEngineSessionManager: EngineSessionManager initialized
-[2018.03.30-08.51.21:161][  0]LogInit: Transaction tracking system initialized
-[2018.03.30-08.51.23:077][  0]BlueprintLog: New page: Editor Load
-[2018.03.30-08.51.27:472][  0]LocalizationService: Localization service is disabled
-[2018.03.30-08.51.30:120][  0]LogConsoleResponse: Display: 
-[2018.03.30-08.51.36:866][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Content/' took 0.05s
-[2018.03.30-08.51.36:866][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
-[2018.03.30-08.51.36:892][  0]LogCook: Display: Mobile HDR setting 1
-[2018.03.30-08.51.36:905][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
-[2018.03.30-08.51.36:920][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
-[2018.03.30-08.51.36:921][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
-[2018.03.30-08.51.45:355][  0]SourceControl: Source control is disabled
-[2018.03.30-08.51.45:523][  0]Cmd: MAP LOAD FILE="C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Content/Levels/Dev_Test.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
-[2018.03.30-08.51.45:764][  0]LightingResults: New page: Lighting Build
-[2018.03.30-08.51.47:005][  0]MapCheck: New page: Map Check
-[2018.03.30-08.51.47:005][  0]LightingResults: New page: Lighting Build
-[2018.03.30-08.51.57:747][  0]LogMaterial: Missing cached shader map for material UFO_texture2, compiling. 
-[2018.03.30-08.51.57:817][  0]LogMaterial: Warning: C:\Users\Edward\Desktop\Asteroids_A_La_Mode\Content\Enemy\Materials\UFO_texture2.uasset: Failed to compile Material for platform PCD3D_SM5, Default Material will be used in game.
-[2018.03.30-08.51.57:817][  0]LogMaterial: 	(Node TextureSample) TextureSample> Sampler type is Color, should be Linear Color for /Game/Enemy/Textures/ufo_diffuse2.ufo_diffuse2
-[2018.03.30-08.51.57:918][  0]LogAIModule: Creating AISystem for world Dev_Test
-[2018.03.30-08.51.59:611][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2018.03.30-08.52.00:619][  0]Cmd: MAP CHECKDEP NOCLEARLOG
-[2018.03.30-08.52.00:958][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 311.382ms to complete.
-[2018.03.30-08.52.00:992][  0]LogFileHelpers: Loading map 'Dev_Test' took 15.493
-[2018.03.30-08.52.05:920][  0]LogSlate: Took 0.024609 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
-[2018.03.30-08.52.16:330][  0]LogSlate: Only BGRA pngs, bmps or icos are supported in by External Image Picker
-[2018.03.30-08.52.19:158][  0]LogTemp: Executing iPhonePackager certificates Engine -bundlename com.YourCompany.AsteroidsALaMode
-[2018.03.30-08.52.19:158][  0]LogTemp: CWD: E:\Development\Epic Games\UE_4.19\Engine\Binaries\DotNET\IOS
-[2018.03.30-08.52.19:159][  0]LogTemp: Initial Dir: E:\Development\Epic Games\UE_4.19
-[2018.03.30-08.52.19:159][  0]LogTemp: Env CWD: E:\Development\Epic Games\UE_4.19\Engine\Binaries\DotNET\IOS
-[2018.03.30-08.52.19:159][  0]LogTemp: BranchPath = EDSREDDESKTOP/E/Development/Epic Games/UE_4.19/Engine/Binaries --- GameBranchPath = EDSREDDESKTOP/E/Development/Epic Games/UE_4.19/Engine/Binaries
-[2018.03.30-08.52.19:159][  0]LogTemp: IPP ERROR: Could not find provision directory 'C:\Users\Edward\AppData\Local/Apple Computer/MobileDevice/Provisioning Profiles/'.
-[2018.03.30-08.52.19:159][  0]LogCollectionManager: Loaded 0 collections in 0.009347 seconds
-[2018.03.30-08.52.19:531][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Saved/Collections/' took 0.01s
-[2018.03.30-08.52.19:531][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Content/Developers/Edward/Collections/' took 0.01s
-[2018.03.30-08.52.19:531][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Content/Collections/' took 0.01s
-[2018.03.30-08.52.19:531][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
-[2018.03.30-08.52.19:559][  0]LogContentBrowser: Native class hierarchy populated in 0.0251 seconds. Added 2453 classes and 559 folders.
-[2018.03.30-08.52.19:712][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0005 seconds. Added 0 classes and 0 folders.
-[2018.03.30-08.52.26:018][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0006 seconds. Added 0 classes and 0 folders.
-[2018.03.30-08.52.26:474][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0006 seconds. Added 1 classes and 2 folders.
-[2018.03.30-08.52.29:538][  0]LogSlate: Took 0.127679 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
-[2018.03.30-08.52.29:762][  0]LogSlate: Took 0.035080 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
-[2018.03.30-08.52.31:152][  0]LogRenderer: Reallocating scene render targets to support 1344x632 Format 10 NumSamples 1 (Frame:1).
-[2018.03.30-08.52.35:508][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0004 seconds. Added 0 classes and 0 folders.
-[2018.03.30-08.52.35:509][  0]LogLoad: (Engine Initialization) Total time: 261.64 seconds
-[2018.03.30-08.52.35:509][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
-[2018.03.30-08.52.38:869][  0]LogContentStreaming: Texture pool size now 3000 MB
-[2018.03.30-08.52.41:071][  1]LogSlate: Took 0.031766 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2018.03.30-08.52.41:546][  2]LogSlate: Took 0.000466 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2018.03.30-08.52.42:154][  4]LogAssetRegistry: Asset discovery search completed in 188.4709 seconds
-[2018.03.30-08.52.42:195][  4]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
-[2018.03.30-08.52.42:195][  4]LogCollectionManager: Fixed up redirectors for 0 collections in 0.014994 seconds (updated 0 objects)
-[2018.03.30-12.27.04:217][589]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2018.03.31-20.05.23:333][  0]LogInit: Selected Device Profile: [Windows]
+[2018.03.31-20.05.23:333][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2018.03.31-20.05.23:364][  0]LogInit: Computer: DESKTOP-TVE1Q8K
+[2018.03.31-20.05.23:364][  0]LogInit: User: Cosmotron
+[2018.03.31-20.05.23:364][  0]LogInit: CPU Page size=4096, Cores=4
+[2018.03.31-20.05.23:364][  0]LogInit: High frequency timer resolution =2.648439 MHz
+[2018.03.31-20.05.23:364][  0]LogMemory: Memory total: Physical=32.0GB (32GB approx)
+[2018.03.31-20.05.23:364][  0]LogMemory: Platform Memory Stats for Windows
+[2018.03.31-20.05.23:364][  0]LogMemory: Process Physical Memory: 275.96 MB used, 275.96 MB peak
+[2018.03.31-20.05.23:364][  0]LogMemory: Process Virtual Memory: 272.64 MB used, 272.64 MB peak
+[2018.03.31-20.05.23:364][  0]LogMemory: Physical Memory: 4659.61 MB used,  28063.11 MB free, 32722.71 MB total
+[2018.03.31-20.05.23:364][  0]LogMemory: Virtual Memory: 706.14 MB used,  28063.11 MB free, 134217728.00 MB total
+[2018.03.31-20.05.23:563][  0]LogInit: Using OS detected language (en-US).
+[2018.03.31-20.05.23:563][  0]LogInit: Using OS detected locale (en-US).
+[2018.03.31-20.05.23:616][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2018.03.31-20.05.24:118][  0]LogStreaming: Display: Took  0.555s to EndInitTextLocalization.
+[2018.03.31-20.05.24:118][  0]LogInit: Setting process to per monitor DPI aware
+[2018.03.31-20.05.24:205][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2018.03.31-20.05.24:205][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2018.03.31-20.05.26:304][  0]LogD3D11RHI: D3D11 adapters:
+[2018.03.31-20.05.26:858][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1070' (Feature Level 11_0)
+[2018.03.31-20.05.26:858][  0]LogD3D11RHI:       8081/0/16361 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
+[2018.03.31-20.05.26:860][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2018.03.31-20.05.26:860][  0]LogD3D11RHI:       0/0/16361 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2018.03.31-20.05.26:860][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2018.03.31-20.05.26:866][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2018.03.31-20.05.26:866][  0]LogD3D11RHI:     GPU DeviceId: 0x1be1 (for the marketing name, search the web for "GPU Device Id")
+[2018.03.31-20.05.26:866][  0]LogWindows: EnumDisplayDevices:
+[2018.03.31-20.05.26:866][  0]LogWindows:    0. 'NVIDIA GeForce GTX 1070' (P:1 D:1)
+[2018.03.31-20.05.26:867][  0]LogWindows:    1. 'NVIDIA GeForce GTX 1070' (P:0 D:1)
+[2018.03.31-20.05.26:867][  0]LogWindows:    2. 'NVIDIA GeForce GTX 1070' (P:0 D:0)
+[2018.03.31-20.05.26:867][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1070' (P:0 D:0)
+[2018.03.31-20.05.26:867][  0]LogWindows: DebugString: GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:0 
+[2018.03.31-20.05.26:867][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1070
+[2018.03.31-20.05.26:867][  0]LogD3D11RHI:   Driver Version: Unknown (internal:Unknown, unified:Unknown)
+[2018.03.31-20.05.26:867][  0]LogD3D11RHI:      Driver Date: Unknown
+[2018.03.31-20.05.26:867][  0]LogRHI: Texture pool is 5656 MB (70% of 8081 MB)
+[2018.03.31-20.05.26:899][  0]LogD3D11RHI: [Aftermath] Aftermath enabled and primed
+[2018.03.31-20.05.26:899][  0]LogD3D11RHI: Async texture creation enabled
+[2018.03.31-20.05.27:011][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
+[2018.03.31-20.05.27:103][  0]LogShaderCompilers: Guid format shader working directory is -41 characters bigger than the processId version (../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Intermediate/Shaders/WorkingDirectory/10820/).
+[2018.03.31-20.05.27:103][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Cosmotron/AppData/Local/Temp/UnrealShaderWorkingDir/1687AD4847DFCBEE54248C81CF134184/'.
+[2018.03.31-20.05.27:740][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
+[2018.03.31-20.05.27:754][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
+[2018.03.31-20.05.27:767][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
+[2018.03.31-20.05.27:780][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
+[2018.03.31-20.05.27:800][  0]LogTemp: Display: Loaded TP MacTargetPlatform
+[2018.03.31-20.05.27:813][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
+[2018.03.31-20.05.27:825][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
+[2018.03.31-20.05.27:838][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
+[2018.03.31-20.05.27:844][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
+[2018.03.31-20.05.27:855][  0]LogTemp: Display: Loaded TP Android_ASTCTargetPlatform
+[2018.03.31-20.05.27:867][  0]LogTemp: Display: Loaded TP Android_ATCTargetPlatform
+[2018.03.31-20.05.27:879][  0]LogTemp: Display: Loaded TP Android_DXTTargetPlatform
+[2018.03.31-20.05.27:892][  0]LogTemp: Display: Loaded TP Android_ETC1aTargetPlatform
+[2018.03.31-20.05.27:904][  0]LogTemp: Display: Loaded TP Android_ETC1TargetPlatform
+[2018.03.31-20.05.27:916][  0]LogTemp: Display: Loaded TP Android_ETC2TargetPlatform
+[2018.03.31-20.05.27:943][  0]LogTemp: Display: Loaded TP Android_MultiTargetPlatform
+[2018.03.31-20.05.27:943][  0]LogTemp: Display: Loaded TP Android_PVRTCTargetPlatform
+[2018.03.31-20.05.27:960][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.03.31-20.05.27:961][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
+[2018.03.31-20.05.28:024][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2018.03.31-20.05.28:037][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2018.03.31-20.05.28:049][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
+[2018.03.31-20.05.28:061][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
+[2018.03.31-20.05.28:072][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
+[2018.03.31-20.05.28:090][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
+[2018.03.31-20.05.28:090][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2018.03.31-20.05.28:424][  0]LogXGEController: Cleaning working directory: C:/Users/Cosmotron/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2018.03.31-20.05.28:424][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2018.03.31-20.05.28:424][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2018.03.31-20.05.28:424][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2018.03.31-20.05.30:050][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2018.03.31-20.05.30:225][  0]LogDerivedDataCache: Loaded boot cache 0.17s 74MB C:/Users/Cosmotron/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
+[2018.03.31-20.05.30:225][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/Cosmotron/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc
+[2018.03.31-20.05.30:225][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2018.03.31-20.05.30:225][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2018.03.31-20.05.30:225][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2018.03.31-20.05.30:225][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2018.03.31-20.05.30:250][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2018.03.31-20.05.30:264][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Cosmotron/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2018.03.31-20.05.30:275][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2018.03.31-20.05.30:276][  0]LogSlate: Using Freetype 2.6.0
+[2018.03.31-20.05.30:291][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2018.03.31-20.05.30:291][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2018.03.31-20.05.32:630][  0]LogAssetRegistry: FAssetRegistry took 0.0266 seconds to start up
+[2018.03.31-20.05.32:962][  0]LogInit: Selected Device Profile: [Windows]
+[2018.03.31-20.05.33:279][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2018.03.31-20.05.33:285][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
+[2018.03.31-20.05.33:286][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2018.03.31-20.05.33:286][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
+[2018.03.31-20.05.33:286][  0]LogMeshReduction: No automatic mesh merging module available
+[2018.03.31-20.05.33:286][  0]LogMeshMerging: No automatic mesh merging module available
+[2018.03.31-20.05.33:351][  0]LogNetVersion: Asteroids_A_La_Mode , NetCL: 3944462, EngineNetVer: 2, GameNetVer: 0 (Checksum: 515911077)
+[2018.03.31-20.05.34:260][  0]LogPackageLocalizationCache: Processed 9 localized package path(s) for 2 prioritized culture(s) in 0.094817 seconds
+[2018.03.31-20.05.34:266][  0]LogUObjectArray: 36782 objects as part of root set at end of initial load.
+[2018.03.31-20.05.34:266][  0]LogUObjectAllocator: 7333368 out of 0 bytes used by permanent object pool.
+[2018.03.31-20.05.34:266][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2018.03.31-20.05.38:307][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2018.03.31-20.05.38:334][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2018.03.31-20.05.38:695][  0]SourceControl: Source control is disabled
+[2018.03.31-20.05.38:695][  0]SourceControl: Source control is disabled
+[2018.03.31-20.05.38:710][  0]SourceControl: Source control is disabled
+[2018.03.31-20.05.38:725][  0]SourceControl: Source control is disabled
+[2018.03.31-20.05.39:180][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2018.03.31-20.05.39:347][  0]LogOcInput: OculusInput pre-init called
+[2018.03.31-20.05.39:455][  0]LogEngine: Initializing Engine...
+[2018.03.31-20.05.39:534][  0]LogHMD: Failed to initialize OpenVR with code 126
+[2018.03.31-20.05.39:536][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2018.03.31-20.05.39:536][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2018.03.31-20.05.39:784][  0]LogAIModule: Creating AISystem for world Untitled
+[2018.03.31-20.05.39:800][  0]LogInit: XAudio2 using 'DELL S2415H (NVIDIA High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2018.03.31-20.05.39:849][  0]LogInit: FAudioDevice initialized.
+[2018.03.31-20.05.39:913][  0]LogDerivedDataCache: Saved boot cache 0.06s 74MB C:/Users/Cosmotron/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
+[2018.03.31-20.05.39:923][  0]LogInit: Texture streaming: Enabled
+[2018.03.31-20.05.39:942][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2018.03.31-20.05.39:959][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2018.03.31-20.05.40:000][  0]LogInit: Transaction tracking system initialized
+[2018.03.31-20.05.40:043][  0]BlueprintLog: New page: Editor Load
+[2018.03.31-20.05.40:164][  0]LocalizationService: Localization service is disabled
+[2018.03.31-20.05.40:257][  0]LogLinker: Warning: Can't find file '/Game/ThirdPersonBP/ThirdPersonOverview'
+[2018.03.31-20.05.40:258][  0]LogLinker: Warning: Can't find file '/Game/ThirdPersonBP/ThirdPersonOverview'
+[2018.03.31-20.05.40:258][  0]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/ThirdPersonBP/ThirdPersonOverview.ThirdPersonOverview_C'
+[2018.03.31-20.05.40:306][  0]LogConsoleResponse: Display: 
+[2018.03.31-20.05.40:488][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2018.03.31-20.05.40:488][  0]LogCook: Display: Mobile HDR setting 1
+[2018.03.31-20.05.40:488][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
+[2018.03.31-20.05.40:488][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2018.03.31-20.05.40:488][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2018.03.31-20.05.40:764][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Content/' took 0.02s
+[2018.03.31-20.05.40:764][  0]LogLinker: Warning: Can't find file '/Engine/BasicShapes/Sphere'
+[2018.03.31-20.05.40:764][  0]LogLinker: Warning: Can't find file '/Engine/BasicShapes/Sphere'
+[2018.03.31-20.05.40:764][  0]LogUObjectGlobals: Warning: Failed to find object 'StaticMesh /Engine/BasicShapes/Sphere.Sphere'
+[2018.03.31-20.05.40:892][  0]SourceControl: Source control is disabled
+[2018.03.31-20.05.40:892][  0]Cmd: MAP LOAD FILE="../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Content/Levels/MainScreen.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2018.03.31-20.05.40:893][  0]LightingResults: New page: Lighting Build
+[2018.03.31-20.05.40:895][  0]MapCheck: New page: Map Check
+[2018.03.31-20.05.40:895][  0]LightingResults: New page: Lighting Build
+[2018.03.31-20.05.42:734][  0]LogMaterial: Missing cached shader map for material UFO_texture2, compiling. 
+[2018.03.31-20.05.42:735][  0]LogMaterial: Warning: C:\Users\Cosmotron\Documents\GitHub\Asteroids_a_la_Mode\Asteroids_A_La_Mode\Content\Enemy\Materials\UFO_texture2.uasset: Failed to compile Material for platform PCD3D_SM5, Default Material will be used in game.
+[2018.03.31-20.05.42:735][  0]LogMaterial: 	(Node TextureSample) TextureSample> Sampler type is Color, should be Linear Color for /Game/Enemy/Textures/ufo_diffuse2.ufo_diffuse2
+[2018.03.31-20.05.42:744][  0]LogAIModule: Creating AISystem for world MainScreen
+[2018.03.31-20.05.42:745][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2018.03.31-20.05.42:768][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2018.03.31-20.05.42:826][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 57.89ms to complete.
+[2018.03.31-20.05.42:826][  0]LogFileHelpers: Loading map 'MainScreen' took 1.934
+[2018.03.31-20.05.43:013][  0]LogCollectionManager: Loaded 0 collections in 0.001968 seconds
+[2018.03.31-20.05.43:058][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Saved/Collections/' took 0.01s
+[2018.03.31-20.05.43:058][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Content/Developers/Cosmotron/Collections/' took 0.01s
+[2018.03.31-20.05.43:058][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Content/Collections/' took 0.01s
+[2018.03.31-20.05.43:058][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
+[2018.03.31-20.05.43:068][  0]LogContentBrowser: Native class hierarchy populated in 0.0106 seconds. Added 2454 classes and 562 folders.
+[2018.03.31-20.05.43:080][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0006 seconds. Added 0 classes and 0 folders.
+[2018.03.31-20.05.43:436][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0006 seconds. Added 0 classes and 0 folders.
+[2018.03.31-20.05.43:525][  0]LogSlate: Took 0.006218 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2018.03.31-20.05.43:535][  0]LogSlate: Took 0.004710 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2018.03.31-20.05.43:542][  0]LogSlate: Took 0.005000 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2018.03.31-20.05.43:635][  0]LogRenderer: Reallocating scene render targets to support 1028x436 Format 10 NumSamples 1 (Frame:1).
+[2018.03.31-20.05.43:855][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0008 seconds. Added 0 classes and 0 folders.
+[2018.03.31-20.05.43:855][  0]LogLoad: (Engine Initialization) Total time: 25.48 seconds
+[2018.03.31-20.05.43:855][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2018.03.31-20.05.43:887][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2018.03.31-20.05.43:980][  1]LogAssetRegistry: Asset discovery search completed in 11.3728 seconds
+[2018.03.31-20.05.43:983][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
+[2018.03.31-20.05.43:983][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000111 seconds (updated 0 objects)
+[2018.03.31-20.05.44:895][ 98]LogSlate: Took 0.005373 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2018.03.31-20.05.54:317][465]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2018.03.31-20.05.57:030][714]LogSlate: Took 0.000169 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2018.03.31-20.06.01:664][268]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2018.03.31-20.06.11:926][326]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2018.03.31-20.06.11:945][326]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/MainScreen.MainScreen:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainScreen.MainScreen:PersistentLevel.MainScreen' with GeneratedClass '/Game/Levels/MainScreen.MainScreen_C' with ClassGeneratedBy '/Game/Levels/MainScreen.MainScreen:PersistentLevel.MainScreen'
+[2018.03.31-20.06.11:945][326]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2018.03.31-20.06.11:945][326]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.03.31-20.06.11:945][326]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.03.31-20.06.11:964][326]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.03.31-20.06.11:964][326]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.03.31-20.06.11:964][326]PIE: New page: PIE session: MainScreen (Mar 31, 2018, 12:06:11 PM)
+[2018.03.31-20.06.11:964][326]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_1_MainScreen
+[2018.03.31-20.06.11:965][326]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001267s)
+[2018.03.31-20.06.11:966][326]LogAIModule: Creating AISystem for world MainScreen
+[2018.03.31-20.06.11:966][326]LogPlayLevel: PIE: World Init took: (0.000572s)
+[2018.03.31-20.06.11:966][326]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainScreen.MainScreen to /Game/Levels/UEDPIE_1_MainScreen.MainScreen (0.001991s)
+[2018.03.31-20.06.11:988][326]LogInit: XAudio2 using 'DELL S2415H (NVIDIA High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2018.03.31-20.06.11:996][326]LogInit: FAudioDevice initialized.
+[2018.03.31-20.06.12:117][326]LogLoad: Game class is 'DebugMode_C'
+[2018.03.31-20.06.12:120][326]LogWorld: Bringing World /Game/Levels/UEDPIE_1_MainScreen.MainScreen up for play (max tick rate 0) at 2018.03.31-16.06.12
+[2018.03.31-20.06.12:120][326]LogWorld: Bringing up level for play took: 0.000733
+[2018.03.31-20.06.12:132][326]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2018.03.31-20.06.12:132][326]LogSpawn: Warning: SpawnActor failed because no class was specified
+[2018.03.31-20.06.12:137][326]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0007 seconds. Added 11 classes and 0 folders.
+[2018.03.31-20.06.12:137][326]LogBlueprintUserMessages: [DebugMode_C_0] OnPostLogin called.
+[2018.03.31-20.06.12:137][326]LogBlueprintUserMessages: [DebugState_C_0] Player 1 Ref Set.
+[2018.03.31-20.06.12:137][326]LogBlueprintUserMessages: [PlayerC_Regular_C_0] OnPostLogin called.
+[2018.03.31-20.06.12:138][326]LogGameMode: Display: Match State Changed from EnteringMap to WaitingToStart
+[2018.03.31-20.06.12:138][326]LogGameState: Match State Changed from EnteringMap to WaitingToStart
+[2018.03.31-20.06.12:138][326]LogGameMode: Display: Match State Changed from WaitingToStart to InProgress
+[2018.03.31-20.06.12:138][326]LogScript: Warning: Accessed None trying to read property User Info
+	DebugInstance_C /Engine/Transient.UnrealEdEngine_0:DebugInstance_C_0
+	Function /Game/Modes/Debug/DebugInstance.DebugInstance_C:ExecuteUbergraph_DebugInstance:10E7
+[2018.03.31-20.06.12:138][326]PIE: Error: Blueprint Runtime Error: Accessed None trying to read property User Info from function: 'ExecuteUbergraph_DebugInstance' from node: Get Info On Env From Unreal in graph: EventGraph in object: DebugInstance with description: Accessed None trying to read property User Info
+[2018.03.31-20.06.12:138][326]LogBlueprintUserMessages: [DebugMode_C_0] BeginPlay called.
+[2018.03.31-20.06.12:138][326]LogBlueprintUserMessages: [MainScreen_C_7] BeginPlay called.
+[2018.03.31-20.06.12:139][326]LogBlueprintUserMessages: [DebugState_C_0] Player 1 Start Ref set.
+[2018.03.31-20.06.12:139][326]LogBlueprintUserMessages: [MainScreen_C_7] Sucessful cast to DInstance.
+[2018.03.31-20.06.12:139][326]LogBlueprintUserMessages: [DebugInstance_C_0] DebugM to MM called.
+[2018.03.31-20.06.12:139][326]LogBlueprintUserMessages: [DebugState_C_0] State sucessfully set.
+[2018.03.31-20.06.12:139][326]LogBlueprintUserMessages: [DebugMode_C_0] State change called.
+[2018.03.31-20.06.12:139][326]LogBlueprintUserMessages: [DebugMode_C_0] Setup Main Menu called.
+[2018.03.31-20.06.12:139][326]LogBlueprintUserMessages: [PlayerC_Regular_C_0] BeginPlay called.
+[2018.03.31-20.06.12:140][326]LogBlueprintUserMessages: [MainScreen_C_1] Current GM ^^
+[2018.03.31-20.06.12:140][326]LogBlueprintUserMessages: [MainScreen_C_1] Arcade1979
+[2018.03.31-20.06.12:140][326]LogGameState: Match State Changed from WaitingToStart to InProgress
+[2018.03.31-20.06.12:146][326]PIE: Play in editor start time for /Game/Levels/UEDPIE_1_MainScreen 0.1
+[2018.03.31-20.06.12:150][326]PIE: New page: PIE session: MainScreen (Mar 31, 2018, 12:06:12 PM)
+[2018.03.31-20.06.12:150][326]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_2_MainScreen
+[2018.03.31-20.06.12:152][326]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001231s)
+[2018.03.31-20.06.12:152][326]LogAIModule: Creating AISystem for world MainScreen
+[2018.03.31-20.06.12:152][326]LogPlayLevel: PIE: World Init took: (0.000567s)
+[2018.03.31-20.06.12:152][326]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainScreen.MainScreen to /Game/Levels/UEDPIE_2_MainScreen.MainScreen (0.001906s)
+[2018.03.31-20.06.12:177][326]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.03.31-20.06.12:263][326]LogLoad: Game class is 'DebugMode_C'
+[2018.03.31-20.06.12:264][326]LogWorld: Bringing World /Game/Levels/UEDPIE_2_MainScreen.MainScreen up for play (max tick rate 0) at 2018.03.31-16.06.12
+[2018.03.31-20.06.12:265][326]LogWorld: Bringing up level for play took: 0.000481
+[2018.03.31-20.06.12:277][326]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2018.03.31-20.06.12:277][326]LogSpawn: Warning: SpawnActor failed because no class was specified
+[2018.03.31-20.06.12:277][326]LogBlueprintUserMessages: [DebugMode_C_0] OnPostLogin called.
+[2018.03.31-20.06.12:277][326]LogBlueprintUserMessages: [DebugState_C_0] Player 1 Ref Set.
+[2018.03.31-20.06.12:277][326]LogBlueprintUserMessages: [PlayerC_Regular_C_0] OnPostLogin called.
+[2018.03.31-20.06.12:277][326]LogGameMode: Display: Match State Changed from EnteringMap to WaitingToStart
+[2018.03.31-20.06.12:277][326]LogGameState: Match State Changed from EnteringMap to WaitingToStart
+[2018.03.31-20.06.12:277][326]LogGameMode: Display: Match State Changed from WaitingToStart to InProgress
+[2018.03.31-20.06.12:278][326]LogScript: Warning: Accessed None trying to read property User Info
+	DebugInstance_C /Engine/Transient.UnrealEdEngine_0:DebugInstance_C_1
+	Function /Game/Modes/Debug/DebugInstance.DebugInstance_C:ExecuteUbergraph_DebugInstance:10E7
+[2018.03.31-20.06.12:278][326]PIE: Error: Blueprint Runtime Error: Accessed None trying to read property User Info from function: 'ExecuteUbergraph_DebugInstance' from node: Get Info On Env From Unreal in graph: EventGraph in object: DebugInstance with description: Accessed None trying to read property User Info
+[2018.03.31-20.06.12:278][326]LogBlueprintUserMessages: [DebugMode_C_0] BeginPlay called.
+[2018.03.31-20.06.12:278][326]LogBlueprintUserMessages: [MainScreen_C_7] BeginPlay called.
+[2018.03.31-20.06.12:278][326]LogBlueprintUserMessages: [DebugState_C_0] Player 1 Start Ref set.
+[2018.03.31-20.06.12:278][326]LogBlueprintUserMessages: [MainScreen_C_7] Sucessful cast to DInstance.
+[2018.03.31-20.06.12:278][326]LogBlueprintUserMessages: [DebugInstance_C_1] DebugM to MM called.
+[2018.03.31-20.06.12:278][326]LogBlueprintUserMessages: [DebugState_C_0] State sucessfully set.
+[2018.03.31-20.06.12:278][326]LogBlueprintUserMessages: [DebugMode_C_0] State change called.
+[2018.03.31-20.06.12:278][326]LogBlueprintUserMessages: [DebugMode_C_0] Setup Main Menu called.
+[2018.03.31-20.06.12:278][326]LogBlueprintUserMessages: [PlayerC_Regular_C_0] BeginPlay called.
+[2018.03.31-20.06.12:279][326]LogBlueprintUserMessages: [MainScreen_C_2] Current GM ^^
+[2018.03.31-20.06.12:279][326]LogBlueprintUserMessages: [MainScreen_C_2] Arcade1979
+[2018.03.31-20.06.12:279][326]LogGameState: Match State Changed from WaitingToStart to InProgress
+[2018.03.31-20.06.12:283][326]PIE: Play in editor start time for /Game/Levels/UEDPIE_2_MainScreen 0.237
+[2018.03.31-20.06.12:296][326]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/MainScreen.MainScreen:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainScreen.MainScreen:PersistentLevel.MainScreen' with GeneratedClass '/Game/Levels/MainScreen.MainScreen_C' with ClassGeneratedBy '/Game/Levels/MainScreen.MainScreen:PersistentLevel.MainScreen'
+[2018.03.31-20.06.12:334][326]LogRenderer: Reallocating scene render targets to support 1028x480 Format 10 NumSamples 1 (Frame:1).
+[2018.03.31-20.06.14:769][415]LogBlueprintUserMessages: [MenuPawn_C_0] Menu Select Pressed.
+[2018.03.31-20.06.14:769][415]LogBlueprintUserMessages: [MainScreen_C_1] Menu Select called.
+[2018.03.31-20.06.14:770][415]LogBlueprintUserMessages: [DebugInstance_C_0] DebugM to A1979 called.
+[2018.03.31-20.06.14:770][415]LogBlueprintUserMessages: [DebugState_C_0] State sucessfully set.
+[2018.03.31-20.06.14:770][415]LogBlueprintUserMessages: [DebugMode_C_0] State change called.
+[2018.03.31-20.06.14:770][415]LogBlueprintUserMessages: [DebugMode_C_0] Setup A1979 mode called.
+[2018.03.31-20.06.14:797][416]LogGameMode: Display: Match State Changed from InProgress to LeavingMap
+[2018.03.31-20.06.14:797][416]LogGameState: Match State Changed from InProgress to LeavingMap
+[2018.03.31-20.06.14:797][416]LogNet: Browse: /Game/Levels/Dev_Test?listen
+[2018.03.31-20.06.14:826][416]LogLoad: LoadMap: /Game/Levels/Dev_Test?listen
+[2018.03.31-20.06.14:827][416]LogBlueprintUserMessages: [DebugMode_C_0] Player: 
+[2018.03.31-20.06.14:827][416]LogBlueprintUserMessages: [DebugMode_C_0] PlayerC_Regular_C_0
+[2018.03.31-20.06.14:827][416]LogBlueprintUserMessages: [DebugMode_C_0] Logged out
+[2018.03.31-20.06.15:585][416]LogAIModule: Creating AISystem for world Dev_Test
+[2018.03.31-20.06.15:585][416]LogLoad: Game class is 'DebugMode_C'
+[2018.03.31-20.06.15:585][416]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.03.31-20.06.15:585][416]LogTemp: Display: ParseSettings for IpNetDriver_0
+[2018.03.31-20.06.15:585][416]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.03.31-20.06.15:586][416]LogInit: WinSock: Socket queue 131072 / 131072
+[2018.03.31-20.06.15:586][416]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.03.31-20.06.15:586][416]LogNet: GameNetDriver IpNetDriver_0 IpNetDriver listening on port 7777
+[2018.03.31-20.06.15:590][416]LogWorld: Bringing World /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test up for play (max tick rate 0) at 2018.03.31-16.06.15
+[2018.03.31-20.06.15:590][416]LogOnline: Warning: OSS: AutoLogin missing AUTH_LOGIN=<login id>.
+[2018.03.31-20.06.15:591][416]LogWorld: Bringing up level for play took: 0.003481
+[2018.03.31-20.06.15:591][416]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.03.31-20.06.15:591][416]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2018.03.31-20.06.15:591][416]LogSpawn: Warning: SpawnActor failed because no class was specified
+[2018.03.31-20.06.15:591][416]LogBlueprintUserMessages: [DebugMode_C_0] Server: OnPostLogin called.
+[2018.03.31-20.06.15:591][416]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Ref Set.
+[2018.03.31-20.06.15:591][416]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: OnPostLogin called.
+[2018.03.31-20.06.15:591][416]LogGameMode: Display: Match State Changed from EnteringMap to WaitingToStart
+[2018.03.31-20.06.15:592][416]LogGameState: Match State Changed from EnteringMap to WaitingToStart
+[2018.03.31-20.06.15:592][416]LogGameMode: Display: Match State Changed from WaitingToStart to InProgress
+[2018.03.31-20.06.15:592][416]LogScript: Warning: Accessed None trying to read property User Info
+	DebugInstance_C /Engine/Transient.UnrealEdEngine_0:DebugInstance_C_0
+	Function /Game/Modes/Debug/DebugInstance.DebugInstance_C:ExecuteUbergraph_DebugInstance:10E7
+[2018.03.31-20.06.15:592][416]PIE: Error: Blueprint Runtime Error: Accessed None trying to read property User Info from function: 'ExecuteUbergraph_DebugInstance' from node: Get Info On Env From Unreal in graph: EventGraph in object: DebugInstance with description: Accessed None trying to read property User Info
+[2018.03.31-20.06.15:592][416]LogBlueprintUserMessages: [DebugMode_C_0] Server: BeginPlay called.
+[2018.03.31-20.06.15:592][416]LogBlueprintUserMessages: [DebugMode_C_0] Server: SpawnVolume_Bottom
+[2018.03.31-20.06.15:592][416]LogBlueprintUserMessages: [DebugMode_C_0] Server: SpawnVolume_Left
+[2018.03.31-20.06.15:592][416]LogBlueprintUserMessages: [DebugMode_C_0] Server: SpawnVolume_Right
+[2018.03.31-20.06.15:592][416]LogBlueprintUserMessages: [DebugMode_C_0] Server: SpawnVolume_Top
+[2018.03.31-20.06.15:592][416]LogBlueprintUserMessages: [Dev_Test_C_0] Server: BeginPlay called.
+[2018.03.31-20.06.15:592][416]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Start Ref set.
+[2018.03.31-20.06.15:592][416]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 2 Start Ref set.
+[2018.03.31-20.06.15:592][416]LogBlueprintUserMessages: [Dev_Test_C_0] Server: Cams Passed
+[2018.03.31-20.06.15:592][416]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: BeginPlay called.
+[2018.03.31-20.06.15:598][416]LogGameState: Match State Changed from WaitingToStart to InProgress
+[2018.03.31-20.06.15:598][416]LogLoad: Took 0.772339 seconds to LoadMap(/Game/Levels/Dev_Test)
+[2018.03.31-20.06.19:754][553]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Player start pressed.
+[2018.03.31-20.06.19:781][554]LogBlueprintUserMessages: [DebugMode_C_0] Server: Round 1 Started
+[2018.03.31-20.06.19:782][554]LogBlueprintUserMessages: [Asteroid_Large_C_0] Server: Asteroids: ^^
+[2018.03.31-20.06.19:782][554]LogBlueprintUserMessages: [Asteroid_Large_C_0] Server: 1
+[2018.03.31-20.06.19:782][554]LogBlueprintUserMessages: [Asteroid_Large_C_1] Server: Asteroids: ^^
+[2018.03.31-20.06.19:782][554]LogBlueprintUserMessages: [Asteroid_Large_C_1] Server: 2
+[2018.03.31-20.06.19:783][554]LogBlueprintUserMessages: [Asteroid_Large_C_2] Server: Asteroids: ^^
+[2018.03.31-20.06.19:783][554]LogBlueprintUserMessages: [Asteroid_Large_C_2] Server: 3
+[2018.03.31-20.06.19:783][554]LogBlueprintUserMessages: [Asteroid_Large_C_3] Server: Asteroids: ^^
+[2018.03.31-20.06.19:783][554]LogBlueprintUserMessages: [Asteroid_Large_C_3] Server: 4
+[2018.03.31-20.06.19:783][554]LogBlueprintUserMessages: [DebugState_C_0] Server: Give Player Life called.
+[2018.03.31-20.06.19:783][554]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Lives: 
+[2018.03.31-20.06.19:783][554]LogBlueprintUserMessages: [DebugState_C_0] Server: 3
+[2018.03.31-20.06.19:783][554]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud
+	DebugState_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugState_C_0
+	Function /Game/Modes/Debug/DebugState.DebugState_C:ExecuteUbergraph_DebugState:0619
+[2018.03.31-20.06.19:783][554]PIE: Error: Blueprint Runtime Error: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud from function: 'ExecuteUbergraph_DebugState' from node: Update Lives in graph: EventGraph in object: DebugState with description: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud
+[2018.03.31-20.06.19:783][554]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.19:783][554]LogBlueprintUserMessages: [DebugState_C_0] Server: 0
+[2018.03.31-20.06.19:783][554]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1
+	DebugState_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugState_C_0
+	Function /Game/Modes/Debug/DebugState.DebugState_C:ExecuteUbergraph_DebugState:0F02
+[2018.03.31-20.06.19:784][554]PIE: Error: Blueprint Runtime Error: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1 from function: 'ExecuteUbergraph_DebugState' from node: Update Score in graph: EventGraph in object: DebugState with description: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1
+[2018.03.31-20.06.19:784][554]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Spawn Player
+[2018.03.31-20.06.19:784][554]LogBlueprintUserMessages: [DebugMode_C_0] Server: Spawn Player
+[2018.03.31-20.06.19:784][554]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Player 1 spawned.
+[2018.03.31-20.06.24:246][716]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.24:246][716]LogBlueprintUserMessages: [DebugState_C_0] Server: 20
+[2018.03.31-20.06.24:247][716]LogBlueprintUserMessages: [Asteroid_Medium_C_0] Server: Asteroids: ^^
+[2018.03.31-20.06.24:247][716]LogBlueprintUserMessages: [Asteroid_Medium_C_0] Server: 5
+[2018.03.31-20.06.24:247][716]LogBlueprintUserMessages: [Asteroid_Medium_C_1] Server: Asteroids: ^^
+[2018.03.31-20.06.24:247][716]LogBlueprintUserMessages: [Asteroid_Medium_C_1] Server: 6
+[2018.03.31-20.06.24:247][716]LogBlueprintUserMessages: [Asteroid_Large_C_0] Server: Asteroids: ^^
+[2018.03.31-20.06.24:247][716]LogBlueprintUserMessages: [Asteroid_Large_C_0] Server: 5
+[2018.03.31-20.06.24:306][718]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.24:306][718]LogBlueprintUserMessages: [DebugState_C_0] Server: 40
+[2018.03.31-20.06.24:307][718]LogBlueprintUserMessages: [Asteroid_Medium_C_2] Server: Asteroids: ^^
+[2018.03.31-20.06.24:307][718]LogBlueprintUserMessages: [Asteroid_Medium_C_2] Server: 6
+[2018.03.31-20.06.24:307][718]LogBlueprintUserMessages: [Asteroid_Medium_C_3] Server: Asteroids: ^^
+[2018.03.31-20.06.24:307][718]LogBlueprintUserMessages: [Asteroid_Medium_C_3] Server: 7
+[2018.03.31-20.06.24:307][718]LogBlueprintUserMessages: [Asteroid_Large_C_3] Server: Asteroids: ^^
+[2018.03.31-20.06.24:307][718]LogBlueprintUserMessages: [Asteroid_Large_C_3] Server: 6
+[2018.03.31-20.06.25:201][750]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.25:201][750]LogBlueprintUserMessages: [DebugState_C_0] Server: 60
+[2018.03.31-20.06.25:201][750]LogBlueprintUserMessages: [Asteroid_Medium_C_4] Server: Asteroids: ^^
+[2018.03.31-20.06.25:201][750]LogBlueprintUserMessages: [Asteroid_Medium_C_4] Server: 7
+[2018.03.31-20.06.25:202][750]LogBlueprintUserMessages: [Asteroid_Medium_C_5] Server: Asteroids: ^^
+[2018.03.31-20.06.25:202][750]LogBlueprintUserMessages: [Asteroid_Medium_C_5] Server: 8
+[2018.03.31-20.06.25:202][750]LogBlueprintUserMessages: [Asteroid_Large_C_1] Server: Asteroids: ^^
+[2018.03.31-20.06.25:202][750]LogBlueprintUserMessages: [Asteroid_Large_C_1] Server: 7
+[2018.03.31-20.06.36:269][  2]LogBlueprintUserMessages: [Ship_C_0] Server: Ship Destoryed.
+[2018.03.31-20.06.36:269][  2]LogBlueprintUserMessages: [DebugMode_C_0] Server: Ship Destroyed called.
+[2018.03.31-20.06.36:269][  2]LogBlueprintUserMessages: [DebugState_C_0] Server: Take Player Life called.
+[2018.03.31-20.06.36:269][  2]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Lives: 
+[2018.03.31-20.06.36:269][  2]LogBlueprintUserMessages: [DebugState_C_0] Server: 2
+[2018.03.31-20.06.36:269][  2]LogBlueprintUserMessages: [InGameHud_C_0] Server: Hello
+[2018.03.31-20.06.36:269][  2]LogBlueprintUserMessages: [InGameHud_C_0] Server: true
+[2018.03.31-20.06.36:269][  2]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Spawn Player
+[2018.03.31-20.06.36:269][  2]LogBlueprintUserMessages: [DebugMode_C_0] Server: Spawn Player
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [Ship_C_1] Server: Ship Destoryed.
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [DebugMode_C_0] Server: Ship Destroyed called.
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [DebugState_C_0] Server: Take Player Life called.
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Lives: 
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [DebugState_C_0] Server: 1
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [InGameHud_C_0] Server: Hello
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [InGameHud_C_0] Server: true
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Spawn Player
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [DebugMode_C_0] Server: Spawn Player
+[2018.03.31-20.06.36:270][  2]LogSpawn: Warning: SpawnActor failed because of collision at the spawn location [X=0.000 Y=-250.000 Z=0.000] for [Ship_C]
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [DebugMode_C_0] Server: Ship Destroyed called.
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [DebugState_C_0] Server: Take Player Life called.
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Lives: 
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [DebugState_C_0] Server: 0
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [InGameHud_C_0] Server: Hello
+[2018.03.31-20.06.36:270][  2]LogBlueprintUserMessages: [InGameHud_C_0] Server: true
+[2018.03.31-20.06.36:270][  2]LogScript: Warning: Attempted to access Ship_C_2 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_2 is pending kill
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F06
+[2018.03.31-20.06.36:271][  2]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_2 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_2 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_2 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_2 is pending kill
+[2018.03.31-20.06.36:271][  2]LogScript: Warning: Attempted to access Ship_C_2 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_2 is pending kill
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F31
+[2018.03.31-20.06.36:271][  2]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_2 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_2 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_2 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_2 is pending kill
+[2018.03.31-20.06.36:271][  2]LogScript: Warning: Attempted to assign to None
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F46
+[2018.03.31-20.06.36:271][  2]PIE: Error: Blueprint Runtime Error: Attempted to assign to None from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to assign to None
+[2018.03.31-20.06.36:271][  2]LogScript: Warning: Attempted to access Ship_C_2 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_2 is pending kill
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F5B
+[2018.03.31-20.06.36:271][  2]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_2 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_2 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Possess in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_2 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_2 is pending kill
+[2018.03.31-20.06.36:271][  2]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Player 1 spawned.
+[2018.03.31-20.06.36:271][  2]LogScript: Warning: Attempted to access Ship_C_1 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_1 is pending kill
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F06
+[2018.03.31-20.06.36:271][  2]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_1 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_1 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_1 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_1 is pending kill
+[2018.03.31-20.06.36:271][  2]LogScript: Warning: Attempted to access Ship_C_1 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_1 is pending kill
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F31
+[2018.03.31-20.06.36:272][  2]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_1 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_1 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_1 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_1 is pending kill
+[2018.03.31-20.06.36:272][  2]LogScript: Warning: Attempted to assign to None
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F46
+[2018.03.31-20.06.36:272][  2]PIE: Error: Blueprint Runtime Error: Attempted to assign to None from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to assign to None
+[2018.03.31-20.06.36:272][  2]LogScript: Warning: Attempted to access Ship_C_1 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_1 is pending kill
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F5B
+[2018.03.31-20.06.36:272][  2]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_1 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_1 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Possess in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_1 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_1 is pending kill
+[2018.03.31-20.06.36:272][  2]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Player 1 spawned.
+[2018.03.31-20.06.36:324][  3]LogBlueprintUserMessages: [DebugMode_C_0] Server: Game Over
+[2018.03.31-20.06.49:764][241]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Player start pressed.
+[2018.03.31-20.06.49:776][242]LogBlueprintUserMessages: [DebugMode_C_0] Server: Round 1 Started
+[2018.03.31-20.06.49:776][242]LogBlueprintUserMessages: [Asteroid_Large_C_4] Server: Asteroids: ^^
+[2018.03.31-20.06.49:776][242]LogBlueprintUserMessages: [Asteroid_Large_C_4] Server: 8
+[2018.03.31-20.06.49:777][242]LogBlueprintUserMessages: [Asteroid_Large_C_5] Server: Asteroids: ^^
+[2018.03.31-20.06.49:777][242]LogBlueprintUserMessages: [Asteroid_Large_C_5] Server: 9
+[2018.03.31-20.06.49:777][242]LogBlueprintUserMessages: [Asteroid_Large_C_6] Server: Asteroids: ^^
+[2018.03.31-20.06.49:777][242]LogBlueprintUserMessages: [Asteroid_Large_C_6] Server: 10
+[2018.03.31-20.06.49:778][242]LogBlueprintUserMessages: [Asteroid_Large_C_7] Server: Asteroids: ^^
+[2018.03.31-20.06.49:778][242]LogBlueprintUserMessages: [Asteroid_Large_C_7] Server: 11
+[2018.03.31-20.06.49:778][242]LogBlueprintUserMessages: [DebugState_C_0] Server: Give Player Life called.
+[2018.03.31-20.06.49:778][242]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Lives: 
+[2018.03.31-20.06.49:778][242]LogBlueprintUserMessages: [DebugState_C_0] Server: 3
+[2018.03.31-20.06.49:778][242]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud
+	DebugState_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugState_C_0
+	Function /Game/Modes/Debug/DebugState.DebugState_C:ExecuteUbergraph_DebugState:0619
+[2018.03.31-20.06.49:778][242]PIE: Error: Blueprint Runtime Error: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud from function: 'ExecuteUbergraph_DebugState' from node: Update Lives in graph: EventGraph in object: DebugState with description: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud
+[2018.03.31-20.06.49:778][242]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.49:778][242]LogBlueprintUserMessages: [DebugState_C_0] Server: 60
+[2018.03.31-20.06.49:778][242]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1
+	DebugState_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugState_C_0
+	Function /Game/Modes/Debug/DebugState.DebugState_C:ExecuteUbergraph_DebugState:0F02
+[2018.03.31-20.06.49:778][242]PIE: Error: Blueprint Runtime Error: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1 from function: 'ExecuteUbergraph_DebugState' from node: Update Score in graph: EventGraph in object: DebugState with description: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1
+[2018.03.31-20.06.49:778][242]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Spawn Player
+[2018.03.31-20.06.49:778][242]LogBlueprintUserMessages: [DebugMode_C_0] Server: Spawn Player
+[2018.03.31-20.06.49:779][242]LogBlueprintUserMessages: [Ship_C_3] Server: Ship Destoryed.
+[2018.03.31-20.06.49:779][242]LogBlueprintUserMessages: [DebugMode_C_0] Server: Ship Destroyed called.
+[2018.03.31-20.06.49:779][242]LogBlueprintUserMessages: [DebugState_C_0] Server: Take Player Life called.
+[2018.03.31-20.06.49:779][242]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Lives: 
+[2018.03.31-20.06.49:779][242]LogBlueprintUserMessages: [DebugState_C_0] Server: 2
+[2018.03.31-20.06.49:779][242]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1
+	DebugState_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugState_C_0
+	Function /Game/Modes/Debug/DebugState.DebugState_C:ExecuteUbergraph_DebugState:0975
+[2018.03.31-20.06.49:779][242]PIE: Error: Blueprint Runtime Error: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1 from function: 'ExecuteUbergraph_DebugState' from node: Update Lives in graph: EventGraph in object: DebugState with description: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1
+[2018.03.31-20.06.49:779][242]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Spawn Player
+[2018.03.31-20.06.49:779][242]LogBlueprintUserMessages: [DebugMode_C_0] Server: Spawn Player
+[2018.03.31-20.06.49:780][242]LogSpawn: Warning: SpawnActor failed because of collision at the spawn location [X=0.000 Y=-250.000 Z=0.000] for [Ship_C]
+[2018.03.31-20.06.49:780][242]LogBlueprintUserMessages: [DebugMode_C_0] Server: Ship Destroyed called.
+[2018.03.31-20.06.49:780][242]LogBlueprintUserMessages: [DebugState_C_0] Server: Take Player Life called.
+[2018.03.31-20.06.49:780][242]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Lives: 
+[2018.03.31-20.06.49:780][242]LogBlueprintUserMessages: [DebugState_C_0] Server: 1
+[2018.03.31-20.06.49:780][242]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1
+	DebugState_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugState_C_0
+	Function /Game/Modes/Debug/DebugState.DebugState_C:ExecuteUbergraph_DebugState:0975
+[2018.03.31-20.06.49:780][242]PIE: Error: Blueprint Runtime Error: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1 from function: 'ExecuteUbergraph_DebugState' from node: Update Lives in graph: EventGraph in object: DebugState with description: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1
+[2018.03.31-20.06.49:780][242]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Spawn Player
+[2018.03.31-20.06.49:780][242]LogBlueprintUserMessages: [DebugMode_C_0] Server: Spawn Player
+[2018.03.31-20.06.49:780][242]LogSpawn: Warning: SpawnActor failed because of collision at the spawn location [X=0.000 Y=-250.000 Z=0.000] for [Ship_C]
+[2018.03.31-20.06.49:780][242]LogBlueprintUserMessages: [DebugMode_C_0] Server: Ship Destroyed called.
+[2018.03.31-20.06.49:780][242]LogBlueprintUserMessages: [DebugState_C_0] Server: Take Player Life called.
+[2018.03.31-20.06.49:781][242]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Lives: 
+[2018.03.31-20.06.49:781][242]LogBlueprintUserMessages: [DebugState_C_0] Server: 0
+[2018.03.31-20.06.49:781][242]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1
+	DebugState_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugState_C_0
+	Function /Game/Modes/Debug/DebugState.DebugState_C:ExecuteUbergraph_DebugState:0975
+[2018.03.31-20.06.49:781][242]PIE: Error: Blueprint Runtime Error: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1 from function: 'ExecuteUbergraph_DebugState' from node: Update Lives in graph: EventGraph in object: DebugState with description: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1
+[2018.03.31-20.06.49:781][242]LogScript: Warning: Attempted to access Ship_C_5 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_5 is pending kill
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F06
+[2018.03.31-20.06.49:781][242]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_5 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_5 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_5 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_5 is pending kill
+[2018.03.31-20.06.49:781][242]LogScript: Warning: Attempted to access Ship_C_5 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_5 is pending kill
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F31
+[2018.03.31-20.06.49:781][242]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_5 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_5 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_5 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_5 is pending kill
+[2018.03.31-20.06.49:781][242]LogScript: Warning: Attempted to assign to None
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F46
+[2018.03.31-20.06.49:781][242]PIE: Error: Blueprint Runtime Error: Attempted to assign to None from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to assign to None
+[2018.03.31-20.06.49:781][242]LogScript: Warning: Attempted to access Ship_C_5 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_5 is pending kill
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F5B
+[2018.03.31-20.06.49:781][242]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_5 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_5 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Possess in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_5 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_5 is pending kill
+[2018.03.31-20.06.49:782][242]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Player 1 spawned.
+[2018.03.31-20.06.49:782][242]LogScript: Warning: Attempted to access Ship_C_4 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_4 is pending kill
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F06
+[2018.03.31-20.06.49:782][242]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_4 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_4 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_4 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_4 is pending kill
+[2018.03.31-20.06.49:782][242]LogScript: Warning: Attempted to access Ship_C_4 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_4 is pending kill
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F31
+[2018.03.31-20.06.49:782][242]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_4 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_4 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_4 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_4 is pending kill
+[2018.03.31-20.06.49:782][242]LogScript: Warning: Attempted to assign to None
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F46
+[2018.03.31-20.06.49:782][242]PIE: Error: Blueprint Runtime Error: Attempted to assign to None from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to assign to None
+[2018.03.31-20.06.49:782][242]LogScript: Warning: Attempted to access Ship_C_4 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_4 is pending kill
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F5B
+[2018.03.31-20.06.49:782][242]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_4 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_4 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Possess in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_4 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_4 is pending kill
+[2018.03.31-20.06.49:782][242]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Player 1 spawned.
+[2018.03.31-20.06.49:782][242]LogScript: Warning: Attempted to access Ship_C_3 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_3 is pending kill
+	DebugMode_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugMode_C_0
+	Function /Game/Modes/Debug/DebugMode.DebugMode_C:ExecuteUbergraph_DebugMode:1F06
+[2018.03.31-20.06.49:782][242]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_3 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_3 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_3 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_3 is pending kill
+[2018.03.31-20.06.49:782][242]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_3 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_3 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_3 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_3 is pending kill
+[2018.03.31-20.06.49:782][242]PIE: Error: Blueprint Runtime Error: Attempted to assign to None from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to assign to None
+[2018.03.31-20.06.49:783][242]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_3 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_3 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Possess in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_3 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_3 is pending kill
+[2018.03.31-20.06.49:783][242]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Player 1 spawned.
+[2018.03.31-20.06.49:784][242]LogBlueprintUserMessages: [DebugMode_C_0] Server: Game Over
+[2018.03.31-20.06.50:647][313]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Player start pressed.
+[2018.03.31-20.06.50:660][314]LogBlueprintUserMessages: [DebugMode_C_0] Server: Round 1 Started
+[2018.03.31-20.06.50:660][314]LogBlueprintUserMessages: [Asteroid_Large_C_8] Server: Asteroids: ^^
+[2018.03.31-20.06.50:660][314]LogBlueprintUserMessages: [Asteroid_Large_C_8] Server: 12
+[2018.03.31-20.06.50:661][314]LogBlueprintUserMessages: [Asteroid_Large_C_9] Server: Asteroids: ^^
+[2018.03.31-20.06.50:661][314]LogBlueprintUserMessages: [Asteroid_Large_C_9] Server: 13
+[2018.03.31-20.06.50:661][314]LogBlueprintUserMessages: [Asteroid_Large_C_10] Server: Asteroids: ^^
+[2018.03.31-20.06.50:661][314]LogBlueprintUserMessages: [Asteroid_Large_C_10] Server: 14
+[2018.03.31-20.06.50:662][314]LogBlueprintUserMessages: [Asteroid_Large_C_11] Server: Asteroids: ^^
+[2018.03.31-20.06.50:662][314]LogBlueprintUserMessages: [Asteroid_Large_C_11] Server: 15
+[2018.03.31-20.06.50:662][314]LogBlueprintUserMessages: [DebugState_C_0] Server: Give Player Life called.
+[2018.03.31-20.06.50:662][314]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Lives: 
+[2018.03.31-20.06.50:662][314]LogBlueprintUserMessages: [DebugState_C_0] Server: 3
+[2018.03.31-20.06.50:662][314]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud
+	DebugState_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugState_C_0
+	Function /Game/Modes/Debug/DebugState.DebugState_C:ExecuteUbergraph_DebugState:0619
+[2018.03.31-20.06.50:662][314]PIE: Error: Blueprint Runtime Error: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud from function: 'ExecuteUbergraph_DebugState' from node: Update Lives in graph: EventGraph in object: DebugState with description: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud
+[2018.03.31-20.06.50:662][314]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.50:662][314]LogBlueprintUserMessages: [DebugState_C_0] Server: 60
+[2018.03.31-20.06.50:662][314]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1
+	DebugState_C /Game/Levels/UEDPIE_1_Dev_Test.Dev_Test:PersistentLevel.DebugState_C_0
+	Function /Game/Modes/Debug/DebugState.DebugState_C:ExecuteUbergraph_DebugState:0F02
+[2018.03.31-20.06.50:662][314]PIE: Error: Blueprint Runtime Error: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1 from function: 'ExecuteUbergraph_DebugState' from node: Update Score in graph: EventGraph in object: DebugState with description: Accessed None trying to read property K2Node_DynamicCast_AsIn_Game_Hud1
+[2018.03.31-20.06.50:662][314]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Spawn Player
+[2018.03.31-20.06.50:662][314]LogBlueprintUserMessages: [DebugMode_C_0] Server: Spawn Player
+[2018.03.31-20.06.50:663][314]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Player 1 spawned.
+[2018.03.31-20.06.53:687][530]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.53:687][530]LogBlueprintUserMessages: [DebugState_C_0] Server: 80
+[2018.03.31-20.06.53:688][530]LogBlueprintUserMessages: [Asteroid_Medium_C_6] Server: Asteroids: ^^
+[2018.03.31-20.06.53:688][530]LogBlueprintUserMessages: [Asteroid_Medium_C_6] Server: 16
+[2018.03.31-20.06.53:688][530]LogBlueprintUserMessages: [Asteroid_Medium_C_7] Server: Asteroids: ^^
+[2018.03.31-20.06.53:688][530]LogBlueprintUserMessages: [Asteroid_Medium_C_7] Server: 17
+[2018.03.31-20.06.53:688][530]LogBlueprintUserMessages: [Asteroid_Large_C_8] Server: Asteroids: ^^
+[2018.03.31-20.06.53:688][530]LogBlueprintUserMessages: [Asteroid_Large_C_8] Server: 16
+[2018.03.31-20.06.54:479][565]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.54:479][565]LogBlueprintUserMessages: [DebugState_C_0] Server: 100
+[2018.03.31-20.06.54:480][565]LogBlueprintUserMessages: [Asteroid_Medium_C_8] Server: Asteroids: ^^
+[2018.03.31-20.06.54:480][565]LogBlueprintUserMessages: [Asteroid_Medium_C_8] Server: 17
+[2018.03.31-20.06.54:480][565]LogBlueprintUserMessages: [Asteroid_Medium_C_9] Server: Asteroids: ^^
+[2018.03.31-20.06.54:480][565]LogBlueprintUserMessages: [Asteroid_Medium_C_9] Server: 18
+[2018.03.31-20.06.54:480][565]LogBlueprintUserMessages: [Asteroid_Large_C_10] Server: Asteroids: ^^
+[2018.03.31-20.06.54:480][565]LogBlueprintUserMessages: [Asteroid_Large_C_10] Server: 17
+[2018.03.31-20.06.54:618][571]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.54:618][571]LogBlueprintUserMessages: [DebugState_C_0] Server: 120
+[2018.03.31-20.06.54:619][571]LogBlueprintUserMessages: [Asteroid_Medium_C_10] Server: Asteroids: ^^
+[2018.03.31-20.06.54:619][571]LogBlueprintUserMessages: [Asteroid_Medium_C_10] Server: 18
+[2018.03.31-20.06.54:619][571]LogBlueprintUserMessages: [Asteroid_Medium_C_11] Server: Asteroids: ^^
+[2018.03.31-20.06.54:619][571]LogBlueprintUserMessages: [Asteroid_Medium_C_11] Server: 19
+[2018.03.31-20.06.54:620][571]LogBlueprintUserMessages: [Asteroid_Large_C_11] Server: Asteroids: ^^
+[2018.03.31-20.06.54:620][571]LogBlueprintUserMessages: [Asteroid_Large_C_11] Server: 18
+[2018.03.31-20.06.54:759][577]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.54:759][577]LogBlueprintUserMessages: [DebugState_C_0] Server: 140
+[2018.03.31-20.06.54:760][577]LogBlueprintUserMessages: [Asteroid_Medium_C_12] Server: Asteroids: ^^
+[2018.03.31-20.06.54:760][577]LogBlueprintUserMessages: [Asteroid_Medium_C_12] Server: 19
+[2018.03.31-20.06.54:760][577]LogBlueprintUserMessages: [Asteroid_Medium_C_13] Server: Asteroids: ^^
+[2018.03.31-20.06.54:760][577]LogBlueprintUserMessages: [Asteroid_Medium_C_13] Server: 20
+[2018.03.31-20.06.54:760][577]LogBlueprintUserMessages: [Asteroid_Large_C_7] Server: Asteroids: ^^
+[2018.03.31-20.06.54:760][577]LogBlueprintUserMessages: [Asteroid_Large_C_7] Server: 19
+[2018.03.31-20.06.54:931][585]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.54:931][585]LogBlueprintUserMessages: [DebugState_C_0] Server: 160
+[2018.03.31-20.06.54:932][585]LogBlueprintUserMessages: [Asteroid_Medium_C_14] Server: Asteroids: ^^
+[2018.03.31-20.06.54:932][585]LogBlueprintUserMessages: [Asteroid_Medium_C_14] Server: 20
+[2018.03.31-20.06.54:932][585]LogBlueprintUserMessages: [Asteroid_Medium_C_15] Server: Asteroids: ^^
+[2018.03.31-20.06.54:932][585]LogBlueprintUserMessages: [Asteroid_Medium_C_15] Server: 21
+[2018.03.31-20.06.54:932][585]LogBlueprintUserMessages: [Asteroid_Large_C_6] Server: Asteroids: ^^
+[2018.03.31-20.06.54:932][585]LogBlueprintUserMessages: [Asteroid_Large_C_6] Server: 20
+[2018.03.31-20.06.55:492][611]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.55:492][611]LogBlueprintUserMessages: [DebugState_C_0] Server: 180
+[2018.03.31-20.06.55:493][611]LogBlueprintUserMessages: [Asteroid_Medium_C_16] Server: Asteroids: ^^
+[2018.03.31-20.06.55:493][611]LogBlueprintUserMessages: [Asteroid_Medium_C_16] Server: 21
+[2018.03.31-20.06.55:493][611]LogBlueprintUserMessages: [Asteroid_Medium_C_17] Server: Asteroids: ^^
+[2018.03.31-20.06.55:493][611]LogBlueprintUserMessages: [Asteroid_Medium_C_17] Server: 22
+[2018.03.31-20.06.55:493][611]LogBlueprintUserMessages: [Asteroid_Large_C_2] Server: Asteroids: ^^
+[2018.03.31-20.06.55:493][611]LogBlueprintUserMessages: [Asteroid_Large_C_2] Server: 21
+[2018.03.31-20.06.55:839][627]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.55:839][627]LogBlueprintUserMessages: [DebugState_C_0] Server: 200
+[2018.03.31-20.06.55:840][627]LogBlueprintUserMessages: [Asteroid_Medium_C_18] Server: Asteroids: ^^
+[2018.03.31-20.06.55:840][627]LogBlueprintUserMessages: [Asteroid_Medium_C_18] Server: 22
+[2018.03.31-20.06.55:840][627]LogBlueprintUserMessages: [Asteroid_Medium_C_19] Server: Asteroids: ^^
+[2018.03.31-20.06.55:840][627]LogBlueprintUserMessages: [Asteroid_Medium_C_19] Server: 23
+[2018.03.31-20.06.55:840][627]LogBlueprintUserMessages: [Asteroid_Large_C_4] Server: Asteroids: ^^
+[2018.03.31-20.06.55:840][627]LogBlueprintUserMessages: [Asteroid_Large_C_4] Server: 22
+[2018.03.31-20.06.56:122][640]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.56:122][640]LogBlueprintUserMessages: [DebugState_C_0] Server: 250
+[2018.03.31-20.06.56:122][640]LogBlueprintUserMessages: [Asteroid_Small_C_0] Server: Asteroids: ^^
+[2018.03.31-20.06.56:122][640]LogBlueprintUserMessages: [Asteroid_Small_C_0] Server: 23
+[2018.03.31-20.06.56:122][640]LogBlueprintUserMessages: [Asteroid_Small_C_1] Server: Asteroids: ^^
+[2018.03.31-20.06.56:122][640]LogBlueprintUserMessages: [Asteroid_Small_C_1] Server: 24
+[2018.03.31-20.06.56:123][640]LogBlueprintUserMessages: [Asteroid_Medium_C_0] Server: Asteroids: ^^
+[2018.03.31-20.06.56:123][640]LogBlueprintUserMessages: [Asteroid_Medium_C_0] Server: 23
+[2018.03.31-20.06.56:494][657]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.56:494][657]LogBlueprintUserMessages: [DebugState_C_0] Server: 270
+[2018.03.31-20.06.56:494][657]LogBlueprintUserMessages: [Asteroid_Medium_C_20] Server: Asteroids: ^^
+[2018.03.31-20.06.56:494][657]LogBlueprintUserMessages: [Asteroid_Medium_C_20] Server: 24
+[2018.03.31-20.06.56:494][657]LogBlueprintUserMessages: [Asteroid_Medium_C_21] Server: Asteroids: ^^
+[2018.03.31-20.06.56:494][657]LogBlueprintUserMessages: [Asteroid_Medium_C_21] Server: 25
+[2018.03.31-20.06.56:495][657]LogBlueprintUserMessages: [Asteroid_Large_C_5] Server: Asteroids: ^^
+[2018.03.31-20.06.56:495][657]LogBlueprintUserMessages: [Asteroid_Large_C_5] Server: 24
+[2018.03.31-20.06.59:602][800]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Points: 
+[2018.03.31-20.06.59:602][800]LogBlueprintUserMessages: [DebugState_C_0] Server: 320
+[2018.03.31-20.06.59:603][800]LogBlueprintUserMessages: [Asteroid_Small_C_2] Server: Asteroids: ^^
+[2018.03.31-20.06.59:603][800]LogBlueprintUserMessages: [Asteroid_Small_C_2] Server: 25
+[2018.03.31-20.06.59:603][800]LogBlueprintUserMessages: [Asteroid_Small_C_3] Server: Asteroids: ^^
+[2018.03.31-20.06.59:603][800]LogBlueprintUserMessages: [Asteroid_Small_C_3] Server: 26
+[2018.03.31-20.06.59:603][800]LogBlueprintUserMessages: [Asteroid_Medium_C_11] Server: Asteroids: ^^
+[2018.03.31-20.06.59:603][800]LogBlueprintUserMessages: [Asteroid_Medium_C_11] Server: 25
+[2018.03.31-20.07.04:159][997]LogBlueprintUserMessages: [Ship_C_6] Server: Ship Destoryed.
+[2018.03.31-20.07.04:159][997]LogBlueprintUserMessages: [DebugMode_C_0] Server: Ship Destroyed called.
+[2018.03.31-20.07.04:159][997]LogBlueprintUserMessages: [DebugState_C_0] Server: Take Player Life called.
+[2018.03.31-20.07.04:159][997]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Lives: 
+[2018.03.31-20.07.04:159][997]LogBlueprintUserMessages: [DebugState_C_0] Server: 2
+[2018.03.31-20.07.04:159][997]LogBlueprintUserMessages: [InGameHud_C_2] Server: Hello
+[2018.03.31-20.07.04:159][997]LogBlueprintUserMessages: [InGameHud_C_2] Server: true
+[2018.03.31-20.07.04:159][997]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Spawn Player
+[2018.03.31-20.07.04:159][997]LogBlueprintUserMessages: [DebugMode_C_0] Server: Spawn Player
+[2018.03.31-20.07.04:159][997]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Player 1 spawned.
+[2018.03.31-20.07.04:584][ 17]LogBlueprintUserMessages: [Ship_C_7] Server: Ship Destoryed.
+[2018.03.31-20.07.04:584][ 17]LogBlueprintUserMessages: [DebugMode_C_0] Server: Ship Destroyed called.
+[2018.03.31-20.07.04:584][ 17]LogBlueprintUserMessages: [DebugState_C_0] Server: Take Player Life called.
+[2018.03.31-20.07.04:584][ 17]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Lives: 
+[2018.03.31-20.07.04:584][ 17]LogBlueprintUserMessages: [DebugState_C_0] Server: 1
+[2018.03.31-20.07.04:584][ 17]LogBlueprintUserMessages: [InGameHud_C_2] Server: Hello
+[2018.03.31-20.07.04:584][ 17]LogBlueprintUserMessages: [InGameHud_C_2] Server: true
+[2018.03.31-20.07.04:584][ 17]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Spawn Player
+[2018.03.31-20.07.04:584][ 17]LogBlueprintUserMessages: [DebugMode_C_0] Server: Spawn Player
+[2018.03.31-20.07.04:585][ 17]LogSpawn: Warning: SpawnActor failed because of collision at the spawn location [X=0.000 Y=-250.000 Z=0.000] for [Ship_C]
+[2018.03.31-20.07.04:585][ 17]LogBlueprintUserMessages: [DebugMode_C_0] Server: Ship Destroyed called.
+[2018.03.31-20.07.04:585][ 17]LogBlueprintUserMessages: [DebugState_C_0] Server: Take Player Life called.
+[2018.03.31-20.07.04:585][ 17]LogBlueprintUserMessages: [DebugState_C_0] Server: Player 1 Lives: 
+[2018.03.31-20.07.04:585][ 17]LogBlueprintUserMessages: [DebugState_C_0] Server: 0
+[2018.03.31-20.07.04:585][ 17]LogBlueprintUserMessages: [InGameHud_C_2] Server: Hello
+[2018.03.31-20.07.04:585][ 17]LogBlueprintUserMessages: [InGameHud_C_2] Server: true
+[2018.03.31-20.07.04:585][ 17]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_8 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_8 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_8 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_8 is pending kill
+[2018.03.31-20.07.04:585][ 17]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_8 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_8 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_8 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_8 is pending kill
+[2018.03.31-20.07.04:585][ 17]PIE: Error: Blueprint Runtime Error: Attempted to assign to None from function: 'ExecuteUbergraph_DebugMode' from node: Set with Notify ShipColor in graph: EventGraph in object: DebugMode with description: Attempted to assign to None
+[2018.03.31-20.07.04:585][ 17]PIE: Error: Blueprint Runtime Error: Attempted to access Ship_C_8 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_8 is pending kill from function: 'ExecuteUbergraph_DebugMode' from node: Possess in graph: EventGraph in object: DebugMode with description: Attempted to access Ship_C_8 via property CallFunc_FinishSpawningActor_ReturnValue, but Ship_C_8 is pending kill
+[2018.03.31-20.07.04:585][ 17]LogBlueprintUserMessages: [PlayerC_Regular_C_0] Server: Player 1 spawned.
+[2018.03.31-20.07.04:607][ 18]LogBlueprintUserMessages: [DebugMode_C_0] Server: Game Over
+[2018.03.31-20.07.06:447][101]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/MainScreen.MainScreen:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainScreen.MainScreen:PersistentLevel.MainScreen' with GeneratedClass '/Game/Levels/MainScreen.MainScreen_C' with ClassGeneratedBy '/Game/Levels/MainScreen.MainScreen:PersistentLevel.MainScreen'
+[2018.03.31-20.07.06:447][101]LogBlueprintUserMessages: [DebugMode_C_0] Player: 
+[2018.03.31-20.07.06:447][101]LogBlueprintUserMessages: [DebugMode_C_0] PlayerC_Regular_C_0
+[2018.03.31-20.07.06:447][101]LogBlueprintUserMessages: [DebugMode_C_0] Logged out
+[2018.03.31-20.07.06:469][101]LogSlate: Window 'Asteroids_A_La_Mode Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
+[2018.03.31-20.07.06:496][101]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.03.31-20.07.06:496][101]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.03.31-20.07.06:497][101]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.03.31-20.07.06:497][101]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.03.31-20.07.06:498][101]LogBlueprintUserMessages: [DebugMode_C_0] Server: Player: 
+[2018.03.31-20.07.06:498][101]LogBlueprintUserMessages: [DebugMode_C_0] Server: PlayerC_Regular_C_0
+[2018.03.31-20.07.06:498][101]LogBlueprintUserMessages: [DebugMode_C_0] Server: Logged out
+[2018.03.31-20.07.06:498][101]LogOnline: Warning: OSS: No game present to leave for session (GameSession)
+[2018.03.31-20.07.06:515][101]LogSlate: Window 'Asteroids_A_La_Mode Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
+[2018.03.31-20.07.06:546][101]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.03.31-20.07.06:546][101]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.03.31-20.07.06:547][101]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.03.31-20.07.06:547][101]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.03.31-20.07.06:547][101]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2018.03.31-20.07.06:548][101]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/MainScreen.MainScreen:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainScreen.MainScreen:PersistentLevel.MainScreen' with GeneratedClass '/Game/Levels/MainScreen.MainScreen_C' with ClassGeneratedBy '/Game/Levels/MainScreen.MainScreen:PersistentLevel.MainScreen'
+[2018.03.31-20.07.06:564][101]LogExit: GameNetDriver None shut down
+[2018.03.31-20.07.06:605][102]LogPlayLevel: Display: Destroying online subsystem :Context_2
+[2018.03.31-20.07.06:605][102]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.03.31-20.07.06:605][102]LogPlayLevel: Display: Destroying online subsystem :Context_1
+[2018.03.31-20.07.06:605][102]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.03.31-20.09.55:756][449]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0009 seconds. Added 116 classes and 0 folders.
+[2018.03.31-20.09.56:596][449]LogSlate: Took 0.004577 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2018.03.31-20.09.56:812][450]LogSlate: Took 0.007592 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2018.03.31-20.16.39:027][433]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Levels/MainScreen' took 0.032
+[2018.03.31-20.16.39:030][433]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Modes/Debug/DebugMode] ([1] browsable assets)...
+[2018.03.31-20.16.39:030][433]OBJ SavePackage: Finished generating thumbnails for package [/Game/Modes/Debug/DebugMode]
+[2018.03.31-20.16.39:194][433]LogSavePackage: Save=142.90ms
+[2018.03.31-20.16.39:194][433]LogSavePackage: Moving '../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Saved/DebugMode_Auto1D5C0BD9C45B59A1F7DC6C8A09EE65A23.tmp' to '../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Saved/Autosaves/Game/Modes/Debug/DebugMode_Auto1.uasset'
+[2018.03.31-20.16.39:197][433]LogSavePackage: Display: Finished SavePackage ../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Saved/Autosaves/Game/Modes/Debug/DebugMode_Auto1.uasset
+[2018.03.31-20.16.39:197][433]LogFileHelpers: Auto-saving content packages took 0.169
+[2018.03.31-20.24.51:036][910]LogRenderer: Reallocating scene render targets to support 1156x500 Format 10 NumSamples 1 (Frame:10328).
+[2018.03.31-20.49.36:933][556]LogSlate: Window 'PlayerC_Regular' being destroyed
+[2018.04.01-00.10.46:270][556]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsDebug_Mode
+	Ship_C /Engine/Transient.World_7:PersistentLevel.Ship_C_1
+	Function /Game/Ship/Ship.Ship_C:ExecuteUbergraph_Ship:0770
+[2018.04.01-00.10.47:351][616]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2018.04.01-00.10.49:889][760]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2018.04.01-00.10.50:794][809]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2018.04.01-00.14.49:398][940]LogBlueprint: Warning: [Compiler PlayerState_1979] Get : 'Player2StatsVB' variable not found. Base class was probably changed. /Game/Modes/Arcade1979/PlayerState_1979.PlayerState_1979
+[2018.04.01-00.14.49:408][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  <Unnamed>  no longer exists on node  P2 Set Name and Score . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:409][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Target  no longer exists on node  P2 Set Name and Score . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:409][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Name  no longer exists on node  P2 Set Name and Score . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:409][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Score  no longer exists on node  P2 Set Name and Score . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:409][940]LogBlueprint: Error: [Compiler PlayerState_1979] Could not find a function named "P2_SetNameAndScore" in 'InGameHud_C'.
+Make sure 'InGameHud_C' has been compiled for  P2 Set Name and Score
+[2018.04.01-00.14.49:410][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  <Unnamed>  no longer exists on node  P1 Set Name and Score . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:410][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Target  no longer exists on node  P1 Set Name and Score . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:410][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Name  no longer exists on node  P1 Set Name and Score . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:410][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Score  no longer exists on node  P1 Set Name and Score . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:410][940]LogBlueprint: Error: [Compiler PlayerState_1979] Could not find a function named "P1_SetNameAndScore" in 'InGameHud_C'.
+Make sure 'InGameHud_C' has been compiled for  P1 Set Name and Score
+[2018.04.01-00.14.49:410][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  <Unnamed>  no longer exists on node  P2 Set Name and Score . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:410][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  <Unnamed>  no longer exists on node  P2 Set Name and Score . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:410][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Target  no longer exists on node  P2 Set Name and Score . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:410][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Name  no longer exists on node  P2 Set Name and Score . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:410][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Score  no longer exists on node  P2 Set Name and Score . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:410][940]LogBlueprint: Error: [Compiler PlayerState_1979] Could not find a function named "P2_SetNameAndScore" in 'InGameHud_C'.
+Make sure 'InGameHud_C' has been compiled for  P2 Set Name and Score
+[2018.04.01-00.14.49:410][940]LogBlueprint: Warning: [Compiler PlayerState_1979] Could not find a variable named "Player2StatsVB" in 'InGameHud_C'.
+Make sure 'InGameHud_C' has been compiled for  Get Player2StatsVB
+[2018.04.01-00.14.49:411][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  <Unnamed>  no longer exists on node  P1 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:411][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Target  no longer exists on node  P1 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:411][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Num Lives  no longer exists on node  P1 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:411][940]LogBlueprint: Error: [Compiler PlayerState_1979] Could not find a function named "P1_SetLife" in 'InGameHud_C'.
+Make sure 'InGameHud_C' has been compiled for  P1 Set Life
+[2018.04.01-00.14.49:411][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  <Unnamed>  no longer exists on node  P2 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:411][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Target  no longer exists on node  P2 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:411][940]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Num Lives  no longer exists on node  P2 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.14.49:411][940]LogBlueprint: Error: [Compiler PlayerState_1979] Could not find a function named "P2_SetLife" in 'InGameHud_C'.
+Make sure 'InGameHud_C' has been compiled for  P2 Set Life
+[2018.04.01-00.14.49:418][940]LogBlueprint: Warning: [Compiler PlayerController_1979] Could not find the function 'OnRep_PlyrLives' called from  On Rep Plyr Lives
+[2018.04.01-00.14.49:421][940]LogBlueprint: Warning: [Compiler Asteroids1979] Could not find the function 'OnRep_PlyrLives' called from  On Rep Plyr Lives
+[2018.04.01-00.14.49:426][940]LogBlueprint: Warning: [Compiler PlayerController_1979] [4971.05] Compile of PlayerController_1979 successful, but with 1 Warning(s) [in 30 ms] (/Game/Modes/Arcade1979/PlayerController_1979.PlayerController_1979)
+[2018.04.01-00.14.49:426][940]LogBlueprint: Warning: [Compiler PlayerState_1979] [4971.05] Compile of PlayerState_1979 failed. 24 Fatal Issue(s) 2 Warning(s) [in 30 ms] (/Game/Modes/Arcade1979/PlayerState_1979.PlayerState_1979)
+[2018.04.01-00.14.49:426][940]LogBlueprint: Warning: [Compiler Asteroids1979] [4971.05] Compile of Asteroids1979 successful, but with 1 Warning(s) [in 30 ms] (/Game/Modes/Arcade1979/Asteroids1979.Asteroids1979)
+[2018.04.01-00.14.49:854][940]LoadErrors: Error: /Game/Modes/Arcade1979/PlayerState_1979 : Failed import for ObjectProperty /Game/UserInterface/Dev_Test/InGameHud.InGameHud_C:Player2StatsVB Referenced by export Function /Game/Modes/Arcade1979/PlayerState_1979.PlayerState_1979_C:PlayerHudSetup
+[2018.04.01-00.14.51:728][ 12]BlueprintLog: New page: Compile Asteroids1979
+[2018.04.01-00.14.51:770][ 12]LogBlueprint: Warning: [Compiler Asteroids1979] Could not find the function 'OnRep_PlyrLives' called from  On Rep Plyr Lives
+[2018.04.01-00.14.51:976][ 12]LogBlueprint: Warning: [Compiler Asteroids1979] [4973.60] Compile of Asteroids1979 successful, but with 1 Warning(s) [in 248 ms] (/Game/Modes/Arcade1979/Asteroids1979.Asteroids1979)
+[2018.04.01-00.15.26:210][471]BlueprintLog: New page: Compile PlayerState_1979
+[2018.04.01-00.15.26:256][471]LogBlueprint: Warning: [Compiler PlayerState_1979] Could not find a variable named "Player2StatsVB" in 'InGameHud_C'.
+Make sure 'InGameHud_C' has been compiled for  Get Player2StatsVB
+[2018.04.01-00.15.26:257][471]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  <Unnamed>  no longer exists on node  P1 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.26:257][471]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Target  no longer exists on node  P1 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.26:257][471]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Num Lives  no longer exists on node  P1 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.26:257][471]LogBlueprint: Error: [Compiler PlayerState_1979] Could not find a function named "P1_SetLife" in 'InGameHud_C'.
+Make sure 'InGameHud_C' has been compiled for  P1 Set Life
+[2018.04.01-00.15.26:257][471]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  <Unnamed>  no longer exists on node  P2 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.26:257][471]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Target  no longer exists on node  P2 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.26:257][471]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Num Lives  no longer exists on node  P2 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.26:258][471]LogBlueprint: Error: [Compiler PlayerState_1979] Could not find a function named "P2_SetLife" in 'InGameHud_C'.
+Make sure 'InGameHud_C' has been compiled for  P2 Set Life
+[2018.04.01-00.15.26:259][471]LogBlueprint: Error: [Compiler PlayerState_1979] The property associated with  Player 2Stats VB  could not be found
+[2018.04.01-00.15.26:387][471]LogBlueprint: Warning: [Compiler PlayerState_1979] [5008.01] Compile of PlayerState_1979 failed. 9 Fatal Issue(s) 1 Warning(s) [in 177 ms] (/Game/Modes/Arcade1979/PlayerState_1979.PlayerState_1979)
+[2018.04.01-00.15.33:938][828]BlueprintLog: New page: Compile PlayerState_1979
+[2018.04.01-00.15.33:977][828]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  <Unnamed>  no longer exists on node  P1 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.33:977][828]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Target  no longer exists on node  P1 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.33:977][828]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Num Lives  no longer exists on node  P1 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.33:977][828]LogBlueprint: Error: [Compiler PlayerState_1979] Could not find a function named "P1_SetLife" in 'InGameHud_C'.
+Make sure 'InGameHud_C' has been compiled for  P1 Set Life
+[2018.04.01-00.15.33:977][828]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  <Unnamed>  no longer exists on node  P2 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.33:977][828]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Target  no longer exists on node  P2 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.33:977][828]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Num Lives  no longer exists on node  P2 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.33:977][828]LogBlueprint: Error: [Compiler PlayerState_1979] Could not find a function named "P2_SetLife" in 'InGameHud_C'.
+Make sure 'InGameHud_C' has been compiled for  P2 Set Life
+[2018.04.01-00.15.33:978][828]LogBlueprint: Error: [Compiler PlayerState_1979] This blueprint (self) is not a Widget, therefore ' Target ' must have a connection.
+[2018.04.01-00.15.34:103][828]LogBlueprint: Warning: [Compiler PlayerState_1979] [5015.73] Compile of PlayerState_1979 failed. 9 Fatal Issue(s) 0 Warning(s) [in 165 ms] (/Game/Modes/Arcade1979/PlayerState_1979.PlayerState_1979)
+[2018.04.01-00.15.37:650][  9]BlueprintLog: New page: Compile PlayerState_1979
+[2018.04.01-00.15.37:690][  9]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  <Unnamed>  no longer exists on node  P1 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.37:690][  9]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Target  no longer exists on node  P1 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.37:690][  9]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Num Lives  no longer exists on node  P1 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.37:690][  9]LogBlueprint: Error: [Compiler PlayerState_1979] Could not find a function named "P1_SetLife" in 'InGameHud_C'.
+Make sure 'InGameHud_C' has been compiled for  P1 Set Life
+[2018.04.01-00.15.37:690][  9]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  <Unnamed>  no longer exists on node  P2 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.37:690][  9]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Target  no longer exists on node  P2 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.37:690][  9]LogBlueprint: Error: [Compiler PlayerState_1979] In use pin  Num Lives  no longer exists on node  P2 Set Life . Please refresh node or break links to remove pin.
+[2018.04.01-00.15.37:690][  9]LogBlueprint: Error: [Compiler PlayerState_1979] Could not find a function named "P2_SetLife" in 'InGameHud_C'.
+Make sure 'InGameHud_C' has been compiled for  P2 Set Life
+[2018.04.01-00.15.37:816][  9]LogBlueprint: Warning: [Compiler PlayerState_1979] [5019.44] Compile of PlayerState_1979 failed. 8 Fatal Issue(s) 0 Warning(s) [in 165 ms] (/Game/Modes/Arcade1979/PlayerState_1979.PlayerState_1979)
+[2018.04.01-00.15.50:157][492]BlueprintLog: New page: Compile PlayerState_1979
+[2018.04.01-00.16.29:163][940]BlueprintLog: New page: Compile PlayerState_1979
+[2018.04.01-00.16.34:319][123]BlueprintLog: New page: Compile Asteroids1979
+[2018.04.01-00.16.36:539][195]LogSlate: Window 'Asteroids1979' being destroyed
+[2018.04.01-00.16.36:575][195]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2018.04.01-00.16.43:894][524]LogSlate: Window 'Save Content' being destroyed
+[2018.04.01-00.16.43:985][524]LogSavePackage: Save=38.51ms
+[2018.04.01-00.16.43:985][524]LogSavePackage: Moving '../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Saved/PlayerState_1979004532B346DE7C3469573FA902F00FE2.tmp' to '../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Content/Modes/Arcade1979/PlayerState_1979.uasset'
+[2018.04.01-00.16.43:990][524]LogSavePackage: Display: Finished SavePackage ../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Content/Modes/Arcade1979/PlayerState_1979.uasset
+[2018.04.01-00.16.44:133][524]LogSavePackage: Save=124.39ms
+[2018.04.01-00.16.44:133][524]LogSavePackage: Moving '../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Saved/DebugMode6F6506A04D6B350E6E2BF38595E69A54.tmp' to '../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Content/Modes/Debug/DebugMode.uasset'
+[2018.04.01-00.16.44:137][524]LogSavePackage: Display: Finished SavePackage ../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Content/Modes/Debug/DebugMode.uasset
+[2018.04.01-00.16.44:247][524]LogSlate: Window 'Asteroids_A_La_Mode - Unreal Editor' being destroyed
+[2018.04.01-00.16.44:441][525]Cmd: QUIT_EDITOR
+[2018.04.01-00.16.44:993][525]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2018.04.01-00.16.45:007][525]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2018.04.01-00.16.45:007][525]LogExit: Preparing to exit.
+[2018.04.01-00.16.45:558][525]LogDirectoryWatcher: A directory notification for 'C:/Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Content/' was aborted.
+[2018.04.01-00.16.45:595][525]LogExit: Editor shut down
+[2018.04.01-00.16.45:598][525]LogExit: Transaction tracking system shut down
+[2018.04.01-00.16.45:711][525]LogDirectoryWatcher: A directory notification for '../../../Engine/Content/' was aborted.
+[2018.04.01-00.16.45:712][525]LogDirectoryWatcher: A directory notification for '../../../../../../Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Content/' was aborted.
+[2018.04.01-00.16.45:712][525]LogDirectoryWatcher: A directory notification for '../../Plugins/2D/Paper2D/Content/' was aborted.
+[2018.04.01-00.16.45:712][525]LogDirectoryWatcher: A directory notification for '../../Plugins/Enterprise/DatasmithContent/Content/' was aborted.
+[2018.04.01-00.16.45:712][525]LogDirectoryWatcher: A directory notification for '../../Plugins/Media/MediaCompositing/Content/' was aborted.
+[2018.04.01-00.16.45:712][525]LogDirectoryWatcher: A directory notification for '../../Plugins/Runtime/AppleARKit/Content/' was aborted.
+[2018.04.01-00.16.45:712][525]LogDirectoryWatcher: A directory notification for '../../Plugins/Runtime/Oculus/OculusVR/Content/' was aborted.
+[2018.04.01-00.16.45:712][525]LogDirectoryWatcher: A directory notification for '../../Plugins/Runtime/Steam/SteamVR/Content/' was aborted.
+[2018.04.01-00.16.45:824][525]LogExit: Object subsystem successfully closed.
+[2018.04.01-00.16.45:848][525]LogShaderCompilers: Display: Shaders left to compile 0
+[2018.04.01-00.16.45:851][525]LogD3D11RHI: Shutdown
+[2018.04.01-00.16.45:851][525]LogD3D11RHI: CleanupD3DDevice
+[2018.04.01-00.16.45:853][525]LogD3D11RHI: ~FD3D11DynamicRHI
+[2018.04.01-00.16.45:867][525]LogModuleManager: Shutting down and abandoning module SequencerWidgets (586)
+[2018.04.01-00.16.45:867][525]LogModuleManager: Shutting down and abandoning module BlueprintGraph (584)
+[2018.04.01-00.16.45:867][525]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (580)
+[2018.04.01-00.16.45:867][525]LogModuleManager: Shutting down and abandoning module Voice (578)
+[2018.04.01-00.16.45:867][525]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (576)
+[2018.04.01-00.16.45:867][525]LogModuleManager: Shutting down and abandoning module DesktopPlatform (574)
+[2018.04.01-00.16.45:867][525]LogModuleManager: Shutting down and abandoning module AddContentDialog (572)
+[2018.04.01-00.16.45:867][525]LogDirectoryWatcher: A directory notification for 'C:/Program Files/Epic Games/UE_4.19/FeaturePacks/' was aborted.
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module WidgetCarousel (571)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module EditorWidgets (568)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module CollectionManager (566)
+[2018.04.01-00.16.45:868][525]LogDirectoryWatcher: A directory notification for 'C:/Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Content/Collections/' was aborted.
+[2018.04.01-00.16.45:868][525]LogDirectoryWatcher: A directory notification for 'C:/Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Content/Developers/Cosmotron/Collections/' was aborted.
+[2018.04.01-00.16.45:868][525]LogDirectoryWatcher: A directory notification for 'C:/Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Saved/Collections/' was aborted.
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module SceneOutliner (564)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module StatsViewer (562)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module FoliageEdit (560)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module LandscapeEditor (558)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module MeshPaintMode (556)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (554)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module ActorPickerMode (552)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module GeometryMode (550)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module TextureAlignMode (548)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module BspMode (546)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (544)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module HardwareSurvey (542)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (540)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module AutomationWorker (538)
+[2018.04.01-00.16.45:868][525]LogModuleManager: Shutting down and abandoning module AudioCaptureEditor (536)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module SequenceRecorder (535)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (532)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (530)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module PlacementMode (529)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module MaterialEditor (528)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (524)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (522)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (520)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (518)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (516)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module ImgMediaEditor (514)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (512)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (510)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (508)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (506)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module CharacterAI (504)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module SmartSnapping (502)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module SessionServices (500)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module ViewportSnapping (498)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module ViewportInteraction (496)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module ClothPainter (494)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module SkeletalMeshEditor (493)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module LogVisualizer (490)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module IntroTutorials (488)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (487)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (484)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (482)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (480)
+[2018.04.01-00.16.45:869][525]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (479)
+[2018.04.01-00.16.46:054][525]LogModuleManager: Shutting down and abandoning module WindowsPlatformEditor (476)
+[2018.04.01-00.16.46:054][525]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (474)
+[2018.04.01-00.16.46:054][525]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (472)
+[2018.04.01-00.16.46:054][525]LogModuleManager: Shutting down and abandoning module InputBindingEditor (470)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module MergeActors (468)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (466)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module LocalizationService (465)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module HardwareTargeting (462)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (460)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module UndoHistory (458)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module XmlParser (456)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module Blutility (454)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (452)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (451)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (448)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module SettingsEditor (446)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module ProjectLauncher (444)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module SessionFrontend (442)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module ProfilerClient (440)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module DeviceManager (438)
+[2018.04.01-00.16.46:055][525]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (437)
+[2018.04.01-00.16.46:117][525]LogModuleManager: Shutting down and abandoning module AutomationController (434)
+[2018.04.01-00.16.46:117][525]LogModuleManager: Shutting down and abandoning module AutomationWindow (432)
+[2018.04.01-00.16.46:117][525]LogModuleManager: Shutting down and abandoning module Layers (430)
+[2018.04.01-00.16.46:117][525]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (428)
+[2018.04.01-00.16.46:117][525]LogModuleManager: Shutting down and abandoning module DetailCustomizations (426)
+[2018.04.01-00.16.46:117][525]LogModuleManager: Shutting down and abandoning module PackagesDialog (424)
+[2018.04.01-00.16.46:117][525]LogModuleManager: Shutting down and abandoning module Persona (422)
+[2018.04.01-00.16.46:117][525]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (421)
+[2018.04.01-00.16.46:117][525]LogModuleManager: Shutting down and abandoning module AnimGraph (419)
+[2018.04.01-00.16.46:117][525]LogModuleManager: Shutting down and abandoning module Kismet (416)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module GraphEditor (414)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module ClassViewer (412)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module Toolbox (410)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module ModuleUI (408)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module MovieSceneTools (406)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module OutputLog (404)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module GammaUI (402)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module Documentation (400)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (398)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module MovieScene (396)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (394)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module LauncherPlatform (392)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module AnalyticsET (390)
+[2018.04.01-00.16.46:125][525]LogModuleManager: Shutting down and abandoning module PortalServices (388)
+[2018.04.01-00.16.46:126][525]LogModuleManager: Shutting down and abandoning module PortalRpc (386)
+[2018.04.01-00.16.46:126][525]LogModuleManager: Shutting down and abandoning module MessagingRpc (384)
+[2018.04.01-00.16.46:126][525]LogModuleManager: Shutting down and abandoning module AIModule (382)
+[2018.04.01-00.16.46:126][525]LogModuleManager: Shutting down and abandoning module GameplayDebugger (381)
+[2018.04.01-00.16.46:126][525]LogModuleManager: Shutting down and abandoning module AITestSuite (379)
+[2018.04.01-00.16.46:126][525]LogModuleManager: Shutting down and abandoning module ProfilerService (376)
+[2018.04.01-00.16.46:295][525]LogModuleManager: Shutting down and abandoning module TaskGraph (374)
+[2018.04.01-00.16.46:295][525]LogModuleManager: Shutting down and abandoning module SteamVRController (372)
+[2018.04.01-00.16.46:295][525]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (370)
+[2018.04.01-00.16.46:295][525]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (368)
+[2018.04.01-00.16.46:295][525]LogModuleManager: Shutting down and abandoning module OculusInput (366)
+[2018.04.01-00.16.46:296][525]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (364)
+[2018.04.01-00.16.46:296][525]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (362)
+[2018.04.01-00.16.46:296][525]LogModuleManager: Shutting down and abandoning module CableComponent (360)
+[2018.04.01-00.16.46:296][525]LogModuleManager: Shutting down and abandoning module AudioCapture (358)
+[2018.04.01-00.16.46:296][525]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (356)
+[2018.04.01-00.16.46:296][525]LogModuleManager: Shutting down and abandoning module AndroidPermission (354)
+[2018.04.01-00.16.46:296][525]LogModuleManager: Shutting down and abandoning module NUTUnrealEngine4 (352)
+[2018.04.01-00.16.46:296][525]LogModuleManager: Shutting down and abandoning module NetcodeUnitTest (350)
+[2018.04.01-00.16.46:296][525]LogModuleManager: Shutting down and abandoning module MediaCompositingEditor (348)
+[2018.04.01-00.16.46:296][525]LogModuleManager: Shutting down and abandoning module MediaCompositing (346)
+[2018.04.01-00.16.46:296][525]LogModuleManager: Shutting down and abandoning module LinearTimecode (344)
+[2018.04.01-00.16.46:296][525]LogModuleManager: Shutting down and abandoning module ImgMedia (342)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module HTML5Networking (340)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module AlembicImporter (338)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module AlembicLibrary (337)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module GeometryCache (336)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (335)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module DatasmithContent (330)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (328)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module PluginBrowser (326)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (324)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module CryptoKeysOpenSSL (322)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module CryptoKeys (320)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (318)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module VisualStudioCodeSourceCodeAccess (316)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module UObjectPlugin (314)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (312)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (310)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module GitSourceControl (308)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module SourceControl (307)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module CLionSourceCodeAccess (304)
+[2018.04.01-00.16.46:299][525]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (302)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (300)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (298)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module Paper2DEditor (296)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module MeshPaint (295)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module Asteroids_A_La_Mode (292)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (290)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module PhysXVehiclesEditor (288)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module PhysXVehicles (286)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module OculusEditor (284)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (282)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module ImmediatePhysicsEditor (280)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module ImmediatePhysics (278)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module ActorSequence (276)
+[2018.04.01-00.16.46:300][525]LogModuleManager: Shutting down and abandoning module UdpMessaging (274)
+[2018.04.01-00.16.46:402][525]LogModuleManager: Shutting down and abandoning module TcpMessaging (272)
+[2018.04.01-00.16.46:502][525]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (270)
+[2018.04.01-00.16.46:502][525]LogModuleManager: Shutting down and abandoning module FacialAnimationEditor (268)
+[2018.04.01-00.16.46:502][525]LogModuleManager: Shutting down and abandoning module FacialAnimation (266)
+[2018.04.01-00.16.46:502][525]LogModuleManager: Shutting down and abandoning module DataValidation (264)
+[2018.04.01-00.16.46:502][525]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (262)
+[2018.04.01-00.16.46:502][525]LogModuleManager: Shutting down and abandoning module LevelEditor (261)
+[2018.04.01-00.16.46:503][525]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (260)
+[2018.04.01-00.16.46:503][525]LogModuleManager: Shutting down and abandoning module CommonMenuExtensions (258)
+[2018.04.01-00.16.46:503][525]LogModuleManager: Shutting down and abandoning module MainFrame (256)
+[2018.04.01-00.16.46:503][525]LogModuleManager: Shutting down and abandoning module HotReload (255)
+[2018.04.01-00.16.46:503][525]LogDirectoryWatcher: A directory notification for 'C:/Users/Cosmotron/Documents/GitHub/Asteroids_a_la_Mode/Asteroids_A_La_Mode/Binaries/Win64' was aborted.
+[2018.04.01-00.16.46:503][525]LogModuleManager: Shutting down and abandoning module ContentBrowser (251)
+[2018.04.01-00.16.46:504][525]LogModuleManager: Shutting down and abandoning module TreeMap (249)
+[2018.04.01-00.16.46:504][525]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (246)
+[2018.04.01-00.16.46:504][525]LogModuleManager: Shutting down and abandoning module LiveLinkEditor (244)
+[2018.04.01-00.16.46:504][525]LogModuleManager: Shutting down and abandoning module LiveLink (242)
+[2018.04.01-00.16.46:815][525]LogModuleManager: Shutting down and abandoning module Paper2D (240)
+[2018.04.01-00.16.46:815][525]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (238)
+[2018.04.01-00.16.46:815][525]LogModuleManager: Shutting down and abandoning module WmfMedia (236)
+[2018.04.01-00.16.46:817][525]LogModuleManager: Shutting down and abandoning module PacketHandler (234)
+[2018.04.01-00.16.46:817][525]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (232)
+[2018.04.01-00.16.46:817][525]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntime (230)
+[2018.04.01-00.16.46:817][525]LogModuleManager: Shutting down and abandoning module MediaAssets (228)
+[2018.04.01-00.16.46:817][525]LogModuleManager: Shutting down and abandoning module Media (227)
+[2018.04.01-00.16.46:823][525]LogModuleManager: Shutting down and abandoning module Overlay (224)
+[2018.04.01-00.16.46:823][525]LogModuleManager: Shutting down and abandoning module OverlayEditor (223)
+[2018.04.01-00.16.46:823][525]LogModuleManager: Shutting down and abandoning module VREditor (220)
+[2018.04.01-00.16.46:823][525]LogModuleManager: Shutting down and abandoning module StringTableEditor (218)
+[2018.04.01-00.16.46:823][525]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (216)
+[2018.04.01-00.16.46:824][525]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (214)
+[2018.04.01-00.16.46:824][525]LogModuleManager: Shutting down and abandoning module FunctionalTesting (212)
+[2018.04.01-00.16.46:824][525]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (210)
+[2018.04.01-00.16.46:824][525]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (209)
+[2018.04.01-00.16.46:824][525]LogModuleManager: Shutting down and abandoning module UMG (206)
+[2018.04.01-00.16.46:824][525]LogModuleManager: Shutting down and abandoning module UMGEditor (205)
+[2018.04.01-00.16.46:824][525]LogModuleManager: Shutting down and abandoning module Sequencer (204)
+[2018.04.01-00.16.46:824][525]LogModuleManager: Shutting down and abandoning module MessageLog (201)
+[2018.04.01-00.16.46:824][525]LogModuleManager: Shutting down and abandoning module SlateReflector (196)
+[2018.04.01-00.16.46:824][525]LogModuleManager: Shutting down and abandoning module Slate (194)
+[2018.04.01-00.16.46:824][525]LogModuleManager: Shutting down and abandoning module EditorStyle (192)
+[2018.04.01-00.16.46:825][525]LogModuleManager: Shutting down and abandoning module MRMesh (190)
+[2018.04.01-00.16.46:825][525]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (188)
+[2018.04.01-00.16.46:825][525]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (186)
+[2018.04.01-00.16.46:825][525]LogModuleManager: Shutting down and abandoning module XAudio2 (184)
+[2018.04.01-00.16.46:825][525]LogModuleManager: Shutting down and abandoning module Networking (182)
+[2018.04.01-00.16.46:825][525]LogModuleManager: Shutting down and abandoning module Core (180)
+[2018.04.01-00.16.46:825][525]LogModuleManager: Shutting down and abandoning module LevelSequence (178)
+[2018.04.01-00.16.46:825][525]LogModuleManager: Shutting down and abandoning module KismetCompiler (176)
+[2018.04.01-00.16.46:826][525]LogModuleManager: Shutting down and abandoning module MeshUtilities (174)
+[2018.04.01-00.16.46:826][525]LogModuleManager: Shutting down and abandoning module MeshMergeUtilities (173)
+[2018.04.01-00.16.46:826][525]LogModuleManager: Shutting down and abandoning module MeshReductionInterface (172)
+[2018.04.01-00.16.46:826][525]LogModuleManager: Shutting down and abandoning module SimplygonSwarm (171)
+[2018.04.01-00.16.46:826][525]LogModuleManager: Shutting down and abandoning module SimplygonMeshReduction (169)
+[2018.04.01-00.16.46:826][525]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (167)
+[2018.04.01-00.16.46:826][525]LogModuleManager: Shutting down and abandoning module MaterialBaking (163)
+[2018.04.01-00.16.46:826][525]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (159)
+[2018.04.01-00.16.46:826][525]LogModuleManager: Shutting down and abandoning module DerivedDataCache (156)
+[2018.04.01-00.16.46:848][525]LogDerivedDataCache: Shutdown
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module XGEController (154)
+[2018.04.01-00.16.46:848][525]LogXGEController: Cleaning working directory: C:/Users/Cosmotron/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module TargetPlatform (152)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (151)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (149)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (147)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (145)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (143)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (141)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (139)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (137)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (135)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (133)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module ImageWrapper (132)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (129)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (127)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (125)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (123)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (121)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (119)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (117)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (115)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (113)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module Messaging (111)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (109)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (107)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (105)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module Android_PVRTCTargetPlatform (103)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module Android_MultiTargetPlatform (101)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module Android_ETC2TargetPlatform (99)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module Android_ETC1TargetPlatform (97)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module Android_ETC1aTargetPlatform (95)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module Android_DXTTargetPlatform (93)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module Android_ATCTargetPlatform (91)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module Android_ASTCTargetPlatform (89)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (87)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (85)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (83)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (81)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (79)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module MacServerTargetPlatform (77)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module MacNoEditorTargetPlatform (75)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module MacClientTargetPlatform (73)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (71)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module InputCore (68)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module Settings (66)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module PhysXCooking (64)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module SteamVR (62)
+[2018.04.01-00.16.46:848][525]LogModuleManager: Shutting down and abandoning module OculusHMD (60)
+[2018.04.01-00.16.46:850][525]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (58)
+[2018.04.01-00.16.46:850][525]LogModuleManager: Shutting down and abandoning module AppleARKit (56)
+[2018.04.01-00.16.46:850][525]LogModuleManager: Shutting down and abandoning module AugmentedReality (55)
+[2018.04.01-00.16.46:850][525]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (52)
+[2018.04.01-00.16.46:850][525]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (48)
+[2018.04.01-00.16.46:850][525]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.04.01-00.16.46:850][525]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.04.01-00.16.46:850][525]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.04.01-00.16.46:850][525]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.04.01-00.16.46:850][525]LogModuleManager: Shutting down and abandoning module XMPP (43)
+[2018.04.01-00.16.46:850][525]LogModuleManager: Shutting down and abandoning module HTTP (41)
+[2018.04.01-00.16.46:850][525]LogHttp: Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
+[2018.04.01-00.16.46:850][525]LogHttp: Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BD2606ECD-4ACF-3CCA-6C3E-29A842BC7319%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.19.0-3944462%2B%2B%2BUE4%2BRelease-4.19&UserID=a198cc664e80f62bffec53ae281df260%7Caede66b47dc74c7dbc239fe2c29745e4%7Cd3a968a9-d84c-4791-baa5-56d6482b1928&AppEnvironment=datacollector-binary&UploadType=eteventstream] status=Processing
+[2018.04.01-00.16.46:870][525]LogModuleManager: Shutting down and abandoning module SSL (40)
+[2018.04.01-00.16.46:873][525]LogModuleManager: Shutting down and abandoning module AnimationModifiers (36)
+[2018.04.01-00.16.46:873][525]LogModuleManager: Shutting down and abandoning module PropertyEditor (35)
+[2018.04.01-00.16.46:873][525]LogModuleManager: Shutting down and abandoning module AudioEditor (32)
+[2018.04.01-00.16.46:873][525]LogModuleManager: Shutting down and abandoning module TextureCompressor (30)
+[2018.04.01-00.16.46:873][525]LogModuleManager: Shutting down and abandoning module ShaderCore (28)
+[2018.04.01-00.16.46:873][525]LogModuleManager: Shutting down and abandoning module Landscape (26)
+[2018.04.01-00.16.46:873][525]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (24)
+[2018.04.01-00.16.46:876][525]LogModuleManager: Shutting down and abandoning module OpenGLDrv (22)
+[2018.04.01-00.16.46:876][525]LogModuleManager: Shutting down and abandoning module D3D11RHI (20)
+[2018.04.01-00.16.46:876][525]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (18)
+[2018.04.01-00.16.46:876][525]LogModuleManager: Shutting down and abandoning module Renderer (16)
+[2018.04.01-00.16.46:876][525]LogModuleManager: Shutting down and abandoning module Engine (14)
+[2018.04.01-00.16.46:876][525]LogModuleManager: Shutting down and abandoning module CoreUObject (12)
+[2018.04.01-00.16.46:876][525]LogModuleManager: Shutting down and abandoning module NetworkFile (10)
+[2018.04.01-00.16.46:876][525]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (8)
+[2018.04.01-00.16.46:876][525]LogModuleManager: Shutting down and abandoning module StreamingFile (6)
+[2018.04.01-00.16.46:876][525]LogModuleManager: Shutting down and abandoning module SandboxFile (4)
+[2018.04.01-00.16.46:876][525]LogModuleManager: Shutting down and abandoning module PakFile (2)
+[2018.04.01-00.16.46:883][525]LogExit: Exiting.
+[2018.04.01-00.16.46:900][525]Log file closed, 03/31/18 20:16:46
