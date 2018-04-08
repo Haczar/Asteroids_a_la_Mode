@@ -1,0 +1,460 @@
+{
+	"manifestChunkId": -1,
+	"pluginName": "NativizedAssets",
+	"outputDir": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game",
+	"moduleDependencies": [
+		"Package'/Script/CoreUObject'",
+		"Package'/Script/Engine'",
+		"Package'/Script/UMG'",
+		"Package'/Script/InputCore'",
+		"Package'/Script/OnlineSubsystemUtils'",
+		"Package'/Script/SlateCore'",
+		"Package'/Script/ClothingSystemRuntimeInterface'",
+		"Package'/Script/AIModule'",
+		"Package'/Script/GameplayTasks'",
+		"Package'/Script/MovieScene'",
+		"Package'/Script/Slate'"
+	],
+	"convertedAssets":
+	{
+		"/Game/Modes/Arcade1979/1979Rounds.1979Rounds":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Modes/Arcade1979/1979Rounds.1979Rounds",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/1979Rounds__pf2955639682.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/1979Rounds__pf2955639682.cpp"
+		},
+		"/Game/Levels/Assets/Colliders/BorderSide.BorderSide":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Levels/Assets/Colliders/BorderSide.BorderSide",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/BorderSide__pf2174024837.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/BorderSide__pf2174024837.cpp"
+		},
+		"/Game/Modes/Debug/DStates.DStates":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Modes/Debug/DStates.DStates",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/DStates__pf4162722864.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/DStates__pf4162722864.cpp"
+		},
+		"/Game/Player/PState.PState":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Player/PState.PState",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/PState__pf4061722237.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/PState__pf4061722237.cpp"
+		},
+		"/Game/UserInterface/MainScreen/ECoOpSel.ECoOpSel":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/UserInterface/MainScreen/ECoOpSel.ECoOpSel",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/ECoOpSel__pf1232574660.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/ECoOpSel__pf1232574660.cpp"
+		},
+		"/Game/UserInterface/MainScreen/EMenSel.EMenSel":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/UserInterface/MainScreen/EMenSel.EMenSel",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/EMenSel__pf1232574660.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/EMenSel__pf1232574660.cpp"
+		},
+		"/Game/UserInterface/MainScreen/EDisplayRes.EDisplayRes":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/UserInterface/MainScreen/EDisplayRes.EDisplayRes",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/EDisplayRes__pf1232574660.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/EDisplayRes__pf1232574660.cpp"
+		},
+		"/Game/UserInterface/MainScreen/EOptionSel.EOptionSel":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/UserInterface/MainScreen/EOptionSel.EOptionSel",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/EOptionSel__pf1232574660.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/EOptionSel__pf1232574660.cpp"
+		},
+		"/Game/UserInterface/MainScreen/ERenderValDirection.ERenderValDirection":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/UserInterface/MainScreen/ERenderValDirection.ERenderValDirection",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/ERenderValDirection__pf1232574660.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/ERenderValDirection__pf1232574660.cpp"
+		},
+		"/Game/UserInterface/MainScreen/EServerSel.EServerSel":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/UserInterface/MainScreen/EServerSel.EServerSel",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/EServerSel__pf1232574660.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/EServerSel__pf1232574660.cpp"
+		},
+		"/Game/Ship/SRotate.SRotate":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Ship/SRotate.SRotate",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/SRotate__pf3227778944.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/SRotate__pf3227778944.cpp"
+		},
+		"/Game/UserInterface/MainScreen/EServerRow.EServerRow":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/UserInterface/MainScreen/EServerRow.EServerRow",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/EServerRow__pf1232574660.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/EServerRow__pf1232574660.cpp"
+		},
+		"/Game/Modes/Options/SuperAsteroids.SuperAsteroids":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Modes/Options/SuperAsteroids.SuperAsteroids",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/SuperAsteroids__pf179872773.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/SuperAsteroids__pf179872773.cpp"
+		},
+		"/Game/Modes/Options/Presets.Presets":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Modes/Options/Presets.Presets",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Presets__pf179872773.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Presets__pf179872773.cpp"
+		},
+		"/Game/Modes/Options/Graphics.Graphics":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Modes/Options/Graphics.Graphics",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Graphics__pf179872773.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Graphics__pf179872773.cpp"
+		},
+		"/Game/Modes/Options/Display.Display":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Modes/Options/Display.Display",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Display__pf179872773.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Display__pf179872773.cpp"
+		},
+		"/Game/Modes/Options/Difficulty.Difficulty":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Modes/Options/Difficulty.Difficulty",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Difficulty__pf179872773.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Difficulty__pf179872773.cpp"
+		},
+		"/Game/Modes/Options/Controls.Controls":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Modes/Options/Controls.Controls",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Controls__pf179872773.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Controls__pf179872773.cpp"
+		},
+		"/Game/Modes/Options/Camera.Camera":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Modes/Options/Camera.Camera",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Camera__pf179872773.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Camera__pf179872773.cpp"
+		},
+		"/Game/Modes/Options/Audio.Audio":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Modes/Options/Audio.Audio",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Audio__pf179872773.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Audio__pf179872773.cpp"
+		},
+		"/Game/Modes/Options/Arcade_Deluxe_1981.Arcade_Deluxe_1981":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Modes/Options/Arcade_Deluxe_1981.Arcade_Deluxe_1981",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Arcade_Deluxe_1981__pf179872773.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Arcade_Deluxe_1981__pf179872773.cpp"
+		},
+		"/Game/Modes/Options/Arcade_1979.Arcade_1979":
+		{
+			"assetType": "Class'/Script/Engine.UserDefinedEnum'",
+			"targetObjPath": "/Game/Modes/Options/Arcade_1979.Arcade_1979",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Arcade_1979__pf179872773.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Arcade_1979__pf179872773.cpp"
+		},
+		"/Game/Modes/Debug/DebugMode.DebugMode_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Modes/Debug/DebugMode.DebugMode_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/DebugMode__pf4162722864.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/DebugMode__pf4162722864.cpp"
+		},
+		"/Game/Enemy/Alien.Alien_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Enemy/Alien.Alien_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Alien__pf655108736.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Alien__pf655108736.cpp"
+		},
+		"/Game/Enemy/AlienProjectile.AlienProjectile_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Enemy/AlienProjectile.AlienProjectile_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/AlienProjectile__pf655108736.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/AlienProjectile__pf655108736.cpp"
+		},
+		"/Game/Levels/Assets/Colliders/Spawn_Volume.Spawn_Volume_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Levels/Assets/Colliders/Spawn_Volume.Spawn_Volume_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Spawn_Volume__pf2174024837.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Spawn_Volume__pf2174024837.cpp"
+		},
+		"/Game/Obstacles/Asteroid_Large.Asteroid_Large_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Obstacles/Asteroid_Large.Asteroid_Large_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Asteroid_Large__pf2772898577.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Asteroid_Large__pf2772898577.cpp"
+		},
+		"/Game/Obstacles/Asteroid.Asteroid_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Obstacles/Asteroid.Asteroid_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Asteroid__pf2772898577.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Asteroid__pf2772898577.cpp"
+		},
+		"/Game/Ship/BP_Projectile.BP_Projectile_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Ship/BP_Projectile.BP_Projectile_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/BP_Projectile__pf3227778944.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/BP_Projectile__pf3227778944.cpp"
+		},
+		"/Game/Modes/Debug/DebugState.DebugState_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Modes/Debug/DebugState.DebugState_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/DebugState__pf4162722864.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/DebugState__pf4162722864.cpp"
+		},
+		"/Game/Player/PlayerC_Regular.PlayerC_Regular_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Player/PlayerC_Regular.PlayerC_Regular_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/PlayerC_Regular__pf4061722237.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/PlayerC_Regular__pf4061722237.cpp"
+		},
+		"/Game/Modes/Debug/DebugInstance.DebugInstance_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Modes/Debug/DebugInstance.DebugInstance_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/DebugInstance__pf4162722864.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/DebugInstance__pf4162722864.cpp"
+		},
+		"/Game/Player/SaveObj.SaveObj_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Player/SaveObj.SaveObj_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/SaveObj__pf4061722237.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/SaveObj__pf4061722237.cpp"
+		},
+		"/Game/Player/PlyrState.PlyrState_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Player/PlyrState.PlyrState_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/PlyrState__pf4061722237.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/PlyrState__pf4061722237.cpp"
+		},
+		"/Game/UserInterface/Dev_Test/InGameHud.InGameHud_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/Dev_Test/InGameHud.InGameHud_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/InGameHud__pf515974370.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/InGameHud__pf515974370.cpp"
+		},
+		"/Game/UserInterface/GameStart.GameStart_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/GameStart.GameStart_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/GameStart__pf3166771619.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/GameStart__pf3166771619.cpp"
+		},
+		"/Game/UserInterface/LeaderBoard.LeaderBoard_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/LeaderBoard.LeaderBoard_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/LeaderBoard__pf3166771619.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/LeaderBoard__pf3166771619.cpp"
+		},
+		"/Game/UserInterface/Dev_Test/LevelStart_Widget.LevelStart_Widget_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/Dev_Test/LevelStart_Widget.LevelStart_Widget_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/LevelStart_Widget__pf515974370.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/LevelStart_Widget__pf515974370.cpp"
+		},
+		"/Game/Player/MenuPawn.MenuPawn_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Player/MenuPawn.MenuPawn_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/MenuPawn__pf4061722237.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/MenuPawn__pf4061722237.cpp"
+		},
+		"/Game/UserInterface/MainScreen/Coop.Coop_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/MainScreen/Coop.Coop_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Coop__pf1232574660.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Coop__pf1232574660.cpp"
+		},
+		"/Game/UserInterface/MainScreen/MainScreen.MainScreen_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/MainScreen/MainScreen.MainScreen_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/MainScreen__pf1232574660.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/MainScreen__pf1232574660.cpp"
+		},
+		"/Game/UserInterface/MainScreen/Options.Options_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/MainScreen/Options.Options_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Options__pf1232574660.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Options__pf1232574660.cpp"
+		},
+		"/Game/UserInterface/MenuBase.MenuBase_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/MenuBase.MenuBase_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/MenuBase__pf3166771619.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/MenuBase__pf3166771619.cpp"
+		},
+		"/Game/UserInterface/MainScreen/ServerList.ServerList_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/MainScreen/ServerList.ServerList_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/ServerList__pf1232574660.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/ServerList__pf1232574660.cpp"
+		},
+		"/Game/UserInterface/MainScreen/ServerRow.ServerRow_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/MainScreen/ServerRow.ServerRow_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/ServerRow__pf1232574660.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/ServerRow__pf1232574660.cpp"
+		},
+		"/Game/Ship/Ship.Ship_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Ship/Ship.Ship_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Ship__pf3227778944.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Ship__pf3227778944.cpp"
+		},
+		"/Game/Obstacles/Asteroid_Medium.Asteroid_Medium_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Obstacles/Asteroid_Medium.Asteroid_Medium_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Asteroid_Medium__pf2772898577.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Asteroid_Medium__pf2772898577.cpp"
+		},
+		"/Game/UserInterface/GameOver.GameOver_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/GameOver.GameOver_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/GameOver__pf3166771619.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/GameOver__pf3166771619.cpp"
+		},
+		"/Game/UserInterface/MainScreen/SubmitScore.SubmitScore_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/MainScreen/SubmitScore.SubmitScore_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/SubmitScore__pf1232574660.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/SubmitScore__pf1232574660.cpp"
+		},
+		"/Game/UserInterface/ResultsDisplay.ResultsDisplay_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/ResultsDisplay.ResultsDisplay_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/ResultsDisplay__pf3166771619.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/ResultsDisplay__pf3166771619.cpp"
+		},
+		"/Game/Levels/Assets/Colliders/WarpWall.WarpWall_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Levels/Assets/Colliders/WarpWall.WarpWall_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/WarpWall__pf2174024837.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/WarpWall__pf2174024837.cpp"
+		},
+		"/Game/Levels/Assets/Skybox/SpaceBox.SpaceBox_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Levels/Assets/Skybox/SpaceBox.SpaceBox_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/SpaceBox__pf3757776177.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/SpaceBox__pf3757776177.cpp"
+		},
+		"/Game/UserInterface/Assets/ShipCapture_BP.ShipCapture_BP_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/UserInterface/Assets/ShipCapture_BP.ShipCapture_BP_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/ShipCapture_BP__pf3162697386.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/ShipCapture_BP__pf3162697386.cpp"
+		},
+		"/Game/Modes/Arcade1979/Asteroids1979.Asteroids1979_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Modes/Arcade1979/Asteroids1979.Asteroids1979_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Asteroids1979__pf2955639682.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Asteroids1979__pf2955639682.cpp"
+		},
+		"/Game/Modes/Arcade1979/GameState_1979.GameState_1979_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Modes/Arcade1979/GameState_1979.GameState_1979_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/GameState_1979__pf2955639682.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/GameState_1979__pf2955639682.cpp"
+		},
+		"/Game/Modes/Arcade1979/PlayerState_1979.PlayerState_1979_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Modes/Arcade1979/PlayerState_1979.PlayerState_1979_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/PlayerState_1979__pf2955639682.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/PlayerState_1979__pf2955639682.cpp"
+		},
+		"/Game/Modes/Arcade1979/PlayerController_1979.PlayerController_1979_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Modes/Arcade1979/PlayerController_1979.PlayerController_1979_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/PlayerController_1979__pf2955639682.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/PlayerController_1979__pf2955639682.cpp"
+		},
+		"/Game/UserInterface/Test/Debug_SingleInstance.Debug_SingleInstance_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/Test/Debug_SingleInstance.Debug_SingleInstance_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Debug_SingleInstance__pf867325549.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Debug_SingleInstance__pf867325549.cpp"
+		},
+		"/Game/UserInterface/LoadingWidget.LoadingWidget_C":
+		{
+			"assetType": "Class'/Script/UMGEditor.WidgetBlueprint'",
+			"targetObjPath": "/Game/UserInterface/LoadingWidget.LoadingWidget_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/LoadingWidget__pf3166771619.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/LoadingWidget__pf3166771619.cpp"
+		},
+		"/Game/UserInterface/Loading.Loading_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/UserInterface/Loading.Loading_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Loading__pf3166771619.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Loading__pf3166771619.cpp"
+		},
+		"/Game/Enemy/Alien_Small.Alien_Small_C":
+		{
+			"assetType": "Class'/Script/Engine.Blueprint'",
+			"targetObjPath": "/Game/Enemy/Alien_Small.Alien_Small_C",
+			"generatedHeaderPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Public/Alien_Small__pf655108736.h",
+			"generatedCppPath": "C:/Users/Edward/Desktop/Asteroids_A_La_Mode/Intermediate/Plugins/NativizedAssets/Windows/Game/Source/NativizedAssets/Private/Alien_Small__pf655108736.cpp"
+		}
+	},
+	"unconvertedDependencies":
+	{
+	},
+	"nativizationOptions":
+	{
+		"platformName": "WindowsNoEditor",
+		"serverOnlyPlatform": false,
+		"clientOnlyPlatform": false,
+		"excludedModules": [],
+		"excludedAssets": [],
+		"excludedFolderPaths": []
+	}
+}

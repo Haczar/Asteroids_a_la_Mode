@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// We don't have a legal team rip.
 
 using UnrealBuildTool;
 using System.Collections.Generic;
