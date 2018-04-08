@@ -8,6 +8,6 @@ Rotate: D F
 
 Thrust: J
 
-Fire  : K
+Fire: K
 
 Enter: Start
