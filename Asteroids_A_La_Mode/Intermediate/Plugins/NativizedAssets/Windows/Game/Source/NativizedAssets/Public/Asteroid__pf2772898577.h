@@ -9,7 +9,7 @@ class UStaticMeshComponent;
 class USceneComponent;
 class UPrimitiveComponent;
 class AActor;
-class ABP_Projectile_C__pf3227778944;
+class ABP_Projectile_C__pf668171628;
 #include "Asteroid__pf2772898577.generated.h"
 UCLASS(config=Engine, Blueprintable, BlueprintType, meta=(ReplaceConverted="/Game/Obstacles/Asteroid.Asteroid_C", OverrideNativeName="Asteroid_C"))
 class AAsteroid_C__pf2772898577 : public AActor
@@ -53,7 +53,7 @@ public:
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_ComponentBoundEvent_SweepResult"))
 	FHitResult b0l__K2Node_ComponentBoundEvent_SweepResult__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsBP_Projectile"))
-	ABP_Projectile_C__pf3227778944* b0l__K2Node_DynamicCast_AsBP_Projectile__pf;
+	ABP_Projectile_C__pf668171628* b0l__K2Node_DynamicCast_AsBP_Projectile__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess2"))
 	bool b0l__K2Node_DynamicCast_bSuccess2__pf;
 	AAsteroid_C__pf2772898577(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
@@ -74,7 +74,7 @@ public:
 	void bpf__ReceiveBeginPlay__pf();
 	UFUNCTION(meta=(OverrideNativeName="BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature"))
 	virtual void bpf__BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature__pf(UPrimitiveComponent* bpp__OverlappedComponent__pf, AActor* bpp__OtherActor__pf, UPrimitiveComponent* bpp__OtherComp__pf, int32 bpp__OtherBodyIndex__pf, bool bpp__bFromSweep__pf, FHitResult const& bpp__SweepResult__pf__const);
-	UFUNCTION(Server, BlueprintCallable, Unreliable, meta=(Category, OverrideNativeName="Break"))
+	UFUNCTION(Server, Reliable, BlueprintCallable, meta=(Category, OverrideNativeName="Break"))
 	virtual void bpf__Break__pf();
 	UFUNCTION(BlueprintCallable, meta=(BlueprintInternalUseOnly="true", DisplayName="Construction Script", ToolTip="Construction script, the place to spawn components and do other setup.@note Name used in CreateBlueprint function@param       Location        The location.@param       Rotation        The rotation.", Category, CppFromBpEvent, OverrideNativeName="UserConstructionScript"))
 	void bpf__UserConstructionScript__pf();

@@ -80,7 +80,7 @@ void EmptyLinkFunctionForGeneratedCodeSpaceBox__pf3757776177() {}
 				{ "ModuleRelativePath", "Public/SpaceBox__pf3757776177.h" },
 				{ "ObjectInitializerConstructorDeclared", "" },
 				{ "OverrideNativeName", "SpaceBox_C" },
-				{ "ReplaceConverted", "/Game/Levels/Assets/Skybox/SpaceBox.SpaceBox_C,/Game/Levels/Assets/SpaceBox.SpaceBox_C" },
+				{ "ReplaceConverted", "/Game/Levels/Assets/Skybox/SpaceBox.SpaceBox_C" },
 			};
 #endif
 #if WITH_METADATA
@@ -123,7 +123,7 @@ void EmptyLinkFunctionForGeneratedCodeSpaceBox__pf3757776177() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_DYNAMIC_CLASS(ASpaceBox_C__pf3757776177, TEXT("SpaceBox_C"), 3918183805);
+	IMPLEMENT_DYNAMIC_CLASS(ASpaceBox_C__pf3757776177, TEXT("SpaceBox_C"), 1575380379);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ASpaceBox_C__pf3757776177(Z_Construct_UClass_ASpaceBox_C__pf3757776177, &ASpaceBox_C__pf3757776177::StaticClass, TEXT("/Game/Levels/Assets/Skybox/SpaceBox"), TEXT("SpaceBox_C"), true, TEXT("/Game/Levels/Assets/Skybox/SpaceBox"), TEXT("/Game/Levels/Assets/Skybox/SpaceBox.SpaceBox_C"), nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ASpaceBox_C__pf3757776177);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -20,8 +20,8 @@ void EmptyLinkFunctionForGeneratedCodeNativizedAssets_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/NativizedAssets",
 				PKG_CompiledIn | 0x00000000,
-				0xC6FFC11F,
-				0xD4F98D59,
+				0x5023F41A,
+				0x64486667,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};

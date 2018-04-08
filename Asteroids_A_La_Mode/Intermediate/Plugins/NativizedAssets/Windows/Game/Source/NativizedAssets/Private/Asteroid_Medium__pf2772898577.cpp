@@ -373,19 +373,20 @@
 #include "Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h"
 #include "Runtime/Engine/Classes/Engine/ComponentDelegateBinding.h"
 #include "DebugMode__pf4162722864.h"
-#include "BP_Projectile__pf3227778944.h"
-#include "Spawn_Volume__pf2174024837.h"
-#include "DebugState__pf4162722864.h"
-#include "PlayerC_Regular__pf4061722237.h"
-#include "PlyrState__pf4061722237.h"
+#include "BP_Projectile__pf668171628.h"
+#include "DebugMData__pf4162722864.h"
+#include "RegUser__pf4061722237.h"
+#include "UserData__pf4061722237.h"
 #include "Runtime/Engine/Classes/GameFramework/PlayerStart.h"
-#include "Ship__pf3227778944.h"
-#include "DebugInstance__pf4162722864.h"
-#include "Runtime/Engine/Classes/Kismet/KismetArrayLibrary.h"
-#include "Runtime/Engine/Classes/Engine/CollisionProfile.h"
+#include "Spawn_Volume__pf2174024837.h"
+#include "Ship__pf668171628.h"
+#include "DebugManager__pf4162722864.h"
+#include "1979Rounds__pf2955639682.h"
+#include "Runtime/Engine/Classes/Kismet/KismetNodeHelperLibrary.h"
 #include "GameStart__pf3166771619.h"
 #include "InGameHud__pf515974370.h"
 #include "DStates__pf4162722864.h"
+#include "Runtime/Engine/Classes/Engine/CollisionProfile.h"
 #include "Runtime/Engine/Classes/Kismet/KismetStringLibrary.h"
 #include "Runtime/Engine/Classes/Engine/InputActionDelegateBinding.h"
 #include "Runtime/Engine/Classes/Engine/InputDelegateBinding.h"
@@ -396,12 +397,11 @@
 #include "LevelStart_Widget__pf515974370.h"
 #include "GameOver__pf3166771619.h"
 #include "Runtime/Engine/Classes/GameFramework/GameState.h"
-#include "1979Rounds__pf2955639682.h"
-#include "Runtime/Engine/Classes/Kismet/KismetNodeHelperLibrary.h"
+#include "Runtime/Engine/Classes/Kismet/KismetArrayLibrary.h"
 #include "Alien__pf655108736.h"
-#include "SRotate__pf3227778944.h"
+#include "SRotate__pf668171628.h"
 #include "Runtime/Engine/Classes/GameFramework/GameMode.h"
-#include "MenuPawn__pf4061722237.h"
+#include "MenuPawn__pf3752356522.h"
 #include "Asteroid_Large__pf2772898577.h"
 
 
@@ -537,15 +537,15 @@ void AAsteroid_Medium_C__pf2772898577::__StaticDependenciesAssets(TArray<FBluepr
 	__StaticDependencies_DirectlyUsedAssets(AssetsToLoad);
 	const FCompactBlueprintDependencyData LocCompactBlueprintDependencyData[] =
 	{
-		{29, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Obstacles/Asteroid.Asteroid_C 
+		{30, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Obstacles/Asteroid.Asteroid_C 
 		{1, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/Engine.SceneComponent 
-		{35, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/Engine.StaticMeshComponent 
-		{40, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/Engine.ProjectileMovementComponent 
+		{36, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/Engine.StaticMeshComponent 
+		{41, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/Engine.ProjectileMovementComponent 
 		{2, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/Engine.PointerToUberGraphFrame 
 		{7, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.Actor 
-		{17, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Asteroid_Small_C /Game/Obstacles/Asteroid_Small.Default__Asteroid_Small_C 
-		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetMathLibrary 
-		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
+		{18, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Asteroid_Small_C /Game/Obstacles/Asteroid_Small.Default__Asteroid_Small_C 
+		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetMathLibrary 
+		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
 		{48, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.MovementComponent 
 	};
 	for(const FCompactBlueprintDependencyData& CompactData : LocCompactBlueprintDependencyData)

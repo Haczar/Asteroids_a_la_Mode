@@ -4,7 +4,7 @@
 class USceneComponent;
 class UStaticMeshComponent;
 #include "SpaceBox__pf3757776177.generated.h"
-UCLASS(config=Engine, Blueprintable, BlueprintType, meta=(ReplaceConverted="/Game/Levels/Assets/Skybox/SpaceBox.SpaceBox_C,/Game/Levels/Assets/SpaceBox.SpaceBox_C", OverrideNativeName="SpaceBox_C"))
+UCLASS(config=Engine, Blueprintable, BlueprintType, meta=(ReplaceConverted="/Game/Levels/Assets/Skybox/SpaceBox.SpaceBox_C", OverrideNativeName="SpaceBox_C"))
 class ASpaceBox_C__pf3757776177 : public AActor
 {
 public:

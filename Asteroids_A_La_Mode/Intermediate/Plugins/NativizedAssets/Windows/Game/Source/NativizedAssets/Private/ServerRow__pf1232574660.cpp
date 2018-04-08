@@ -367,7 +367,7 @@
 #include "Runtime/Engine/Classes/GameFramework/GameUserSettings.h"
 #include "Runtime/Engine/Classes/Engine/AssetManager.h"
 #include "Runtime/Engine/Classes/GameFramework/OnlineSession.h"
-#include "DebugInstance__pf4162722864.h"
+#include "DebugManager__pf4162722864.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 #include "Runtime/Engine/Classes/Components/AudioComponent.h"
 #include "Runtime/Engine/Classes/GameFramework/ForceFeedbackAttenuation.h"
@@ -432,7 +432,7 @@ void UServerRow_C__pf1232574660::__CustomDynamicClassInitialization(UDynamicClas
 	ensure(nullptr == InDynamicClass->AnimClassImplementation);
 	InDynamicClass->AssembleReferenceTokenStream();
 	// List of all referenced converted classes
-	InDynamicClass->ReferencedConvertedFields.Add(UDebugInstance_C__pf4162722864::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(UDebugManager_C__pf4162722864::StaticClass());
 	FConvertedBlueprintsDependencies::FillUsedAssetsInDynamicClass(InDynamicClass, &__StaticDependencies_DirectlyUsedAssets);
 	auto __Local__0 = NewObject<UComponentDelegateBinding>(InDynamicClass, UComponentDelegateBinding::StaticClass(), TEXT("ComponentDelegateBinding_3"));
 	InDynamicClass->DynamicBindingObjects.Add(__Local__0);
@@ -599,15 +599,15 @@ void UServerRow_C__pf1232574660::bpf__ExecuteUbergraph_ServerRow__pf_0(int32 bpp
 	check(bpp__EntryPoint__pf == 1);
 	// optimized KCST_UnconditionalGoto
 	bpfv__CallFunc_GetGameInstance_ReturnValue__pf = UGameplayStatics::GetGameInstance(this);
-	b0l__K2Node_DynamicCast_AsDebug_Instance__pf = Cast<UDebugInstance_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue__pf);
-	b0l__K2Node_DynamicCast_bSuccess__pf = (b0l__K2Node_DynamicCast_AsDebug_Instance__pf != nullptr);;
+	b0l__K2Node_DynamicCast_AsDebug_Manager__pf = Cast<UDebugManager_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue__pf);
+	b0l__K2Node_DynamicCast_bSuccess__pf = (b0l__K2Node_DynamicCast_AsDebug_Manager__pf != nullptr);;
 	if (!b0l__K2Node_DynamicCast_bSuccess__pf)
 	{
 		return; //KCST_GotoReturnIfNot
 	}
-	if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_Instance__pf))
+	if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_Manager__pf))
 	{
-		b0l__K2Node_DynamicCast_AsDebug_Instance__pf->bpf__JoinxGame__pfT(bpv__SearchResult__pf);
+		b0l__K2Node_DynamicCast_AsDebug_Manager__pf->bpf__JoinxGame__pfT(bpv__SearchResult__pf);
 	}
 	return; // KCST_GotoReturn
 }
@@ -677,15 +677,15 @@ void UServerRow_C__pf1232574660::__StaticDependenciesAssets(TArray<FBlueprintDep
 	{
 		{2, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/Engine.PointerToUberGraphFrame 
 		{8, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameInstance 
-		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
+		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
 		{66, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/OnlineSubsystemUtils.BlueprintSessionResult 
 		{60, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/UMG.UserWidget 
 		{73, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy 
-		{14, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetStringLibrary 
-		{85, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetTextLibrary 
+		{15, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetStringLibrary 
+		{83, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetTextLibrary 
 		{93, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.Button 
-		{86, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.TextBlock 
-		{27, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugInstance.DebugInstance_C 
+		{84, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.TextBlock 
+		{28, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugManager.DebugManager_C 
 	};
 	for(const FCompactBlueprintDependencyData& CompactData : LocCompactBlueprintDependencyData)
 	{

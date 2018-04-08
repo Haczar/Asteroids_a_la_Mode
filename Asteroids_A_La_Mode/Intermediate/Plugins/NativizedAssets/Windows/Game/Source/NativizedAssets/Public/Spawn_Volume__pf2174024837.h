@@ -7,7 +7,7 @@ class AActor;
 class UClass;
 class UBoxComponent;
 #include "Spawn_Volume__pf2174024837.generated.h"
-UCLASS(config=Engine, Blueprintable, BlueprintType, meta=(ReplaceConverted="/Game/Levels/Assets/Colliders/Spawn_Volume.Spawn_Volume_C,/Game/Levels/Assets/Colliders/LevelBorder_Volume.LevelBorder_Volume_C", OverrideNativeName="Spawn_Volume_C"))
+UCLASS(config=Engine, Blueprintable, BlueprintType, meta=(ReplaceConverted="/Game/Levels/Assets/Colliders/Spawn_Volume.Spawn_Volume_C", OverrideNativeName="Spawn_Volume_C"))
 class ASpawn_Volume_C__pf2174024837 : public AActor
 {
 public:

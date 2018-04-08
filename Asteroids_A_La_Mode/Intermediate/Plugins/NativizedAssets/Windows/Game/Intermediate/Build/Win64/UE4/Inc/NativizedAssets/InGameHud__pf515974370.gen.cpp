@@ -23,11 +23,30 @@ void EmptyLinkFunctionForGeneratedCodeInGameHud__pf515974370() {}
 	NATIVIZEDASSETS_API UFunction* Z_Construct_UFunction_UInGameHud_C__pf515974370_bpf__UpdatexLives__pfT();
 	ENGINE_API UClass* Z_Construct_UClass_APlayerController_NoRegister();
 	NATIVIZEDASSETS_API UFunction* Z_Construct_UFunction_UInGameHud_C__pf515974370_bpf__UpdatexScore__pfT();
-	NATIVIZEDASSETS_API UClass* Z_Construct_UClass_ADebugState_C__pf4162722864_NoRegister();
+	NATIVIZEDASSETS_API UClass* Z_Construct_UClass_ADebugMData_C__pf4162722864_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UImage_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UVerticalBox_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 // End Cross Module References
+	static FName NAME_UInGameHud_C__pf515974370_bpf__Makexp2xvisible__pfTT = FName(TEXT("Make p2 visible"));
+	void UInGameHud_C__pf515974370::bpf__Makexp2xvisible__pfTT()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_UInGameHud_C__pf515974370_bpf__Makexp2xvisible__pfTT),NULL);
+	}
+	static FName NAME_UInGameHud_C__pf515974370_bpf__UpdatexLives__pfT = FName(TEXT("Update Lives"));
+	void UInGameHud_C__pf515974370::bpf__UpdatexLives__pfT(APlayerController* bpp__Player__pf)
+	{
+		InGameHud_C__pf515974370_eventbpf__UpdatexLives__pfT_Parms Parms;
+		Parms.bpp__Player__pf=bpp__Player__pf;
+		ProcessEvent(FindFunctionChecked(NAME_UInGameHud_C__pf515974370_bpf__UpdatexLives__pfT),&Parms);
+	}
+	static FName NAME_UInGameHud_C__pf515974370_bpf__UpdatexScore__pfT = FName(TEXT("Update Score"));
+	void UInGameHud_C__pf515974370::bpf__UpdatexScore__pfT(APlayerController* bpp__Player__pf)
+	{
+		InGameHud_C__pf515974370_eventbpf__UpdatexScore__pfT_Parms Parms;
+		Parms.bpp__Player__pf=bpp__Player__pf;
+		ProcessEvent(FindFunctionChecked(NAME_UInGameHud_C__pf515974370_bpf__UpdatexScore__pfT),&Parms);
+	}
 	void UInGameHud_C__pf515974370::StaticRegisterNativesUInGameHud_C__pf515974370()
 	{
 		UClass* Class = UInGameHud_C__pf515974370::StaticClass();
@@ -83,17 +102,13 @@ void EmptyLinkFunctionForGeneratedCodeInGameHud__pf515974370() {}
 				{ "OverrideNativeName", "Make p2 visible" },
 			};
 #endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UInGameHud_C__pf515974370, "Make p2 visible", RF_Public|RF_Transient, nullptr, (EFunctionFlags)0x04020400, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UInGameHud_C__pf515974370, "Make p2 visible", RF_Public|RF_Transient, nullptr, (EFunctionFlags)0x04024CC0, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
 	}
 	UFunction* Z_Construct_UFunction_UInGameHud_C__pf515974370_bpf__UpdatexLives__pfT()
 	{
-		struct InGameHud_C__pf515974370_eventbpf__UpdatexLives__pfT_Parms
-		{
-			APlayerController* bpp__Player__pf;
-		};
 		UObject* Outer = Z_Construct_UClass_UInGameHud_C__pf515974370();
 		UFunction* ReturnFunction = static_cast<UFunction*>(StaticFindObjectFast( UFunction::StaticClass(), Outer, TEXT("Update Lives") ));
 		if (!ReturnFunction)
@@ -109,17 +124,13 @@ void EmptyLinkFunctionForGeneratedCodeInGameHud__pf515974370() {}
 				{ "OverrideNativeName", "Update Lives" },
 			};
 #endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UInGameHud_C__pf515974370, "Update Lives", RF_Public|RF_Transient, nullptr, (EFunctionFlags)0x04020400, sizeof(InGameHud_C__pf515974370_eventbpf__UpdatexLives__pfT_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UInGameHud_C__pf515974370, "Update Lives", RF_Public|RF_Transient, nullptr, (EFunctionFlags)0x04024CC0, sizeof(InGameHud_C__pf515974370_eventbpf__UpdatexLives__pfT_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
 	}
 	UFunction* Z_Construct_UFunction_UInGameHud_C__pf515974370_bpf__UpdatexScore__pfT()
 	{
-		struct InGameHud_C__pf515974370_eventbpf__UpdatexScore__pfT_Parms
-		{
-			APlayerController* bpp__Player__pf;
-		};
 		UObject* Outer = Z_Construct_UClass_UInGameHud_C__pf515974370();
 		UFunction* ReturnFunction = static_cast<UFunction*>(StaticFindObjectFast( UFunction::StaticClass(), Outer, TEXT("Update Score") ));
 		if (!ReturnFunction)
@@ -135,7 +146,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameHud__pf515974370() {}
 				{ "OverrideNativeName", "Update Score" },
 			};
 #endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UInGameHud_C__pf515974370, "Update Score", RF_Public|RF_Transient, nullptr, (EFunctionFlags)0x04020400, sizeof(InGameHud_C__pf515974370_eventbpf__UpdatexScore__pfT_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UInGameHud_C__pf515974370, "Update Score", RF_Public|RF_Transient, nullptr, (EFunctionFlags)0x04024CC0, sizeof(InGameHud_C__pf515974370_eventbpf__UpdatexScore__pfT_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
@@ -155,9 +166,9 @@ void EmptyLinkFunctionForGeneratedCodeInGameHud__pf515974370() {}
 			};
 			static const FClassFunctionLinkInfo FuncInfo[] = {
 				{ &Z_Construct_UFunction_UInGameHud_C__pf515974370_bpf__DeterminexPlayer__pfT, "Determine Player" }, // 251480103
-				{ &Z_Construct_UFunction_UInGameHud_C__pf515974370_bpf__Makexp2xvisible__pfTT, "Make p2 visible" }, // 2178253996
-				{ &Z_Construct_UFunction_UInGameHud_C__pf515974370_bpf__UpdatexLives__pfT, "Update Lives" }, // 831618721
-				{ &Z_Construct_UFunction_UInGameHud_C__pf515974370_bpf__UpdatexScore__pfT, "Update Score" }, // 2417011628
+				{ &Z_Construct_UFunction_UInGameHud_C__pf515974370_bpf__Makexp2xvisible__pfTT, "Make p2 visible" }, // 272744970
+				{ &Z_Construct_UFunction_UInGameHud_C__pf515974370_bpf__UpdatexLives__pfT, "Update Lives" }, // 3289534223
+				{ &Z_Construct_UFunction_UInGameHud_C__pf515974370_bpf__UpdatexScore__pfT, "Update Score" }, // 510968541
 			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
@@ -186,65 +197,6 @@ void EmptyLinkFunctionForGeneratedCodeInGameHud__pf515974370() {}
 #endif
 			static const UE4CodeGen_Private::FIntPropertyParams NewProp_b0l__Temp_int_Variable3__pf = { UE4CodeGen_Private::EPropertyClass::Int, "Temp_int_Variable3", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__Temp_int_Variable3__pf), METADATA_PARAMS(NewProp_b0l__Temp_int_Variable3__pf_MetaData, ARRAY_COUNT(NewProp_b0l__Temp_int_Variable3__pf_MetaData)) };
 #if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_MetaData[] = {
-				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
-				{ "OverrideNativeName", "K2Node_DynamicCast_bSuccess3" },
-			};
-#endif
-			auto NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_SetBit = [](void* Obj){ ((UInGameHud_C__pf515974370*)Obj)->b0l__K2Node_DynamicCast_bSuccess3__pf = 1; };
-			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf = { UE4CodeGen_Private::EPropertyClass::Bool, "K2Node_DynamicCast_bSuccess3", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(UInGameHud_C__pf515974370), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_SetBit)>::SetBit, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_MetaData)) };
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_State3__pf_MetaData[] = {
-				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
-				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_State3" },
-			};
-#endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_State3__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_State3", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__K2Node_DynamicCast_AsDebug_State3__pf), Z_Construct_UClass_ADebugState_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_State3__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_State3__pf_MetaData)) };
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_MetaData[] = {
-				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
-				{ "OverrideNativeName", "K2Node_DynamicCast_bSuccess2" },
-			};
-#endif
-			auto NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_SetBit = [](void* Obj){ ((UInGameHud_C__pf515974370*)Obj)->b0l__K2Node_DynamicCast_bSuccess2__pf = 1; };
-			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf = { UE4CodeGen_Private::EPropertyClass::Bool, "K2Node_DynamicCast_bSuccess2", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(UInGameHud_C__pf515974370), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_SetBit)>::SetBit, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_MetaData)) };
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_State2__pf_MetaData[] = {
-				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
-				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_State2" },
-			};
-#endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_State2__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_State2", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__K2Node_DynamicCast_AsDebug_State2__pf), Z_Construct_UClass_ADebugState_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_State2__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_State2__pf_MetaData)) };
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_CustomEvent_Player__pf_MetaData[] = {
-				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
-				{ "OverrideNativeName", "K2Node_CustomEvent_Player" },
-			};
-#endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_CustomEvent_Player__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_CustomEvent_Player", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__K2Node_CustomEvent_Player__pf), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_CustomEvent_Player__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_CustomEvent_Player__pf_MetaData)) };
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_CustomEvent_Player1__pf_MetaData[] = {
-				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
-				{ "OverrideNativeName", "K2Node_CustomEvent_Player1" },
-			};
-#endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_CustomEvent_Player1__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_CustomEvent_Player1", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__K2Node_CustomEvent_Player1__pf), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_CustomEvent_Player1__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_CustomEvent_Player1__pf_MetaData)) };
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_MetaData[] = {
-				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
-				{ "OverrideNativeName", "K2Node_DynamicCast_bSuccess1" },
-			};
-#endif
-			auto NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_SetBit = [](void* Obj){ ((UInGameHud_C__pf515974370*)Obj)->b0l__K2Node_DynamicCast_bSuccess1__pf = 1; };
-			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf = { UE4CodeGen_Private::EPropertyClass::Bool, "K2Node_DynamicCast_bSuccess1", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(UInGameHud_C__pf515974370), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_SetBit)>::SetBit, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_MetaData)) };
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_State1__pf_MetaData[] = {
-				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
-				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_State1" },
-			};
-#endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_State1__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_State1", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__K2Node_DynamicCast_AsDebug_State1__pf), Z_Construct_UClass_ADebugState_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_State1__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_State1__pf_MetaData)) };
-#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_SwitchInteger2_CmpSuccess__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
 				{ "OverrideNativeName", "K2Node_SwitchInteger2_CmpSuccess" },
@@ -259,6 +211,50 @@ void EmptyLinkFunctionForGeneratedCodeInGameHud__pf515974370() {}
 			};
 #endif
 			static const UE4CodeGen_Private::FIntPropertyParams NewProp_b0l__Temp_int_Variable2__pf = { UE4CodeGen_Private::EPropertyClass::Int, "Temp_int_Variable2", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__Temp_int_Variable2__pf), METADATA_PARAMS(NewProp_b0l__Temp_int_Variable2__pf_MetaData, ARRAY_COUNT(NewProp_b0l__Temp_int_Variable2__pf_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_MetaData[] = {
+				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
+				{ "OverrideNativeName", "K2Node_DynamicCast_bSuccess3" },
+			};
+#endif
+			auto NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_SetBit = [](void* Obj){ ((UInGameHud_C__pf515974370*)Obj)->b0l__K2Node_DynamicCast_bSuccess3__pf = 1; };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf = { UE4CodeGen_Private::EPropertyClass::Bool, "K2Node_DynamicCast_bSuccess3", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(UInGameHud_C__pf515974370), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_SetBit)>::SetBit, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_MData3__pf_MetaData[] = {
+				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
+				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_MData3" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_MData3__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_MData3", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__K2Node_DynamicCast_AsDebug_MData3__pf), Z_Construct_UClass_ADebugMData_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_MData3__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_MData3__pf_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_MetaData[] = {
+				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
+				{ "OverrideNativeName", "K2Node_DynamicCast_bSuccess2" },
+			};
+#endif
+			auto NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_SetBit = [](void* Obj){ ((UInGameHud_C__pf515974370*)Obj)->b0l__K2Node_DynamicCast_bSuccess2__pf = 1; };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf = { UE4CodeGen_Private::EPropertyClass::Bool, "K2Node_DynamicCast_bSuccess2", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(UInGameHud_C__pf515974370), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_SetBit)>::SetBit, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_MData2__pf_MetaData[] = {
+				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
+				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_MData2" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_MData2__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_MData2", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__K2Node_DynamicCast_AsDebug_MData2__pf), Z_Construct_UClass_ADebugMData_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_MData2__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_MData2__pf_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_CustomEvent_Player__pf_MetaData[] = {
+				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
+				{ "OverrideNativeName", "K2Node_CustomEvent_Player" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_CustomEvent_Player__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_CustomEvent_Player", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__K2Node_CustomEvent_Player__pf), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_CustomEvent_Player__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_CustomEvent_Player__pf_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_CustomEvent_Player1__pf_MetaData[] = {
+				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
+				{ "OverrideNativeName", "K2Node_CustomEvent_Player1" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_CustomEvent_Player1__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_CustomEvent_Player1", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__K2Node_CustomEvent_Player1__pf), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_CustomEvent_Player1__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_CustomEvent_Player1__pf_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_SwitchInteger1_CmpSuccess__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
@@ -275,6 +271,21 @@ void EmptyLinkFunctionForGeneratedCodeInGameHud__pf515974370() {}
 #endif
 			static const UE4CodeGen_Private::FIntPropertyParams NewProp_b0l__Temp_int_Variable1__pf = { UE4CodeGen_Private::EPropertyClass::Int, "Temp_int_Variable1", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__Temp_int_Variable1__pf), METADATA_PARAMS(NewProp_b0l__Temp_int_Variable1__pf_MetaData, ARRAY_COUNT(NewProp_b0l__Temp_int_Variable1__pf_MetaData)) };
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_MetaData[] = {
+				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
+				{ "OverrideNativeName", "K2Node_DynamicCast_bSuccess1" },
+			};
+#endif
+			auto NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_SetBit = [](void* Obj){ ((UInGameHud_C__pf515974370*)Obj)->b0l__K2Node_DynamicCast_bSuccess1__pf = 1; };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf = { UE4CodeGen_Private::EPropertyClass::Bool, "K2Node_DynamicCast_bSuccess1", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(UInGameHud_C__pf515974370), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_SetBit)>::SetBit, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_MData1__pf_MetaData[] = {
+				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
+				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_MData1" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_MData1__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_MData1", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__K2Node_DynamicCast_AsDebug_MData1__pf), Z_Construct_UClass_ADebugMData_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_MData1__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_MData1__pf_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_bSuccess__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
 				{ "OverrideNativeName", "K2Node_DynamicCast_bSuccess" },
@@ -283,12 +294,12 @@ void EmptyLinkFunctionForGeneratedCodeInGameHud__pf515974370() {}
 			auto NewProp_b0l__K2Node_DynamicCast_bSuccess__pf_SetBit = [](void* Obj){ ((UInGameHud_C__pf515974370*)Obj)->b0l__K2Node_DynamicCast_bSuccess__pf = 1; };
 			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_b0l__K2Node_DynamicCast_bSuccess__pf = { UE4CodeGen_Private::EPropertyClass::Bool, "K2Node_DynamicCast_bSuccess", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(UInGameHud_C__pf515974370), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_b0l__K2Node_DynamicCast_bSuccess__pf_SetBit)>::SetBit, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_bSuccess__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_bSuccess__pf_MetaData)) };
 #if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_State__pf_MetaData[] = {
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_MData__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
-				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_State" },
+				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_MData" },
 			};
 #endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_State__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_State", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__K2Node_DynamicCast_AsDebug_State__pf), Z_Construct_UClass_ADebugState_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_State__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_State__pf_MetaData)) };
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_MData__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_MData", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UInGameHud_C__pf515974370, b0l__K2Node_DynamicCast_AsDebug_MData__pf), Z_Construct_UClass_ADebugMData_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_MData__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_MData__pf_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_SwitchInteger_CmpSuccess__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/InGameHud__pf515974370.h" },
@@ -527,20 +538,20 @@ void EmptyLinkFunctionForGeneratedCodeInGameHud__pf515974370() {}
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_SwitchInteger3_CmpSuccess__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__Temp_int_Variable3__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_State3__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_State2__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_CustomEvent_Player__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_CustomEvent_Player1__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_State1__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_SwitchInteger2_CmpSuccess__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__Temp_int_Variable2__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_MData3__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_MData2__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_CustomEvent_Player__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_CustomEvent_Player1__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_SwitchInteger1_CmpSuccess__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__Temp_int_Variable1__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_MData1__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_bSuccess__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_State__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_MData__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_SwitchInteger_CmpSuccess__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__Temp_int_Variable__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_bpv__Player1__pf,
@@ -584,7 +595,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameHud__pf515974370() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_DYNAMIC_CLASS(UInGameHud_C__pf515974370, TEXT("InGameHud_C"), 1878703067);
+	IMPLEMENT_DYNAMIC_CLASS(UInGameHud_C__pf515974370, TEXT("InGameHud_C"), 1037657873);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UInGameHud_C__pf515974370(Z_Construct_UClass_UInGameHud_C__pf515974370, &UInGameHud_C__pf515974370::StaticClass, TEXT("/Game/UserInterface/Dev_Test/InGameHud"), TEXT("InGameHud_C"), true, TEXT("/Game/UserInterface/Dev_Test/InGameHud"), TEXT("/Game/UserInterface/Dev_Test/InGameHud.InGameHud_C"), nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UInGameHud_C__pf515974370);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -5,7 +5,7 @@
 #include "Runtime/UMG/Public/Blueprint/UserWidget.h"
 class UTextBlock;
 class UButton;
-class UDebugInstance_C__pf4162722864;
+class UDebugManager_C__pf4162722864;
 #include "ServerRow__pf1232574660.generated.h"
 UCLASS(config=Engine, Blueprintable, BlueprintType, meta=(ReplaceConverted="/Game/UserInterface/MainScreen/ServerRow.ServerRow_C", OverrideNativeName="ServerRow_C"))
 class UServerRow_C__pf1232574660 : public UUserWidget
@@ -24,8 +24,8 @@ public:
 	FString bpv__PlayerCounts__pf;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Search Result", Category="Default", BlueprintPrivate="true", OverrideNativeName="SearchResult"))
 	FBlueprintSessionResult bpv__SearchResult__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_Instance"))
-	UDebugInstance_C__pf4162722864* b0l__K2Node_DynamicCast_AsDebug_Instance__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_Manager"))
+	UDebugManager_C__pf4162722864* b0l__K2Node_DynamicCast_AsDebug_Manager__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess"))
 	bool b0l__K2Node_DynamicCast_bSuccess__pf;
 	UServerRow_C__pf1232574660(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());

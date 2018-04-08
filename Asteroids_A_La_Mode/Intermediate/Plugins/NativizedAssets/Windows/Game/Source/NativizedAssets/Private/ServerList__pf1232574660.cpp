@@ -367,13 +367,18 @@
 #include "Runtime/Engine/Classes/GameFramework/GameUserSettings.h"
 #include "Runtime/Engine/Classes/Engine/AssetManager.h"
 #include "Runtime/Engine/Classes/GameFramework/OnlineSession.h"
-#include "DebugInstance__pf4162722864.h"
+#include "DebugManager__pf4162722864.h"
 #include "ServerRow__pf1232574660.h"
-#include "PlayerC_Regular__pf4061722237.h"
+#include "RegUser__pf4061722237.h"
 #include "../Plugins/Online/OnlineSubsystemUtils/Source/OnlineSubsystemUtils/Classes/CreateSessionCallbackProxy.h"
 #include "Runtime/Engine/Public/Net/OnlineBlueprintCallProxyBase.h"
 #include "../Plugins/Online/OnlineSubsystemUtils/Source/OnlineSubsystemUtils/Classes/DestroySessionCallbackProxy.h"
 #include "../Plugins/Online/OnlineSubsystemUtils/Source/OnlineSubsystemUtils/Classes/JoinSessionCallbackProxy.h"
+#include "Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h"
+#include "Runtime/Engine/Classes/Engine/CollisionProfile.h"
+#include "SaveObj__pf4061722237.h"
+#include "Runtime/Engine/Classes/Kismet/KismetArrayLibrary.h"
+#include "Runtime/Engine/Classes/Kismet/KismetMathLibrary.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 #include "Runtime/Engine/Classes/Components/AudioComponent.h"
 #include "Runtime/Engine/Classes/GameFramework/ForceFeedbackAttenuation.h"
@@ -385,15 +390,10 @@
 #include "Runtime/Engine/Classes/Components/DecalComponent.h"
 #include "Runtime/Engine/Classes/GameFramework/SaveGame.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStaticsTypes.h"
-#include "Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h"
-#include "Runtime/Engine/Classes/Engine/CollisionProfile.h"
-#include "Runtime/Engine/Classes/Kismet/KismetArrayLibrary.h"
-#include "Runtime/Engine/Classes/Kismet/KismetMathLibrary.h"
-#include "SaveObj__pf4061722237.h"
 #include "Runtime/Engine/Classes/Kismet/KismetNodeHelperLibrary.h"
 #include "Runtime/Engine/Classes/Kismet/KismetStringLibrary.h"
 #include "DStates__pf4162722864.h"
-#include "DebugState__pf4162722864.h"
+#include "DebugMData__pf4162722864.h"
 #include "Runtime/UMG/Public/Blueprint/WidgetBlueprintLibrary.h"
 #include "Runtime/Engine/Classes/Slate/SlateBrushAsset.h"
 #include "Runtime/SlateCore/Public/Styling/SlateWidgetStyle.h"
@@ -407,24 +407,24 @@
 #include "Runtime/SlateCore/Public/Fonts/SlateFontInfo.h"
 #include "Runtime/Engine/Classes/Engine/InputActionDelegateBinding.h"
 #include "Runtime/Engine/Classes/Engine/InputDelegateBinding.h"
-#include "PlyrState__pf4061722237.h"
+#include "UserData__pf4061722237.h"
 #include "DebugMode__pf4162722864.h"
-#include "InGameHud__pf515974370.h"
 #include "GameStart__pf3166771619.h"
+#include "InGameHud__pf515974370.h"
 #include "PState__pf4061722237.h"
 #include "GameOver__pf3166771619.h"
 #include "Runtime/Engine/Classes/GameFramework/GameState.h"
 #include "Runtime/Engine/Classes/GameFramework/PlayerStart.h"
 #include "Spawn_Volume__pf2174024837.h"
-#include "Ship__pf3227778944.h"
+#include "Ship__pf668171628.h"
 #include "1979Rounds__pf2955639682.h"
 #include "Runtime/Engine/Classes/Engine/ComponentDelegateBinding.h"
-#include "BP_Projectile__pf3227778944.h"
+#include "BP_Projectile__pf668171628.h"
 #include "Alien__pf655108736.h"
 #include "Asteroid__pf2772898577.h"
-#include "SRotate__pf3227778944.h"
+#include "SRotate__pf668171628.h"
 #include "Runtime/Engine/Classes/GameFramework/GameMode.h"
-#include "MenuPawn__pf4061722237.h"
+#include "MenuPawn__pf3752356522.h"
 #include "Asteroid_Medium__pf2772898577.h"
 #include "Asteroid_Large__pf2772898577.h"
 #include "MainScreen__pf1232574660.h"
@@ -481,10 +481,10 @@ void UServerList_C__pf1232574660::__CustomDynamicClassInitialization(UDynamicCla
 	// List of all referenced converted enums
 	InDynamicClass->ReferencedConvertedFields.Add(LoadObject<UEnum>(nullptr, TEXT("/Game/UserInterface/MainScreen/EServerSel.EServerSel")));
 	// List of all referenced converted classes
-	InDynamicClass->ReferencedConvertedFields.Add(UDebugInstance_C__pf4162722864::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(UDebugManager_C__pf4162722864::StaticClass());
 	InDynamicClass->ReferencedConvertedFields.Add(UServerRow_C__pf1232574660::StaticClass());
 	InDynamicClass->ReferencedConvertedFields.Add(UMenuBase_C__pf3166771619::StaticClass());
-	InDynamicClass->ReferencedConvertedFields.Add(APlayerC_Regular_C__pf4061722237::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(ARegUser_C__pf4061722237::StaticClass());
 	InDynamicClass->ReferencedConvertedFields.Add(UMainScreen_C__pf1232574660::StaticClass());
 	FConvertedBlueprintsDependencies::FillUsedAssetsInDynamicClass(InDynamicClass, &__StaticDependencies_DirectlyUsedAssets);
 	auto __Local__0 = NewObject<UWidgetTree>(InDynamicClass, UWidgetTree::StaticClass(), TEXT("WidgetTree"));
@@ -999,7 +999,7 @@ void UServerList_C__pf1232574660::bpf__ExecuteUbergraph_ServerList__pf_1(int32 b
 		case 2:
 			{
 				bool  __Local__58 = false;
-				if (!((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Instance__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Instance__pf->bpv__SearchxComplete__pfT) : (__Local__58)))
+				if (!((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Manager__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Manager__pf->bpv__SearchxComplete__pfT) : (__Local__58)))
 				{
 					__CurrentState = 20;
 					break;
@@ -1008,7 +1008,7 @@ void UServerList_C__pf1232574660::bpf__ExecuteUbergraph_ServerList__pf_1(int32 b
 		case 3:
 			{
 				TArray<FBlueprintSessionResult>  __Local__59 = TArray<FBlueprintSessionResult> {};
-				bpfv__CallFunc_Array_Length_ReturnValue1__pf = FCustomThunkTemplates::Array_Length(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Instance__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Instance__pf->bpv__FoundxGames__pfT) : (__Local__59)));
+				bpfv__CallFunc_Array_Length_ReturnValue1__pf = FCustomThunkTemplates::Array_Length(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Manager__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Manager__pf->bpv__FoundxGames__pfT) : (__Local__59)));
 				bpfv__CallFunc_Greater_IntInt_ReturnValue__pf = UKismetMathLibrary::Greater_IntInt(bpfv__CallFunc_Array_Length_ReturnValue1__pf, 0);
 				if (!bpfv__CallFunc_Greater_IntInt_ReturnValue__pf)
 				{
@@ -1031,7 +1031,7 @@ void UServerList_C__pf1232574660::bpf__ExecuteUbergraph_ServerList__pf_1(int32 b
 		case 7:
 			{
 				TArray<FBlueprintSessionResult>  __Local__60 = TArray<FBlueprintSessionResult> {};
-				bpfv__CallFunc_Array_Length_ReturnValue__pf = FCustomThunkTemplates::Array_Length(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Instance__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Instance__pf->bpv__FoundxGames__pfT) : (__Local__60)));
+				bpfv__CallFunc_Array_Length_ReturnValue__pf = FCustomThunkTemplates::Array_Length(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Manager__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Manager__pf->bpv__FoundxGames__pfT) : (__Local__60)));
 				bpfv__CallFunc_Less_IntInt_ReturnValue__pf = UKismetMathLibrary::Less_IntInt(b1l__Temp_int_Loop_Counter_Variable__pf, bpfv__CallFunc_Array_Length_ReturnValue__pf);
 				if (!bpfv__CallFunc_Less_IntInt_ReturnValue__pf)
 				{
@@ -1059,7 +1059,7 @@ void UServerList_C__pf1232574660::bpf__ExecuteUbergraph_ServerList__pf_1(int32 b
 		case 12:
 			{
 				TArray<FBlueprintSessionResult>  __Local__61 = TArray<FBlueprintSessionResult> {};
-				FCustomThunkTemplates::Array_Get(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Instance__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Instance__pf->bpv__FoundxGames__pfT) : (__Local__61)), b1l__Temp_int_Array_Index_Variable__pf, /*out*/ b1l__CallFunc_Array_Get_Item__pf);
+				FCustomThunkTemplates::Array_Get(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Manager__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Manager__pf->bpv__FoundxGames__pfT) : (__Local__61)), b1l__Temp_int_Array_Index_Variable__pf, /*out*/ b1l__CallFunc_Array_Get_Item__pf);
 				if(::IsValid(b1l__CallFunc_Create_ReturnValue1__pf))
 				{
 					b1l__CallFunc_Create_ReturnValue1__pf->bpf__SetSearchResult__pf(b1l__CallFunc_Array_Get_Item__pf);
@@ -1167,8 +1167,8 @@ void UServerList_C__pf1232574660::bpf__ExecuteUbergraph_ServerList__pf_1(int32 b
 		case 54:
 			{
 				bpfv__CallFunc_GetGameInstance_ReturnValue__pf = UGameplayStatics::GetGameInstance(this);
-				b1l__K2Node_DynamicCast_AsDebug_Instance__pf = Cast<UDebugInstance_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue__pf);
-				b1l__K2Node_DynamicCast_bSuccess__pf = (b1l__K2Node_DynamicCast_AsDebug_Instance__pf != nullptr);;
+				b1l__K2Node_DynamicCast_AsDebug_Manager__pf = Cast<UDebugManager_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue__pf);
+				b1l__K2Node_DynamicCast_bSuccess__pf = (b1l__K2Node_DynamicCast_AsDebug_Manager__pf != nullptr);;
 				if (!b1l__K2Node_DynamicCast_bSuccess__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
@@ -1177,9 +1177,9 @@ void UServerList_C__pf1232574660::bpf__ExecuteUbergraph_ServerList__pf_1(int32 b
 			}
 		case 55:
 			{
-				if(::IsValid(b1l__K2Node_DynamicCast_AsDebug_Instance__pf))
+				if(::IsValid(b1l__K2Node_DynamicCast_AsDebug_Manager__pf))
 				{
-					b1l__K2Node_DynamicCast_AsDebug_Instance__pf->bpf__FindxGames__pfT();
+					b1l__K2Node_DynamicCast_AsDebug_Manager__pf->bpf__FindxGames__pfT();
 				}
 				__CurrentState = 2;
 				break;
@@ -1246,7 +1246,7 @@ void UServerList_C__pf1232574660::bpf__ExecuteUbergraph_ServerList__pf_2(int32 b
 		case 30:
 			{
 				bool  __Local__63 = false;
-				if (!((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Instance1__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Instance1__pf->bpv__SearchxComplete__pfT) : (__Local__63)))
+				if (!((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Manager1__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Manager1__pf->bpv__SearchxComplete__pfT) : (__Local__63)))
 				{
 					__CurrentState = 53;
 					break;
@@ -1255,7 +1255,7 @@ void UServerList_C__pf1232574660::bpf__ExecuteUbergraph_ServerList__pf_2(int32 b
 		case 31:
 			{
 				TArray<FBlueprintSessionResult>  __Local__64 = TArray<FBlueprintSessionResult> {};
-				bpfv__CallFunc_Array_Length_ReturnValue3__pf = FCustomThunkTemplates::Array_Length(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Instance1__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Instance1__pf->bpv__FoundxGames__pfT) : (__Local__64)));
+				bpfv__CallFunc_Array_Length_ReturnValue3__pf = FCustomThunkTemplates::Array_Length(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Manager1__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Manager1__pf->bpv__FoundxGames__pfT) : (__Local__64)));
 				bpfv__CallFunc_Greater_IntInt_ReturnValue1__pf = UKismetMathLibrary::Greater_IntInt(bpfv__CallFunc_Array_Length_ReturnValue3__pf, 0);
 				if (!bpfv__CallFunc_Greater_IntInt_ReturnValue1__pf)
 				{
@@ -1278,7 +1278,7 @@ void UServerList_C__pf1232574660::bpf__ExecuteUbergraph_ServerList__pf_2(int32 b
 		case 35:
 			{
 				TArray<FBlueprintSessionResult>  __Local__65 = TArray<FBlueprintSessionResult> {};
-				bpfv__CallFunc_Array_Length_ReturnValue2__pf = FCustomThunkTemplates::Array_Length(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Instance1__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Instance1__pf->bpv__FoundxGames__pfT) : (__Local__65)));
+				bpfv__CallFunc_Array_Length_ReturnValue2__pf = FCustomThunkTemplates::Array_Length(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Manager1__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Manager1__pf->bpv__FoundxGames__pfT) : (__Local__65)));
 				bpfv__CallFunc_Less_IntInt_ReturnValue1__pf = UKismetMathLibrary::Less_IntInt(b1l__Temp_int_Loop_Counter_Variable1__pf, bpfv__CallFunc_Array_Length_ReturnValue2__pf);
 				if (!bpfv__CallFunc_Less_IntInt_ReturnValue1__pf)
 				{
@@ -1306,7 +1306,7 @@ void UServerList_C__pf1232574660::bpf__ExecuteUbergraph_ServerList__pf_2(int32 b
 		case 40:
 			{
 				TArray<FBlueprintSessionResult>  __Local__66 = TArray<FBlueprintSessionResult> {};
-				FCustomThunkTemplates::Array_Get(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Instance1__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Instance1__pf->bpv__FoundxGames__pfT) : (__Local__66)), b1l__Temp_int_Array_Index_Variable1__pf, /*out*/ b1l__CallFunc_Array_Get_Item1__pf);
+				FCustomThunkTemplates::Array_Get(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Manager1__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Manager1__pf->bpv__FoundxGames__pfT) : (__Local__66)), b1l__Temp_int_Array_Index_Variable1__pf, /*out*/ b1l__CallFunc_Array_Get_Item1__pf);
 				if(::IsValid(b1l__CallFunc_Create_ReturnValue__pf))
 				{
 					b1l__CallFunc_Create_ReturnValue__pf->bpf__SetSearchResult__pf(b1l__CallFunc_Array_Get_Item1__pf);
@@ -1413,8 +1413,8 @@ void UServerList_C__pf1232574660::bpf__ExecuteUbergraph_ServerList__pf_2(int32 b
 		case 60:
 			{
 				bpfv__CallFunc_GetGameInstance_ReturnValue1__pf = UGameplayStatics::GetGameInstance(this);
-				b1l__K2Node_DynamicCast_AsDebug_Instance1__pf = Cast<UDebugInstance_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue1__pf);
-				b1l__K2Node_DynamicCast_bSuccess1__pf = (b1l__K2Node_DynamicCast_AsDebug_Instance1__pf != nullptr);;
+				b1l__K2Node_DynamicCast_AsDebug_Manager1__pf = Cast<UDebugManager_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue1__pf);
+				b1l__K2Node_DynamicCast_bSuccess1__pf = (b1l__K2Node_DynamicCast_AsDebug_Manager1__pf != nullptr);;
 				if (!b1l__K2Node_DynamicCast_bSuccess1__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
@@ -1423,9 +1423,9 @@ void UServerList_C__pf1232574660::bpf__ExecuteUbergraph_ServerList__pf_2(int32 b
 			}
 		case 61:
 			{
-				if(::IsValid(b1l__K2Node_DynamicCast_AsDebug_Instance1__pf))
+				if(::IsValid(b1l__K2Node_DynamicCast_AsDebug_Manager1__pf))
 				{
-					b1l__K2Node_DynamicCast_AsDebug_Instance1__pf->bpf__FindxGames__pfT();
+					b1l__K2Node_DynamicCast_AsDebug_Manager1__pf->bpf__FindxGames__pfT();
 				}
 				__CurrentState = 30;
 				break;
@@ -1494,12 +1494,12 @@ void UServerList_C__pf1232574660::bpf__ExecuteUbergraph_ServerList__pf_2(int32 b
 		case 114:
 			{
 				bpfv__CallFunc_GetGameInstance_ReturnValue2__pf = UGameplayStatics::GetGameInstance(this);
-				b1l__K2Node_DynamicCast_AsDebug_Instance2__pf = Cast<UDebugInstance_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue2__pf);
-				b1l__K2Node_DynamicCast_bSuccess3__pf = (b1l__K2Node_DynamicCast_AsDebug_Instance2__pf != nullptr);;
-				if(::IsValid(b1l__K2Node_DynamicCast_AsDebug_Instance2__pf))
+				b1l__K2Node_DynamicCast_AsDebug_Manager2__pf = Cast<UDebugManager_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue2__pf);
+				b1l__K2Node_DynamicCast_bSuccess3__pf = (b1l__K2Node_DynamicCast_AsDebug_Manager2__pf != nullptr);;
+				if(::IsValid(b1l__K2Node_DynamicCast_AsDebug_Manager2__pf))
 				{
 					TArray<FBlueprintSessionResult>  __Local__68 = TArray<FBlueprintSessionResult> {};
-					b1l__K2Node_DynamicCast_AsDebug_Instance2__pf->bpf__JoinxGame__pfT(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Instance2__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Instance2__pf->bpv__FoundxGames__pfT) : (__Local__68))[bpv__ServerRowSel__pf]);
+					b1l__K2Node_DynamicCast_AsDebug_Manager2__pf->bpf__JoinxGame__pfT(((::IsValid(b1l__K2Node_DynamicCast_AsDebug_Manager2__pf)) ? (b1l__K2Node_DynamicCast_AsDebug_Manager2__pf->bpv__FoundxGames__pfT) : (__Local__68))[bpv__ServerRowSel__pf]);
 				}
 				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 				break;
@@ -1893,22 +1893,22 @@ void UServerList_C__pf1232574660::bpf__ClearxServerList__pfT()
 void UServerList_C__pf1232574660::bpf__GoxbackxtoxMainscreen__pfTTT()
 {
 	APlayerController* bpfv__CallFunc_GetPlayerController_ReturnValue__pf{};
-	APlayerC_Regular_C__pf4061722237* bpfv__K2Node_DynamicCast_AsPlayer_C_Regular__pf{};
+	ARegUser_C__pf4061722237* bpfv__K2Node_DynamicCast_AsReg_User__pf{};
 	bool bpfv__K2Node_DynamicCast_bSuccess__pf{};
 	bpfv__CallFunc_GetPlayerController_ReturnValue__pf = UGameplayStatics::GetPlayerController(this, 0);
-	bpfv__K2Node_DynamicCast_AsPlayer_C_Regular__pf = Cast<APlayerC_Regular_C__pf4061722237>(bpfv__CallFunc_GetPlayerController_ReturnValue__pf);
-	bpfv__K2Node_DynamicCast_bSuccess__pf = (bpfv__K2Node_DynamicCast_AsPlayer_C_Regular__pf != nullptr);;
-	if(::IsValid(bpfv__K2Node_DynamicCast_AsPlayer_C_Regular__pf))
+	bpfv__K2Node_DynamicCast_AsReg_User__pf = Cast<ARegUser_C__pf4061722237>(bpfv__CallFunc_GetPlayerController_ReturnValue__pf);
+	bpfv__K2Node_DynamicCast_bSuccess__pf = (bpfv__K2Node_DynamicCast_AsReg_User__pf != nullptr);;
+	if(::IsValid(bpfv__K2Node_DynamicCast_AsReg_User__pf))
 	{
 		UUserWidget*  __Local__69 = ((UUserWidget*)nullptr);
-		bpfv__K2Node_DynamicCast_AsPlayer_C_Regular__pf->bpf__RemovexWidget__pfT(((::IsValid(bpfv__K2Node_DynamicCast_AsPlayer_C_Regular__pf)) ? (bpfv__K2Node_DynamicCast_AsPlayer_C_Regular__pf->bpv__WidgetxRef__pfT) : (__Local__69)));
+		bpfv__K2Node_DynamicCast_AsReg_User__pf->bpf__RemovexWidget__pfT(((::IsValid(bpfv__K2Node_DynamicCast_AsReg_User__pf)) ? (bpfv__K2Node_DynamicCast_AsReg_User__pf->bpv__WidgetxRef__pfT) : (__Local__69)));
 	}
 	bpfv__CallFunc_GetPlayerController_ReturnValue__pf = UGameplayStatics::GetPlayerController(this, 0);
-	bpfv__K2Node_DynamicCast_AsPlayer_C_Regular__pf = Cast<APlayerC_Regular_C__pf4061722237>(bpfv__CallFunc_GetPlayerController_ReturnValue__pf);
-	bpfv__K2Node_DynamicCast_bSuccess__pf = (bpfv__K2Node_DynamicCast_AsPlayer_C_Regular__pf != nullptr);;
-	if(::IsValid(bpfv__K2Node_DynamicCast_AsPlayer_C_Regular__pf))
+	bpfv__K2Node_DynamicCast_AsReg_User__pf = Cast<ARegUser_C__pf4061722237>(bpfv__CallFunc_GetPlayerController_ReturnValue__pf);
+	bpfv__K2Node_DynamicCast_bSuccess__pf = (bpfv__K2Node_DynamicCast_AsReg_User__pf != nullptr);;
+	if(::IsValid(bpfv__K2Node_DynamicCast_AsReg_User__pf))
 	{
-		bpfv__K2Node_DynamicCast_AsPlayer_C_Regular__pf->bpf__SpawnxWidget__pfT(UMainScreen_C__pf1232574660::StaticClass());
+		bpfv__K2Node_DynamicCast_AsReg_User__pf->bpf__SpawnxWidget__pfT(UMainScreen_C__pf1232574660::StaticClass());
 	}
 }
 PRAGMA_DISABLE_OPTIMIZATION
@@ -1934,31 +1934,31 @@ void UServerList_C__pf1232574660::__StaticDependenciesAssets(TArray<FBlueprintDe
 		{104, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Font /Engine/EngineFonts/Roboto.Roboto 
 		{2, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/Engine.PointerToUberGraphFrame 
 		{8, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameInstance 
-		{4, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.PlayerController 
+		{5, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.PlayerController 
 		{105, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/UMG.PanelSlot 
 		{100, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/UMG.Widget 
 		{66, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/OnlineSubsystemUtils.BlueprintSessionResult 
 		{88, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/SlateCore.SlateColor 
-		{10, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetArrayLibrary 
-		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetMathLibrary 
+		{12, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetArrayLibrary 
+		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetMathLibrary 
 		{106, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Enum /Script/UMG.ESlateVisibility 
 		{61, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/UMG.WidgetBlueprintLibrary 
 		{107, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.ScrollBox 
 		{108, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/UMG.PanelWidget 
-		{12, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetSystemLibrary 
-		{41, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/Engine.LatentActionInfo 
-		{83, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.VerticalBox 
-		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
-		{86, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.TextBlock 
-		{13, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetNodeHelperLibrary 
+		{13, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetSystemLibrary 
+		{14, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/Engine.LatentActionInfo 
+		{86, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.VerticalBox 
+		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
+		{84, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.TextBlock 
+		{10, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetNodeHelperLibrary 
 		{99, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.HorizontalBox 
-		{14, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetStringLibrary 
-		{85, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetTextLibrary 
+		{15, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetStringLibrary 
+		{83, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetTextLibrary 
 		{60, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/UMG.UserWidget 
 		{93, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.Button 
-		{27, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugInstance.DebugInstance_C 
+		{28, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugManager.DebugManager_C 
 		{109, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  WidgetBlueprintGeneratedClass /Game/UserInterface/MainScreen/ServerRow.ServerRow_C 
-		{24, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Player/PlayerC_Regular.PlayerC_Regular_C 
+		{24, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Player/RegUser.RegUser_C 
 		{63, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  WidgetBlueprintGeneratedClass /Game/UserInterface/MainScreen/MainScreen.MainScreen_C 
 		{110, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  UserDefinedEnum /Game/UserInterface/MainScreen/EServerSel.EServerSel 
 	};

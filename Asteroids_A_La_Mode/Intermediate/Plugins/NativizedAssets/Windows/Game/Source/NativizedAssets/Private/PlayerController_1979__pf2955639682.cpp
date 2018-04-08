@@ -359,7 +359,7 @@
 #include "Runtime/Engine/Classes/Components/ChildActorComponent.h"
 #include "Asteroids1979__pf2955639682.h"
 #include "Runtime/Engine/Classes/GameFramework/PlayerStart.h"
-#include "Ship__pf3227778944.h"
+#include "Ship__pf668171628.h"
 #include "PlayerState_1979__pf2955639682.h"
 #include "InGameHud__pf515974370.h"
 #include "LevelStart_Widget__pf515974370.h"
@@ -434,7 +434,7 @@ void APlayerController_1979_C__pf2955639682::__CustomDynamicClassInitialization(
 	InDynamicClass->AssembleReferenceTokenStream();
 	// List of all referenced converted classes
 	InDynamicClass->ReferencedConvertedFields.Add(AAsteroids1979_C__pf2955639682::StaticClass());
-	InDynamicClass->ReferencedConvertedFields.Add(AShip_C__pf3227778944::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(AShip_C__pf668171628::StaticClass());
 	InDynamicClass->ReferencedConvertedFields.Add(APlayerState_1979_C__pf2955639682::StaticClass());
 	InDynamicClass->ReferencedConvertedFields.Add(UInGameHud_C__pf515974370::StaticClass());
 	InDynamicClass->ReferencedConvertedFields.Add(ULevelStart_Widget_C__pf515974370::StaticClass());
@@ -489,7 +489,7 @@ void APlayerController_1979_C__pf2955639682::bpf__ExecuteUbergraph_PlayerControl
 	int32 bpfv__CallFunc_GetPlayerControllerID_ReturnValue__pf{};
 	FTransform bpfv__CallFunc_GetTransform_ReturnValue__pf{};
 	AActor* bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf{};
-	AShip_C__pf3227778944* bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf{};
+	AShip_C__pf668171628* bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf{};
 	check(bpp__EntryPoint__pf == 17);
 	// optimized KCST_UnconditionalGoto
 	bpfv__CallFunc_GetGameMode_ReturnValue__pf = UGameplayStatics::GetGameMode(this);
@@ -510,14 +510,14 @@ void APlayerController_1979_C__pf2955639682::bpf__ExecuteUbergraph_PlayerControl
 	{
 		bpfv__CallFunc_GetTransform_ReturnValue__pf = b0l__CallFunc_Array_Get_Item__pf->AActor::GetTransform();
 	}
-	bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf = UGameplayStatics::BeginDeferredActorSpawnFromClass(this, AShip_C__pf3227778944::StaticClass(), bpfv__CallFunc_GetTransform_ReturnValue__pf, ESpawnActorCollisionHandlingMethod::Undefined, ((AActor*)nullptr));
+	bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf = UGameplayStatics::BeginDeferredActorSpawnFromClass(this, AShip_C__pf668171628::StaticClass(), bpfv__CallFunc_GetTransform_ReturnValue__pf, ESpawnActorCollisionHandlingMethod::Undefined, ((AActor*)nullptr));
 	TArray<APlayerStart*>  __Local__6 = TArray<APlayerStart*> {};
 	FCustomThunkTemplates::Array_Get(((::IsValid(b0l__K2Node_DynamicCast_AsAsteroids_1979__pf)) ? (b0l__K2Node_DynamicCast_AsAsteroids_1979__pf->bpv__PlayerStarts__pf) : (__Local__6)), bpfv__CallFunc_GetPlayerControllerID_ReturnValue__pf, /*out*/ b0l__CallFunc_Array_Get_Item__pf);
 	if(::IsValid(b0l__CallFunc_Array_Get_Item__pf))
 	{
 		bpfv__CallFunc_GetTransform_ReturnValue__pf = b0l__CallFunc_Array_Get_Item__pf->AActor::GetTransform();
 	}
-	bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf = CastChecked<AShip_C__pf3227778944>(UGameplayStatics::FinishSpawningActor(bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf, bpfv__CallFunc_GetTransform_ReturnValue__pf), ECastCheckedType::NullAllowed);
+	bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf = CastChecked<AShip_C__pf668171628>(UGameplayStatics::FinishSpawningActor(bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf, bpfv__CallFunc_GetTransform_ReturnValue__pf), ECastCheckedType::NullAllowed);
 	Possess(bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf);
 	bpf__SetCamera__pf();
 	b0l__K2Node_DynamicCast_AsPlayer_State_19791__pf = Cast<APlayerState_1979_C__pf2955639682>(PlayerState);
@@ -661,20 +661,20 @@ void APlayerController_1979_C__pf2955639682::__StaticDependenciesAssets(TArray<F
 		{1, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/Engine.SceneComponent 
 		{2, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/Engine.PointerToUberGraphFrame 
 		{59, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/InputCore.Key 
-		{16, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameModeBase 
+		{17, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameModeBase 
 		{6, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.PlayerStart 
 		{7, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.Actor 
-		{5, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.Controller 
+		{4, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.Controller 
 		{60, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/UMG.UserWidget 
 		{61, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/UMG.WidgetBlueprintLibrary 
-		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
-		{10, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetArrayLibrary 
-		{4, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.PlayerController 
+		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
+		{12, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetArrayLibrary 
+		{5, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.PlayerController 
 		{3, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameStateBase 
 		{54, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.CameraActor 
 		{62, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.CheatManager 
 		{131, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Arcade1979/Asteroids1979.Asteroids1979_C 
-		{26, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Ship/Ship.Ship_C 
+		{27, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Pawns/Ship/Ship.Ship_C 
 		{129, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Arcade1979/PlayerState_1979.PlayerState_1979_C 
 		{56, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  WidgetBlueprintGeneratedClass /Game/UserInterface/Dev_Test/InGameHud.InGameHud_C 
 		{64, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  WidgetBlueprintGeneratedClass /Game/UserInterface/Dev_Test/LevelStart_Widget.LevelStart_Widget_C 

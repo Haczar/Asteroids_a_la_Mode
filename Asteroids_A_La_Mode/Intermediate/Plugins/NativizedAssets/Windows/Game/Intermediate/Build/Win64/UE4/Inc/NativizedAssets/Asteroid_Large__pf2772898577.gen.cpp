@@ -127,7 +127,7 @@ void EmptyLinkFunctionForGeneratedCodeAsteroid_Large__pf2772898577() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_DYNAMIC_CLASS(AAsteroid_Large_C__pf2772898577, TEXT("Asteroid_Large_C"), 2878731128);
+	IMPLEMENT_DYNAMIC_CLASS(AAsteroid_Large_C__pf2772898577, TEXT("Asteroid_Large_C"), 907640935);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AAsteroid_Large_C__pf2772898577(Z_Construct_UClass_AAsteroid_Large_C__pf2772898577, &AAsteroid_Large_C__pf2772898577::StaticClass, TEXT("/Game/Obstacles/Asteroid_Large"), TEXT("Asteroid_Large_C"), true, TEXT("/Game/Obstacles/Asteroid_Large"), TEXT("/Game/Obstacles/Asteroid_Large.Asteroid_Large_C"), nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAsteroid_Large_C__pf2772898577);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

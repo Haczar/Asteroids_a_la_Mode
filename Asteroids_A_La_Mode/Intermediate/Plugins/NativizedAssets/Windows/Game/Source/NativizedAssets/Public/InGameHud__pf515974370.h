@@ -5,7 +5,7 @@
 class UImage;
 class UVerticalBox;
 class UTextBlock;
-class ADebugState_C__pf4162722864;
+class ADebugMData_C__pf4162722864;
 class APlayerController;
 class AController;
 #include "InGameHud__pf515974370.generated.h"
@@ -62,34 +62,34 @@ public:
 	int32 b0l__Temp_int_Variable__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_SwitchInteger_CmpSuccess"))
 	bool b0l__K2Node_SwitchInteger_CmpSuccess__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_State"))
-	ADebugState_C__pf4162722864* b0l__K2Node_DynamicCast_AsDebug_State__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_MData"))
+	ADebugMData_C__pf4162722864* b0l__K2Node_DynamicCast_AsDebug_MData__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess"))
 	bool b0l__K2Node_DynamicCast_bSuccess__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_MData1"))
+	ADebugMData_C__pf4162722864* b0l__K2Node_DynamicCast_AsDebug_MData1__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess1"))
+	bool b0l__K2Node_DynamicCast_bSuccess1__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_int_Variable1"))
 	int32 b0l__Temp_int_Variable1__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_SwitchInteger1_CmpSuccess"))
 	bool b0l__K2Node_SwitchInteger1_CmpSuccess__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_int_Variable2"))
-	int32 b0l__Temp_int_Variable2__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_SwitchInteger2_CmpSuccess"))
-	bool b0l__K2Node_SwitchInteger2_CmpSuccess__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_State1"))
-	ADebugState_C__pf4162722864* b0l__K2Node_DynamicCast_AsDebug_State1__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess1"))
-	bool b0l__K2Node_DynamicCast_bSuccess1__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_CustomEvent_Player1"))
 	APlayerController* b0l__K2Node_CustomEvent_Player1__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_CustomEvent_Player"))
 	APlayerController* b0l__K2Node_CustomEvent_Player__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_State2"))
-	ADebugState_C__pf4162722864* b0l__K2Node_DynamicCast_AsDebug_State2__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_MData2"))
+	ADebugMData_C__pf4162722864* b0l__K2Node_DynamicCast_AsDebug_MData2__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess2"))
 	bool b0l__K2Node_DynamicCast_bSuccess2__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_State3"))
-	ADebugState_C__pf4162722864* b0l__K2Node_DynamicCast_AsDebug_State3__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_MData3"))
+	ADebugMData_C__pf4162722864* b0l__K2Node_DynamicCast_AsDebug_MData3__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess3"))
 	bool b0l__K2Node_DynamicCast_bSuccess3__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_int_Variable2"))
+	int32 b0l__Temp_int_Variable2__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_SwitchInteger2_CmpSuccess"))
+	bool b0l__K2Node_SwitchInteger2_CmpSuccess__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_int_Variable3"))
 	int32 b0l__Temp_int_Variable3__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_SwitchInteger3_CmpSuccess"))
@@ -102,11 +102,11 @@ public:
 	void bpf__ExecuteUbergraph_InGameHud__pf_0(int32 bpp__EntryPoint__pf);
 	void bpf__ExecuteUbergraph_InGameHud__pf_1(int32 bpp__EntryPoint__pf);
 	void bpf__ExecuteUbergraph_InGameHud__pf_2(int32 bpp__EntryPoint__pf);
-	UFUNCTION(BlueprintCallable, meta=(Category, OverrideNativeName="Make p2 visible"))
+	UFUNCTION(NetMulticast, Reliable, BlueprintCallable, meta=(Category, OverrideNativeName="Make p2 visible"))
 	virtual void bpf__Makexp2xvisible__pfTT();
-	UFUNCTION(BlueprintCallable, meta=(Category, OverrideNativeName="Update Score"))
+	UFUNCTION(NetMulticast, Reliable, BlueprintCallable, meta=(Category, OverrideNativeName="Update Score"))
 	virtual void bpf__UpdatexScore__pfT(APlayerController* bpp__Player__pf);
-	UFUNCTION(BlueprintCallable, meta=(Category, OverrideNativeName="Update Lives"))
+	UFUNCTION(NetMulticast, Reliable, BlueprintCallable, meta=(Category, OverrideNativeName="Update Lives"))
 	virtual void bpf__UpdatexLives__pfT(APlayerController* bpp__Player__pf);
 	UFUNCTION(BlueprintCallable, BlueprintPure, meta=(Category, OverrideNativeName="Determine Player"))
 	virtual void bpf__DeterminexPlayer__pfT(AController* bpp__Playah__pf, /*out*/ bool& bpp__determination__pf);

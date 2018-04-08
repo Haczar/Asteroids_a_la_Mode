@@ -16,6 +16,9 @@ class APlayerController;
 #define NATIVIZEDASSETS_InGameHud__pf515974370_generated_h
 
 #define Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_RPC_WRAPPERS \
+	virtual void bpf__UpdatexLives__pfT_Implementation(APlayerController* bpp__Player__pf); \
+	virtual void bpf__UpdatexScore__pfT_Implementation(APlayerController* bpp__Player__pf); \
+	virtual void bpf__Makexp2xvisible__pfTT_Implementation(); \
  \
 	DECLARE_FUNCTION(execbpf__DeterminexPlayer__pfT) \
 	{ \
@@ -32,7 +35,7 @@ class APlayerController;
 		P_GET_OBJECT(APlayerController,Z_Param_bpp__Player__pf); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->bpf__UpdatexLives__pfT(Z_Param_bpp__Player__pf); \
+		P_THIS->bpf__UpdatexLives__pfT_Implementation(Z_Param_bpp__Player__pf); \
 		P_NATIVE_END; \
 	} \
  \
@@ -41,7 +44,7 @@ class APlayerController;
 		P_GET_OBJECT(APlayerController,Z_Param_bpp__Player__pf); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->bpf__UpdatexScore__pfT(Z_Param_bpp__Player__pf); \
+		P_THIS->bpf__UpdatexScore__pfT_Implementation(Z_Param_bpp__Player__pf); \
 		P_NATIVE_END; \
 	} \
  \
@@ -49,12 +52,15 @@ class APlayerController;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->bpf__Makexp2xvisible__pfTT(); \
+		P_THIS->bpf__Makexp2xvisible__pfTT_Implementation(); \
 		P_NATIVE_END; \
 	}
 
 
 #define Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void bpf__UpdatexLives__pfT_Implementation(APlayerController* bpp__Player__pf); \
+	virtual void bpf__UpdatexScore__pfT_Implementation(APlayerController* bpp__Player__pf); \
+	virtual void bpf__Makexp2xvisible__pfTT_Implementation(); \
  \
 	DECLARE_FUNCTION(execbpf__DeterminexPlayer__pfT) \
 	{ \
@@ -71,7 +77,7 @@ class APlayerController;
 		P_GET_OBJECT(APlayerController,Z_Param_bpp__Player__pf); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->bpf__UpdatexLives__pfT(Z_Param_bpp__Player__pf); \
+		P_THIS->bpf__UpdatexLives__pfT_Implementation(Z_Param_bpp__Player__pf); \
 		P_NATIVE_END; \
 	} \
  \
@@ -80,7 +86,7 @@ class APlayerController;
 		P_GET_OBJECT(APlayerController,Z_Param_bpp__Player__pf); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->bpf__UpdatexScore__pfT(Z_Param_bpp__Player__pf); \
+		P_THIS->bpf__UpdatexScore__pfT_Implementation(Z_Param_bpp__Player__pf); \
 		P_NATIVE_END; \
 	} \
  \
@@ -88,11 +94,23 @@ class APlayerController;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->bpf__Makexp2xvisible__pfTT(); \
+		P_THIS->bpf__Makexp2xvisible__pfTT_Implementation(); \
 		P_NATIVE_END; \
 	}
 
 
+#define Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_EVENT_PARMS \
+	struct InGameHud_C__pf515974370_eventbpf__UpdatexLives__pfT_Parms \
+	{ \
+		APlayerController* bpp__Player__pf; \
+	}; \
+	struct InGameHud_C__pf515974370_eventbpf__UpdatexScore__pfT_Parms \
+	{ \
+		APlayerController* bpp__Player__pf; \
+	};
+
+
+#define Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_CALLBACK_WRAPPERS
 #define Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUInGameHud_C__pf515974370(); \
@@ -142,12 +160,16 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UInGameHud_C__pf515974370); \
 
 
 #define Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_PRIVATE_PROPERTY_OFFSET
-#define Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_12_PROLOG
+#define Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_12_PROLOG \
+	Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_EVENT_PARMS
+
+
 #define Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_PRIVATE_PROPERTY_OFFSET \
 	Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_RPC_WRAPPERS \
+	Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_CALLBACK_WRAPPERS \
 	Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_INCLASS \
 	Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_STANDARD_CONSTRUCTORS \
 public: \
@@ -159,6 +181,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_PRIVATE_PROPERTY_OFFSET \
 	Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_CALLBACK_WRAPPERS \
 	Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_INCLASS_NO_PURE_DECLS \
 	Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_InGameHud__pf515974370_h_16_ENHANCED_CONSTRUCTORS \
 public: \

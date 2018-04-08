@@ -29,9 +29,9 @@ void EmptyLinkFunctionForGeneratedCodeMainScreen__pf1232574660() {}
 	NATIVIZEDASSETS_API UEnum* Z_Construct_UEnum_NativizedAssets_E__EMenSel__pf();
 	NATIVIZEDASSETS_API UFunction* Z_Construct_UFunction_UMainScreen_C__pf1232574660_bpf__SetxObjxxColorxandxOpacity__pfT3TTT();
 	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
-	NATIVIZEDASSETS_API UClass* Z_Construct_UClass_APlayerC_Regular_C__pf4061722237_NoRegister();
-	NATIVIZEDASSETS_API UClass* Z_Construct_UClass_ADebugState_C__pf4162722864_NoRegister();
-	NATIVIZEDASSETS_API UClass* Z_Construct_UClass_UDebugInstance_C__pf4162722864_NoRegister();
+	NATIVIZEDASSETS_API UClass* Z_Construct_UClass_ARegUser_C__pf4061722237_NoRegister();
+	NATIVIZEDASSETS_API UClass* Z_Construct_UClass_ADebugMData_C__pf4162722864_NoRegister();
+	NATIVIZEDASSETS_API UClass* Z_Construct_UClass_UDebugManager_C__pf4162722864_NoRegister();
 	NATIVIZEDASSETS_API UEnum* Z_Construct_UEnum_NativizedAssets_E__DStates__pf();
 	UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UImage_NoRegister();
@@ -301,12 +301,12 @@ void EmptyLinkFunctionForGeneratedCodeMainScreen__pf1232574660() {}
 			auto NewProp_b0l__K2Node_DynamicCast_bSuccess4__pf_SetBit = [](void* Obj){ ((UMainScreen_C__pf1232574660*)Obj)->b0l__K2Node_DynamicCast_bSuccess4__pf = 1; };
 			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_b0l__K2Node_DynamicCast_bSuccess4__pf = { UE4CodeGen_Private::EPropertyClass::Bool, "K2Node_DynamicCast_bSuccess4", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(UMainScreen_C__pf1232574660), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_b0l__K2Node_DynamicCast_bSuccess4__pf_SetBit)>::SetBit, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_bSuccess4__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_bSuccess4__pf_MetaData)) };
 #if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf_MetaData[] = {
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsReg_User1__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/MainScreen__pf1232574660.h" },
-				{ "OverrideNativeName", "K2Node_DynamicCast_AsPlayer_C_Regular1" },
+				{ "OverrideNativeName", "K2Node_DynamicCast_AsReg_User1" },
 			};
 #endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsPlayer_C_Regular1", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UMainScreen_C__pf1232574660, b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf), Z_Construct_UClass_APlayerC_Regular_C__pf4061722237_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf_MetaData)) };
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsReg_User1__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsReg_User1", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UMainScreen_C__pf1232574660, b0l__K2Node_DynamicCast_AsReg_User1__pf), Z_Construct_UClass_ARegUser_C__pf4061722237_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsReg_User1__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsReg_User1__pf_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/MainScreen__pf1232574660.h" },
@@ -316,12 +316,12 @@ void EmptyLinkFunctionForGeneratedCodeMainScreen__pf1232574660() {}
 			auto NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_SetBit = [](void* Obj){ ((UMainScreen_C__pf1232574660*)Obj)->b0l__K2Node_DynamicCast_bSuccess3__pf = 1; };
 			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf = { UE4CodeGen_Private::EPropertyClass::Bool, "K2Node_DynamicCast_bSuccess3", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(UMainScreen_C__pf1232574660), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_SetBit)>::SetBit, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf_MetaData)) };
 #if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf_MetaData[] = {
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsReg_User__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/MainScreen__pf1232574660.h" },
-				{ "OverrideNativeName", "K2Node_DynamicCast_AsPlayer_C_Regular" },
+				{ "OverrideNativeName", "K2Node_DynamicCast_AsReg_User" },
 			};
 #endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsPlayer_C_Regular", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UMainScreen_C__pf1232574660, b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf), Z_Construct_UClass_APlayerC_Regular_C__pf4061722237_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf_MetaData)) };
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsReg_User__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsReg_User", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UMainScreen_C__pf1232574660, b0l__K2Node_DynamicCast_AsReg_User__pf), Z_Construct_UClass_ARegUser_C__pf4061722237_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsReg_User__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsReg_User__pf_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_SwitchEnum1_CmpSuccess__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/MainScreen__pf1232574660.h" },
@@ -339,12 +339,12 @@ void EmptyLinkFunctionForGeneratedCodeMainScreen__pf1232574660() {}
 			auto NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_SetBit = [](void* Obj){ ((UMainScreen_C__pf1232574660*)Obj)->b0l__K2Node_DynamicCast_bSuccess2__pf = 1; };
 			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf = { UE4CodeGen_Private::EPropertyClass::Bool, "K2Node_DynamicCast_bSuccess2", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(UMainScreen_C__pf1232574660), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_SetBit)>::SetBit, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf_MetaData)) };
 #if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_State__pf_MetaData[] = {
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_MData__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/MainScreen__pf1232574660.h" },
-				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_State" },
+				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_MData" },
 			};
 #endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_State__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_State", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UMainScreen_C__pf1232574660, b0l__K2Node_DynamicCast_AsDebug_State__pf), Z_Construct_UClass_ADebugState_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_State__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_State__pf_MetaData)) };
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_MData__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_MData", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UMainScreen_C__pf1232574660, b0l__K2Node_DynamicCast_AsDebug_MData__pf), Z_Construct_UClass_ADebugMData_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_MData__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_MData__pf_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_MakeStruct_SlateColor__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/MainScreen__pf1232574660.h" },
@@ -361,12 +361,12 @@ void EmptyLinkFunctionForGeneratedCodeMainScreen__pf1232574660() {}
 			auto NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_SetBit = [](void* Obj){ ((UMainScreen_C__pf1232574660*)Obj)->b0l__K2Node_DynamicCast_bSuccess1__pf = 1; };
 			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf = { UE4CodeGen_Private::EPropertyClass::Bool, "K2Node_DynamicCast_bSuccess1", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(UMainScreen_C__pf1232574660), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_SetBit)>::SetBit, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf_MetaData)) };
 #if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_Instance1__pf_MetaData[] = {
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_Manager1__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/MainScreen__pf1232574660.h" },
-				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_Instance1" },
+				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_Manager1" },
 			};
 #endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_Instance1__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_Instance1", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UMainScreen_C__pf1232574660, b0l__K2Node_DynamicCast_AsDebug_Instance1__pf), Z_Construct_UClass_UDebugInstance_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_Instance1__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_Instance1__pf_MetaData)) };
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_Manager1__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_Manager1", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UMainScreen_C__pf1232574660, b0l__K2Node_DynamicCast_AsDebug_Manager1__pf), Z_Construct_UClass_UDebugManager_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_Manager1__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_Manager1__pf_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_bSuccess__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/MainScreen__pf1232574660.h" },
@@ -376,12 +376,12 @@ void EmptyLinkFunctionForGeneratedCodeMainScreen__pf1232574660() {}
 			auto NewProp_b0l__K2Node_DynamicCast_bSuccess__pf_SetBit = [](void* Obj){ ((UMainScreen_C__pf1232574660*)Obj)->b0l__K2Node_DynamicCast_bSuccess__pf = 1; };
 			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_b0l__K2Node_DynamicCast_bSuccess__pf = { UE4CodeGen_Private::EPropertyClass::Bool, "K2Node_DynamicCast_bSuccess", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(UMainScreen_C__pf1232574660), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_b0l__K2Node_DynamicCast_bSuccess__pf_SetBit)>::SetBit, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_bSuccess__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_bSuccess__pf_MetaData)) };
 #if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_Instance__pf_MetaData[] = {
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_DynamicCast_AsDebug_Manager__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/MainScreen__pf1232574660.h" },
-				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_Instance" },
+				{ "OverrideNativeName", "K2Node_DynamicCast_AsDebug_Manager" },
 			};
 #endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_Instance__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_Instance", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UMainScreen_C__pf1232574660, b0l__K2Node_DynamicCast_AsDebug_Instance__pf), Z_Construct_UClass_UDebugInstance_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_Instance__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_Instance__pf_MetaData)) };
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsDebug_Manager__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsDebug_Manager", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(UMainScreen_C__pf1232574660, b0l__K2Node_DynamicCast_AsDebug_Manager__pf), Z_Construct_UClass_UDebugManager_C__pf4162722864_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsDebug_Manager__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsDebug_Manager__pf_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_SwitchEnum_CmpSuccess__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/MainScreen__pf1232574660.h" },
@@ -502,17 +502,17 @@ void EmptyLinkFunctionForGeneratedCodeMainScreen__pf1232574660() {}
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_bpv__AsteroidsIMg__pf = { UE4CodeGen_Private::EPropertyClass::Object, "AsteroidsIMg", RF_Public|RF_Transient, 0x001000000008000c, 1, nullptr, STRUCT_OFFSET(UMainScreen_C__pf1232574660, bpv__AsteroidsIMg__pf), Z_Construct_UClass_UImage_NoRegister, METADATA_PARAMS(NewProp_bpv__AsteroidsIMg__pf_MetaData, ARRAY_COUNT(NewProp_bpv__AsteroidsIMg__pf_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_bSuccess4__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsReg_User1__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_bSuccess3__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsReg_User__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_SwitchEnum1_CmpSuccess__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_bSuccess2__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_State__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_MData__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_MakeStruct_SlateColor__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_bSuccess1__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_Instance1__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_Manager1__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_bSuccess__pf,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_Instance__pf,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_DynamicCast_AsDebug_Manager__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_b0l__K2Node_SwitchEnum_CmpSuccess__pf,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_bpv__DM_GameModex__pfT,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_bpv__DM_GameModex__pfT_Underlying,
@@ -546,7 +546,7 @@ void EmptyLinkFunctionForGeneratedCodeMainScreen__pf1232574660() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_DYNAMIC_CLASS(UMainScreen_C__pf1232574660, TEXT("MainScreen_C"), 1163248316);
+	IMPLEMENT_DYNAMIC_CLASS(UMainScreen_C__pf1232574660, TEXT("MainScreen_C"), 825397682);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UMainScreen_C__pf1232574660(Z_Construct_UClass_UMainScreen_C__pf1232574660, &UMainScreen_C__pf1232574660::StaticClass, TEXT("/Game/UserInterface/MainScreen/MainScreen"), TEXT("MainScreen_C"), true, TEXT("/Game/UserInterface/MainScreen/MainScreen"), TEXT("/Game/UserInterface/MainScreen/MainScreen.MainScreen_C"), nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UMainScreen_C__pf1232574660);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

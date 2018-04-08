@@ -366,10 +366,9 @@
 #include "Runtime/Engine/Classes/Matinee/InterpData.h"
 #include "Runtime/Engine/Classes/Matinee/InterpGroupDirector.h"
 #include "Runtime/Engine/Classes/Components/ChildActorComponent.h"
-#include "DebugState__pf4162722864.h"
-#include "Runtime/Engine/Classes/Kismet/KismetMathLibrary.h"
-#include "Runtime/Engine/Classes/Engine/Texture2DDynamic.h"
-#include "Runtime/Engine/Classes/Slate/SlateBrushAsset.h"
+#include "DebugMData__pf4162722864.h"
+#include "Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h"
+#include "Runtime/Engine/Classes/Engine/CollisionProfile.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 #include "Runtime/Engine/Classes/Components/AudioComponent.h"
 #include "Runtime/Engine/Classes/GameFramework/ForceFeedbackAttenuation.h"
@@ -381,36 +380,36 @@
 #include "Runtime/Engine/Classes/Components/DecalComponent.h"
 #include "Runtime/Engine/Classes/GameFramework/SaveGame.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStaticsTypes.h"
-#include "Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h"
-#include "PlayerC_Regular__pf4061722237.h"
-#include "GameStart__pf3166771619.h"
-#include "PlyrState__pf4061722237.h"
-#include "DStates__pf4162722864.h"
-#include "DebugMode__pf4162722864.h"
 #include "Runtime/Engine/Classes/Kismet/KismetStringLibrary.h"
-#include "Runtime/Engine/Classes/Engine/CollisionProfile.h"
+#include "RegUser__pf4061722237.h"
+#include "GameStart__pf3166771619.h"
+#include "DebugMode__pf4162722864.h"
+#include "DStates__pf4162722864.h"
+#include "UserData__pf4061722237.h"
 #include "Runtime/Engine/Classes/Engine/InputActionDelegateBinding.h"
 #include "Runtime/Engine/Classes/Engine/InputDelegateBinding.h"
-#include "DebugInstance__pf4162722864.h"
+#include "DebugManager__pf4162722864.h"
+#include "Runtime/Engine/Classes/Kismet/KismetMathLibrary.h"
 #include "PState__pf4061722237.h"
-#include "Spawn_Volume__pf2174024837.h"
 #include "Runtime/Engine/Classes/GameFramework/PlayerStart.h"
-#include "Ship__pf3227778944.h"
-#include "Runtime/Engine/Classes/Kismet/KismetArrayLibrary.h"
+#include "Spawn_Volume__pf2174024837.h"
+#include "Ship__pf668171628.h"
 #include "1979Rounds__pf2955639682.h"
 #include "Runtime/Engine/Classes/Kismet/KismetNodeHelperLibrary.h"
+#include "Runtime/Engine/Classes/Kismet/KismetArrayLibrary.h"
 #include "Runtime/Engine/Classes/Engine/ComponentDelegateBinding.h"
-#include "BP_Projectile__pf3227778944.h"
+#include "BP_Projectile__pf668171628.h"
 #include "Alien__pf655108736.h"
 #include "Asteroid__pf2772898577.h"
-#include "SRotate__pf3227778944.h"
+#include "SRotate__pf668171628.h"
 #include "Runtime/Engine/Classes/GameFramework/GameMode.h"
 #include "Runtime/Engine/Classes/GameFramework/GameState.h"
-#include "MenuPawn__pf4061722237.h"
+#include "MenuPawn__pf3752356522.h"
 #include "Asteroid_Medium__pf2772898577.h"
 #include "Asteroid_Large__pf2772898577.h"
 #include "MainScreen__pf1232574660.h"
 #include "Runtime/UMG/Public/Blueprint/WidgetBlueprintLibrary.h"
+#include "Runtime/Engine/Classes/Slate/SlateBrushAsset.h"
 #include "LevelStart_Widget__pf515974370.h"
 #include "GameOver__pf3166771619.h"
 #include "Runtime/Engine/Classes/Kismet/KismetTextLibrary.h"
@@ -418,6 +417,7 @@
 #include "Runtime/SlateCore/Public/Fonts/FontCache.h"
 #include "Runtime/Slate/Public/Framework/Text/TextLayout.h"
 #include "Runtime/SlateCore/Public/Fonts/SlateFontInfo.h"
+#include "Runtime/Engine/Classes/Engine/Texture2DDynamic.h"
 
 
 #ifdef _MSC_VER
@@ -474,8 +474,8 @@ void UInGameHud_C__pf515974370::__CustomDynamicClassInitialization(UDynamicClass
 	ensure(nullptr == InDynamicClass->AnimClassImplementation);
 	InDynamicClass->AssembleReferenceTokenStream();
 	// List of all referenced converted classes
-	InDynamicClass->ReferencedConvertedFields.Add(ADebugState_C__pf4162722864::StaticClass());
-	InDynamicClass->ReferencedConvertedFields.Add(APlyrState_C__pf4061722237::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(ADebugMData_C__pf4162722864::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(AUserData_C__pf4061722237::StaticClass());
 	FConvertedBlueprintsDependencies::FillUsedAssetsInDynamicClass(InDynamicClass, &__StaticDependencies_DirectlyUsedAssets);
 	auto __Local__0 = NewObject<UWidgetTree>(InDynamicClass, UWidgetTree::StaticClass(), TEXT("WidgetTree"));
 	InDynamicClass->MiscConvertedSubobjects.Add(__Local__0);
@@ -855,26 +855,16 @@ void UInGameHud_C__pf515974370::PreSave(const class ITargetPlatform* TargetPlatf
 }
 void UInGameHud_C__pf515974370::bpf__ExecuteUbergraph_InGameHud__pf_0(int32 bpp__EntryPoint__pf)
 {
-	check(bpp__EntryPoint__pf == 54);
-	// optimized KCST_UnconditionalGoto
-	if(::IsValid(bpv__Player2StatsVB__pf))
-	{
-		bpv__Player2StatsVB__pf->SetVisibility(ESlateVisibility::Visible);
-	}
-	return; //KCST_EndOfThread
-}
-void UInGameHud_C__pf515974370::bpf__ExecuteUbergraph_InGameHud__pf_1(int32 bpp__EntryPoint__pf)
-{
 	int32 bpfv__CallFunc_Add_IntInt_ReturnValue__pf{};
 	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue__pf{};
 	int32 bpfv__CallFunc_Subtract_IntInt_ReturnValue__pf{};
-	bool bpfv__CallFunc_LessEqual_IntInt_ReturnValue__pf{};
-	int32 bpfv__CallFunc_Add_IntInt_ReturnValue1__pf{};
-	bool bpfv__CallFunc_LessEqual_IntInt_ReturnValue1__pf{};
-	int32 bpfv__CallFunc_Add_IntInt_ReturnValue2__pf{};
 	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue1__pf{};
 	int32 bpfv__CallFunc_Subtract_IntInt_ReturnValue1__pf{};
+	bool bpfv__CallFunc_LessEqual_IntInt_ReturnValue__pf{};
+	bool bpfv__CallFunc_LessEqual_IntInt_ReturnValue1__pf{};
+	int32 bpfv__CallFunc_Add_IntInt_ReturnValue1__pf{};
 	bool bpfv__CallFunc_LessEqual_IntInt_ReturnValue2__pf{};
+	int32 bpfv__CallFunc_Add_IntInt_ReturnValue2__pf{};
 	bool bpfv__CallFunc_LessEqual_IntInt_ReturnValue3__pf{};
 	int32 bpfv__CallFunc_Add_IntInt_ReturnValue3__pf{};
 	TArray< int32, TInlineAllocator<8> > __StateStack;
@@ -884,296 +874,169 @@ void UInGameHud_C__pf515974370::bpf__ExecuteUbergraph_InGameHud__pf_1(int32 bpp_
 	{
 		switch( __CurrentState )
 		{
-		case 2:
-			{
-				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 0);
-				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
-				{
-					__CurrentState = 3;
-					break;
-				}
-				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 1);
-				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
-				{
-					__CurrentState = 4;
-					break;
-				}
-				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 2);
-				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
-				{
-					__CurrentState = 5;
-					break;
-				}
-				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 3);
-				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
-				{
-					__CurrentState = 6;
-					break;
-				}
-				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 4);
-				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
-				{
-					__CurrentState = 7;
-					break;
-				}
-				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 5);
-				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
-				{
-					__CurrentState = 8;
-					break;
-				}
-				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 6);
-				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
-				{
-					__CurrentState = 9;
-					break;
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 3:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon2_1__pf))
-				{
-					bpv__PlayerLifeIcon2_1__pf->SetVisibility(ESlateVisibility::Visible);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
 		case 4:
 			{
-				if(::IsValid(bpv__PlayerLifeIcon2_2__pf))
-				{
-					bpv__PlayerLifeIcon2_2__pf->SetVisibility(ESlateVisibility::Visible);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
+				__StateStack.Push(6);
 			}
 		case 5:
 			{
-				if(::IsValid(bpv__PlayerLifeIcon2_3__pf))
+				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 0);
+				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
 				{
-					bpv__PlayerLifeIcon2_3__pf->SetVisibility(ESlateVisibility::Visible);
+					__CurrentState = 17;
+					break;
+				}
+				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 1);
+				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
+				{
+					__CurrentState = 18;
+					break;
+				}
+				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 2);
+				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
+				{
+					__CurrentState = 19;
+					break;
+				}
+				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 3);
+				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
+				{
+					__CurrentState = 20;
+					break;
+				}
+				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 4);
+				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
+				{
+					__CurrentState = 21;
+					break;
+				}
+				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 5);
+				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
+				{
+					__CurrentState = 22;
+					break;
+				}
+				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 6);
+				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
+				{
+					__CurrentState = 23;
+					break;
 				}
 				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 				break;
 			}
 		case 6:
 			{
-				if(::IsValid(bpv__PlayerLifeIcon2_4__pf))
-				{
-					bpv__PlayerLifeIcon2_4__pf->SetVisibility(ESlateVisibility::Visible);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
+				bpfv__CallFunc_Add_IntInt_ReturnValue3__pf = UKismetMathLibrary::Add_IntInt(b0l__Temp_int_Variable3__pf, 1);
+				b0l__Temp_int_Variable3__pf = bpfv__CallFunc_Add_IntInt_ReturnValue3__pf;
 			}
 		case 7:
 			{
-				if(::IsValid(bpv__PlayerLifeIcon2_5__pf))
+				bpfv__CallFunc_LessEqual_IntInt_ReturnValue3__pf = UKismetMathLibrary::LessEqual_IntInt(b0l__Temp_int_Variable3__pf, 6);
+				if (!bpfv__CallFunc_LessEqual_IntInt_ReturnValue3__pf)
 				{
-					bpv__PlayerLifeIcon2_5__pf->SetVisibility(ESlateVisibility::Visible);
+					__CurrentState = 8;
+					break;
 				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				__CurrentState = 4;
 				break;
 			}
 		case 8:
 			{
-				if(::IsValid(bpv__PlayerLifeIcon2_6__pf))
-				{
-					bpv__PlayerLifeIcon2_6__pf->SetVisibility(ESlateVisibility::Visible);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
+				b0l__Temp_int_Variable__pf = 0;
 			}
 		case 9:
 			{
-				if(::IsValid(bpv__PlayerLifeIcon2_7__pf))
+				bpfv__CallFunc_GetGameState_ReturnValue1__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData1__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue1__pf);
+				b0l__K2Node_DynamicCast_bSuccess1__pf = (b0l__K2Node_DynamicCast_AsDebug_MData1__pf != nullptr);;
+				int32  __Local__94 = 0;
+				bpfv__CallFunc_Subtract_IntInt_ReturnValue1__pf = UKismetMathLibrary::Subtract_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData1__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData1__pf->bpv__LivesxLeftxP2__pfTT) : (__Local__94)), 1);
+				bpfv__CallFunc_LessEqual_IntInt_ReturnValue1__pf = UKismetMathLibrary::LessEqual_IntInt(b0l__Temp_int_Variable__pf, bpfv__CallFunc_Subtract_IntInt_ReturnValue1__pf);
+				if (!bpfv__CallFunc_LessEqual_IntInt_ReturnValue1__pf)
 				{
-					bpv__PlayerLifeIcon2_7__pf->SetVisibility(ESlateVisibility::Visible);
+					__CurrentState = 12;
+					break;
+				}
+			}
+		case 10:
+			{
+				__StateStack.Push(24);
+			}
+		case 11:
+			{
+				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 0);
+				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
+				{
+					__CurrentState = 25;
+					break;
+				}
+				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 1);
+				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
+				{
+					__CurrentState = 26;
+					break;
+				}
+				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 2);
+				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
+				{
+					__CurrentState = 27;
+					break;
+				}
+				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 3);
+				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
+				{
+					__CurrentState = 28;
+					break;
+				}
+				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 4);
+				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
+				{
+					__CurrentState = 29;
+					break;
+				}
+				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 5);
+				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
+				{
+					__CurrentState = 30;
+					break;
+				}
+				b0l__K2Node_SwitchInteger_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable__pf, 6);
+				if (!b0l__K2Node_SwitchInteger_CmpSuccess__pf)
+				{
+					__CurrentState = 31;
+					break;
 				}
 				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 				break;
 			}
-		case 10:
-			{
-				b0l__Temp_int_Variable__pf = 0;
-			}
-		case 11:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue1__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State1__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue1__pf);
-				b0l__K2Node_DynamicCast_bSuccess1__pf = (b0l__K2Node_DynamicCast_AsDebug_State1__pf != nullptr);;
-				int32  __Local__94 = 0;
-				bpfv__CallFunc_Subtract_IntInt_ReturnValue1__pf = UKismetMathLibrary::Subtract_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State1__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State1__pf->bpv__LivesxLeftxP2__pfTT) : (__Local__94)), 1);
-				bpfv__CallFunc_LessEqual_IntInt_ReturnValue2__pf = UKismetMathLibrary::LessEqual_IntInt(b0l__Temp_int_Variable__pf, bpfv__CallFunc_Subtract_IntInt_ReturnValue1__pf);
-				if (!bpfv__CallFunc_LessEqual_IntInt_ReturnValue2__pf)
-				{
-					__CurrentState = 14;
-					break;
-				}
-			}
 		case 12:
 			{
-				__StateStack.Push(13);
-				__CurrentState = 2;
-				break;
+				bpfv__CallFunc_GetGameState_ReturnValue1__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData1__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue1__pf);
+				b0l__K2Node_DynamicCast_bSuccess1__pf = (b0l__K2Node_DynamicCast_AsDebug_MData1__pf != nullptr);;
+				int32  __Local__95 = 0;
+				b0l__Temp_int_Variable1__pf = ((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData1__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData1__pf->bpv__LivesxLeftxP2__pfTT) : (__Local__95));
 			}
 		case 13:
 			{
-				bpfv__CallFunc_Add_IntInt_ReturnValue__pf = UKismetMathLibrary::Add_IntInt(b0l__Temp_int_Variable__pf, 1);
-				b0l__Temp_int_Variable__pf = bpfv__CallFunc_Add_IntInt_ReturnValue__pf;
-				__CurrentState = 11;
-				break;
-			}
-		case 14:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue1__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State1__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue1__pf);
-				b0l__K2Node_DynamicCast_bSuccess1__pf = (b0l__K2Node_DynamicCast_AsDebug_State1__pf != nullptr);;
-				int32  __Local__95 = 0;
-				bpfv__CallFunc_Subtract_IntInt_ReturnValue1__pf = UKismetMathLibrary::Subtract_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State1__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State1__pf->bpv__LivesxLeftxP2__pfTT) : (__Local__95)), 1);
-				b0l__Temp_int_Variable2__pf = bpfv__CallFunc_Subtract_IntInt_ReturnValue1__pf;
-			}
-		case 15:
-			{
-				bpfv__CallFunc_LessEqual_IntInt_ReturnValue1__pf = UKismetMathLibrary::LessEqual_IntInt(b0l__Temp_int_Variable2__pf, 6);
-				if (!bpfv__CallFunc_LessEqual_IntInt_ReturnValue1__pf)
+				bpfv__CallFunc_LessEqual_IntInt_ReturnValue__pf = UKismetMathLibrary::LessEqual_IntInt(b0l__Temp_int_Variable1__pf, 6);
+				if (!bpfv__CallFunc_LessEqual_IntInt_ReturnValue__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 			}
-		case 16:
+		case 14:
 			{
-				__StateStack.Push(24);
+				__StateStack.Push(16);
 			}
-		case 17:
-			{
-				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 0);
-				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
-				{
-					__CurrentState = 23;
-					break;
-				}
-				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 1);
-				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
-				{
-					__CurrentState = 22;
-					break;
-				}
-				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 2);
-				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
-				{
-					__CurrentState = 21;
-					break;
-				}
-				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 3);
-				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
-				{
-					__CurrentState = 20;
-					break;
-				}
-				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 4);
-				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
-				{
-					__CurrentState = 19;
-					break;
-				}
-				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 5);
-				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
-				{
-					__CurrentState = 18;
-					break;
-				}
-				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 6);
-				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
-				{
-					__CurrentState = 25;
-					break;
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 18:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon2_6__pf))
-				{
-					bpv__PlayerLifeIcon2_6__pf->SetVisibility(ESlateVisibility::Hidden);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 19:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon2_5__pf))
-				{
-					bpv__PlayerLifeIcon2_5__pf->SetVisibility(ESlateVisibility::Hidden);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 20:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon2_4__pf))
-				{
-					bpv__PlayerLifeIcon2_4__pf->SetVisibility(ESlateVisibility::Hidden);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 21:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon2_3__pf))
-				{
-					bpv__PlayerLifeIcon2_3__pf->SetVisibility(ESlateVisibility::Hidden);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 22:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon2_2__pf))
-				{
-					bpv__PlayerLifeIcon2_2__pf->SetVisibility(ESlateVisibility::Hidden);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 23:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon2_1__pf))
-				{
-					bpv__PlayerLifeIcon2_1__pf->SetVisibility(ESlateVisibility::Hidden);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 24:
-			{
-				bpfv__CallFunc_Add_IntInt_ReturnValue2__pf = UKismetMathLibrary::Add_IntInt(b0l__Temp_int_Variable2__pf, 1);
-				b0l__Temp_int_Variable2__pf = bpfv__CallFunc_Add_IntInt_ReturnValue2__pf;
-				__CurrentState = 15;
-				break;
-			}
-		case 25:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon2_7__pf))
-				{
-					bpv__PlayerLifeIcon2_7__pf->SetVisibility(ESlateVisibility::Hidden);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 26:
-			{
-				__StateStack.Push(35);
-			}
-		case 27:
+		case 15:
 			{
 				b0l__K2Node_SwitchInteger1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable1__pf, 0);
 				if (!b0l__K2Node_SwitchInteger1_CmpSuccess__pf)
 				{
-					__CurrentState = 34;
+					__CurrentState = 32;
 					break;
 				}
 				b0l__K2Node_SwitchInteger1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable1__pf, 1);
@@ -1185,243 +1048,44 @@ void UInGameHud_C__pf515974370::bpf__ExecuteUbergraph_InGameHud__pf_1(int32 bpp_
 				b0l__K2Node_SwitchInteger1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable1__pf, 2);
 				if (!b0l__K2Node_SwitchInteger1_CmpSuccess__pf)
 				{
-					__CurrentState = 32;
+					__CurrentState = 34;
 					break;
 				}
 				b0l__K2Node_SwitchInteger1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable1__pf, 3);
 				if (!b0l__K2Node_SwitchInteger1_CmpSuccess__pf)
 				{
-					__CurrentState = 31;
+					__CurrentState = 35;
 					break;
 				}
 				b0l__K2Node_SwitchInteger1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable1__pf, 4);
 				if (!b0l__K2Node_SwitchInteger1_CmpSuccess__pf)
 				{
-					__CurrentState = 30;
+					__CurrentState = 36;
 					break;
 				}
 				b0l__K2Node_SwitchInteger1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable1__pf, 5);
 				if (!b0l__K2Node_SwitchInteger1_CmpSuccess__pf)
 				{
-					__CurrentState = 29;
+					__CurrentState = 37;
 					break;
 				}
 				b0l__K2Node_SwitchInteger1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable1__pf, 6);
 				if (!b0l__K2Node_SwitchInteger1_CmpSuccess__pf)
 				{
-					__CurrentState = 28;
+					__CurrentState = 38;
 					break;
 				}
 				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 				break;
 			}
-		case 28:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon1_7__pf))
-				{
-					bpv__PlayerLifeIcon1_7__pf->SetVisibility(ESlateVisibility::Visible);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 29:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon1_6__pf))
-				{
-					bpv__PlayerLifeIcon1_6__pf->SetVisibility(ESlateVisibility::Visible);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 30:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon1_5__pf))
-				{
-					bpv__PlayerLifeIcon1_5__pf->SetVisibility(ESlateVisibility::Visible);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 31:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon1_4__pf))
-				{
-					bpv__PlayerLifeIcon1_4__pf->SetVisibility(ESlateVisibility::Visible);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 32:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon1_3__pf))
-				{
-					bpv__PlayerLifeIcon1_3__pf->SetVisibility(ESlateVisibility::Visible);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 33:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon1_2__pf))
-				{
-					bpv__PlayerLifeIcon1_2__pf->SetVisibility(ESlateVisibility::Visible);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 34:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon1_1__pf))
-				{
-					bpv__PlayerLifeIcon1_1__pf->SetVisibility(ESlateVisibility::Visible);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 35:
+		case 16:
 			{
 				bpfv__CallFunc_Add_IntInt_ReturnValue1__pf = UKismetMathLibrary::Add_IntInt(b0l__Temp_int_Variable1__pf, 1);
 				b0l__Temp_int_Variable1__pf = bpfv__CallFunc_Add_IntInt_ReturnValue1__pf;
-			}
-		case 36:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue__pf);
-				b0l__K2Node_DynamicCast_bSuccess__pf = (b0l__K2Node_DynamicCast_AsDebug_State__pf != nullptr);;
-				int32  __Local__96 = 0;
-				bpfv__CallFunc_Subtract_IntInt_ReturnValue__pf = UKismetMathLibrary::Subtract_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State__pf->bpv__LivesxLeftxP1__pfTT) : (__Local__96)), 1);
-				bpfv__CallFunc_LessEqual_IntInt_ReturnValue__pf = UKismetMathLibrary::LessEqual_IntInt(b0l__Temp_int_Variable1__pf, bpfv__CallFunc_Subtract_IntInt_ReturnValue__pf);
-				if (!bpfv__CallFunc_LessEqual_IntInt_ReturnValue__pf)
-				{
-					__CurrentState = 37;
-					break;
-				}
-				__CurrentState = 26;
+				__CurrentState = 13;
 				break;
 			}
-		case 37:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue__pf);
-				b0l__K2Node_DynamicCast_bSuccess__pf = (b0l__K2Node_DynamicCast_AsDebug_State__pf != nullptr);;
-				int32  __Local__97 = 0;
-				b0l__Temp_int_Variable3__pf = ((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State__pf->bpv__LivesxLeftxP1__pfTT) : (__Local__97));
-			}
-		case 38:
-			{
-				bpfv__CallFunc_LessEqual_IntInt_ReturnValue3__pf = UKismetMathLibrary::LessEqual_IntInt(b0l__Temp_int_Variable3__pf, 6);
-				if (!bpfv__CallFunc_LessEqual_IntInt_ReturnValue3__pf)
-				{
-					__CurrentState = 10;
-					break;
-				}
-			}
-		case 39:
-			{
-				__StateStack.Push(48);
-			}
-		case 40:
-			{
-				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 0);
-				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
-				{
-					__CurrentState = 47;
-					break;
-				}
-				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 1);
-				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
-				{
-					__CurrentState = 46;
-					break;
-				}
-				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 2);
-				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
-				{
-					__CurrentState = 45;
-					break;
-				}
-				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 3);
-				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
-				{
-					__CurrentState = 44;
-					break;
-				}
-				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 4);
-				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
-				{
-					__CurrentState = 43;
-					break;
-				}
-				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 5);
-				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
-				{
-					__CurrentState = 42;
-					break;
-				}
-				b0l__K2Node_SwitchInteger3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable3__pf, 6);
-				if (!b0l__K2Node_SwitchInteger3_CmpSuccess__pf)
-				{
-					__CurrentState = 41;
-					break;
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 41:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon1_7__pf))
-				{
-					bpv__PlayerLifeIcon1_7__pf->SetVisibility(ESlateVisibility::Hidden);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 42:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon1_6__pf))
-				{
-					bpv__PlayerLifeIcon1_6__pf->SetVisibility(ESlateVisibility::Hidden);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 43:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon1_5__pf))
-				{
-					bpv__PlayerLifeIcon1_5__pf->SetVisibility(ESlateVisibility::Hidden);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 44:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon1_4__pf))
-				{
-					bpv__PlayerLifeIcon1_4__pf->SetVisibility(ESlateVisibility::Hidden);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 45:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon1_3__pf))
-				{
-					bpv__PlayerLifeIcon1_3__pf->SetVisibility(ESlateVisibility::Hidden);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 46:
-			{
-				if(::IsValid(bpv__PlayerLifeIcon1_2__pf))
-				{
-					bpv__PlayerLifeIcon1_2__pf->SetVisibility(ESlateVisibility::Hidden);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 47:
+		case 17:
 			{
 				if(::IsValid(bpv__PlayerLifeIcon1_1__pf))
 				{
@@ -1430,21 +1094,350 @@ void UInGameHud_C__pf515974370::bpf__ExecuteUbergraph_InGameHud__pf_1(int32 bpp_
 				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 				break;
 			}
+		case 18:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon1_2__pf))
+				{
+					bpv__PlayerLifeIcon1_2__pf->SetVisibility(ESlateVisibility::Hidden);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 19:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon1_3__pf))
+				{
+					bpv__PlayerLifeIcon1_3__pf->SetVisibility(ESlateVisibility::Hidden);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 20:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon1_4__pf))
+				{
+					bpv__PlayerLifeIcon1_4__pf->SetVisibility(ESlateVisibility::Hidden);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 21:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon1_5__pf))
+				{
+					bpv__PlayerLifeIcon1_5__pf->SetVisibility(ESlateVisibility::Hidden);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 22:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon1_6__pf))
+				{
+					bpv__PlayerLifeIcon1_6__pf->SetVisibility(ESlateVisibility::Hidden);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 23:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon1_7__pf))
+				{
+					bpv__PlayerLifeIcon1_7__pf->SetVisibility(ESlateVisibility::Hidden);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 24:
+			{
+				bpfv__CallFunc_Add_IntInt_ReturnValue__pf = UKismetMathLibrary::Add_IntInt(b0l__Temp_int_Variable__pf, 1);
+				b0l__Temp_int_Variable__pf = bpfv__CallFunc_Add_IntInt_ReturnValue__pf;
+				__CurrentState = 9;
+				break;
+			}
+		case 25:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_1__pf))
+				{
+					bpv__PlayerLifeIcon2_1__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 26:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_2__pf))
+				{
+					bpv__PlayerLifeIcon2_2__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 27:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_3__pf))
+				{
+					bpv__PlayerLifeIcon2_3__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 28:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_4__pf))
+				{
+					bpv__PlayerLifeIcon2_4__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 29:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_5__pf))
+				{
+					bpv__PlayerLifeIcon2_5__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 30:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_6__pf))
+				{
+					bpv__PlayerLifeIcon2_6__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 31:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_7__pf))
+				{
+					bpv__PlayerLifeIcon2_7__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 32:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_1__pf))
+				{
+					bpv__PlayerLifeIcon2_1__pf->SetVisibility(ESlateVisibility::Hidden);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 33:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_2__pf))
+				{
+					bpv__PlayerLifeIcon2_2__pf->SetVisibility(ESlateVisibility::Hidden);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 34:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_3__pf))
+				{
+					bpv__PlayerLifeIcon2_3__pf->SetVisibility(ESlateVisibility::Hidden);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 35:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_4__pf))
+				{
+					bpv__PlayerLifeIcon2_4__pf->SetVisibility(ESlateVisibility::Hidden);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 36:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_5__pf))
+				{
+					bpv__PlayerLifeIcon2_5__pf->SetVisibility(ESlateVisibility::Hidden);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 37:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_6__pf))
+				{
+					bpv__PlayerLifeIcon2_6__pf->SetVisibility(ESlateVisibility::Hidden);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 38:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon2_7__pf))
+				{
+					bpv__PlayerLifeIcon2_7__pf->SetVisibility(ESlateVisibility::Hidden);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 39:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon1_7__pf))
+				{
+					bpv__PlayerLifeIcon1_7__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 40:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon1_6__pf))
+				{
+					bpv__PlayerLifeIcon1_6__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 41:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon1_5__pf))
+				{
+					bpv__PlayerLifeIcon1_5__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 42:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon1_4__pf))
+				{
+					bpv__PlayerLifeIcon1_4__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 43:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon1_3__pf))
+				{
+					bpv__PlayerLifeIcon1_3__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 44:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon1_2__pf))
+				{
+					bpv__PlayerLifeIcon1_2__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 45:
+			{
+				if(::IsValid(bpv__PlayerLifeIcon1_1__pf))
+				{
+					bpv__PlayerLifeIcon1_1__pf->SetVisibility(ESlateVisibility::Visible);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 46:
+			{
+				__StateStack.Push(48);
+			}
+		case 47:
+			{
+				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 0);
+				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
+				{
+					__CurrentState = 45;
+					break;
+				}
+				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 1);
+				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
+				{
+					__CurrentState = 44;
+					break;
+				}
+				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 2);
+				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
+				{
+					__CurrentState = 43;
+					break;
+				}
+				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 3);
+				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
+				{
+					__CurrentState = 42;
+					break;
+				}
+				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 4);
+				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
+				{
+					__CurrentState = 41;
+					break;
+				}
+				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 5);
+				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
+				{
+					__CurrentState = 40;
+					break;
+				}
+				b0l__K2Node_SwitchInteger2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_IntInt(b0l__Temp_int_Variable2__pf, 6);
+				if (!b0l__K2Node_SwitchInteger2_CmpSuccess__pf)
+				{
+					__CurrentState = 39;
+					break;
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
 		case 48:
 			{
-				bpfv__CallFunc_Add_IntInt_ReturnValue3__pf = UKismetMathLibrary::Add_IntInt(b0l__Temp_int_Variable3__pf, 1);
-				b0l__Temp_int_Variable3__pf = bpfv__CallFunc_Add_IntInt_ReturnValue3__pf;
-				__CurrentState = 38;
-				break;
+				bpfv__CallFunc_Add_IntInt_ReturnValue2__pf = UKismetMathLibrary::Add_IntInt(b0l__Temp_int_Variable2__pf, 1);
+				b0l__Temp_int_Variable2__pf = bpfv__CallFunc_Add_IntInt_ReturnValue2__pf;
 			}
 		case 49:
 			{
-				b0l__Temp_int_Variable1__pf = 0;
-				__CurrentState = 36;
+				bpfv__CallFunc_GetGameState_ReturnValue__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue__pf);
+				b0l__K2Node_DynamicCast_bSuccess__pf = (b0l__K2Node_DynamicCast_AsDebug_MData__pf != nullptr);;
+				int32  __Local__96 = 0;
+				bpfv__CallFunc_Subtract_IntInt_ReturnValue__pf = UKismetMathLibrary::Subtract_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData__pf->bpv__LivesxLeftxP1__pfTT) : (__Local__96)), 1);
+				bpfv__CallFunc_LessEqual_IntInt_ReturnValue2__pf = UKismetMathLibrary::LessEqual_IntInt(b0l__Temp_int_Variable2__pf, bpfv__CallFunc_Subtract_IntInt_ReturnValue__pf);
+				if (!bpfv__CallFunc_LessEqual_IntInt_ReturnValue2__pf)
+				{
+					__CurrentState = 50;
+					break;
+				}
+				__CurrentState = 46;
 				break;
 			}
 		case 50:
 			{
+				bpfv__CallFunc_GetGameState_ReturnValue__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue__pf);
+				b0l__K2Node_DynamicCast_bSuccess__pf = (b0l__K2Node_DynamicCast_AsDebug_MData__pf != nullptr);;
+				int32  __Local__97 = 0;
+				b0l__Temp_int_Variable3__pf = ((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData__pf->bpv__LivesxLeftxP1__pfTT) : (__Local__97));
+				__CurrentState = 7;
+				break;
+			}
+		case 51:
+			{
+				__CurrentState = 52;
+				break;
+			}
+		case 52:
+			{
+				UKismetSystemLibrary::PrintString(this, FString(TEXT("update lives called.")), true, true, FLinearColor(0.000000,0.660000,1.000000,1.000000), 2.000000);
+			}
+		case 53:
+			{
+				b0l__Temp_int_Variable2__pf = 0;
 				__CurrentState = 49;
 				break;
 			}
@@ -1454,6 +1447,19 @@ void UInGameHud_C__pf515974370::bpf__ExecuteUbergraph_InGameHud__pf_1(int32 bpp_
 		}
 	} while( __CurrentState != -1 );
 }
+void UInGameHud_C__pf515974370::bpf__ExecuteUbergraph_InGameHud__pf_1(int32 bpp__EntryPoint__pf)
+{
+	check(bpp__EntryPoint__pf == 55);
+	// optimized KCST_UnconditionalGoto
+	UKismetSystemLibrary::PrintString(this, FString(TEXT("make p2 vis calle.d")), true, true, FLinearColor(0.000000,0.660000,1.000000,1.000000), 2.000000);
+	if(::IsValid(bpv__Player2StatsVB__pf))
+	{
+		bpv__Player2StatsVB__pf->SetVisibility(ESlateVisibility::Visible);
+	}
+	bpf__UpdatexLives__pfT(((APlayerController*)nullptr));
+	bpf__UpdatexScore__pfT(((APlayerController*)nullptr));
+	return; //KCST_EndOfThread
+}
 void UInGameHud_C__pf515974370::bpf__ExecuteUbergraph_InGameHud__pf_2(int32 bpp__EntryPoint__pf)
 {
 	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue2__pf{};
@@ -1462,23 +1468,24 @@ void UInGameHud_C__pf515974370::bpf__ExecuteUbergraph_InGameHud__pf_2(int32 bpp_
 	FText bpfv__CallFunc_Conv_StringToText_ReturnValue__pf{};
 	FString bpfv__CallFunc_Conv_IntToString_ReturnValue1__pf{};
 	FText bpfv__CallFunc_Conv_StringToText_ReturnValue1__pf{};
-	check(bpp__EntryPoint__pf == 51);
+	check(bpp__EntryPoint__pf == 54);
 	// optimized KCST_UnconditionalGoto
+	UKismetSystemLibrary::PrintString(this, FString(TEXT("update score calle.d")), true, true, FLinearColor(0.000000,0.660000,1.000000,1.000000), 2.000000);
 	bpfv__CallFunc_GetGameState_ReturnValue2__pf = UGameplayStatics::GetGameState(this);
-	b0l__K2Node_DynamicCast_AsDebug_State2__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue2__pf);
-	b0l__K2Node_DynamicCast_bSuccess2__pf = (b0l__K2Node_DynamicCast_AsDebug_State2__pf != nullptr);;
+	b0l__K2Node_DynamicCast_AsDebug_MData2__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue2__pf);
+	b0l__K2Node_DynamicCast_bSuccess2__pf = (b0l__K2Node_DynamicCast_AsDebug_MData2__pf != nullptr);;
 	int32  __Local__98 = 0;
-	bpfv__CallFunc_Conv_IntToString_ReturnValue__pf = UKismetStringLibrary::Conv_IntToString(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State2__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State2__pf->bpv__ScoreP1__pf) : (__Local__98)));
+	bpfv__CallFunc_Conv_IntToString_ReturnValue__pf = UKismetStringLibrary::Conv_IntToString(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData2__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData2__pf->bpv__ScoreP1__pf) : (__Local__98)));
 	bpfv__CallFunc_Conv_StringToText_ReturnValue__pf = UKismetTextLibrary::Conv_StringToText(bpfv__CallFunc_Conv_IntToString_ReturnValue__pf);
 	if(::IsValid(bpv__Player1_Score__pf))
 	{
 		bpv__Player1_Score__pf->SetText(bpfv__CallFunc_Conv_StringToText_ReturnValue__pf);
 	}
 	bpfv__CallFunc_GetGameState_ReturnValue3__pf = UGameplayStatics::GetGameState(this);
-	b0l__K2Node_DynamicCast_AsDebug_State3__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue3__pf);
-	b0l__K2Node_DynamicCast_bSuccess3__pf = (b0l__K2Node_DynamicCast_AsDebug_State3__pf != nullptr);;
+	b0l__K2Node_DynamicCast_AsDebug_MData3__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue3__pf);
+	b0l__K2Node_DynamicCast_bSuccess3__pf = (b0l__K2Node_DynamicCast_AsDebug_MData3__pf != nullptr);;
 	int32  __Local__99 = 0;
-	bpfv__CallFunc_Conv_IntToString_ReturnValue1__pf = UKismetStringLibrary::Conv_IntToString(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State3__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State3__pf->bpv__ScoreP2__pf) : (__Local__99)));
+	bpfv__CallFunc_Conv_IntToString_ReturnValue1__pf = UKismetStringLibrary::Conv_IntToString(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData3__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData3__pf->bpv__ScoreP2__pf) : (__Local__99)));
 	bpfv__CallFunc_Conv_StringToText_ReturnValue1__pf = UKismetTextLibrary::Conv_StringToText(bpfv__CallFunc_Conv_IntToString_ReturnValue1__pf);
 	if(::IsValid(bpv__Player2_Score__pf))
 	{
@@ -1486,30 +1493,30 @@ void UInGameHud_C__pf515974370::bpf__ExecuteUbergraph_InGameHud__pf_2(int32 bpp_
 	}
 	return; //KCST_EndOfThread
 }
-void UInGameHud_C__pf515974370::bpf__Makexp2xvisible__pfTT()
+void UInGameHud_C__pf515974370::bpf__Makexp2xvisible__pfTT_Implementation()
 {
-	bpf__ExecuteUbergraph_InGameHud__pf_0(54);
+	bpf__ExecuteUbergraph_InGameHud__pf_1(55);
 }
-void UInGameHud_C__pf515974370::bpf__UpdatexScore__pfT(APlayerController* bpp__Player__pf)
+void UInGameHud_C__pf515974370::bpf__UpdatexScore__pfT_Implementation(APlayerController* bpp__Player__pf)
 {
 	b0l__K2Node_CustomEvent_Player__pf = bpp__Player__pf;
-	bpf__ExecuteUbergraph_InGameHud__pf_2(51);
+	bpf__ExecuteUbergraph_InGameHud__pf_2(54);
 }
-void UInGameHud_C__pf515974370::bpf__UpdatexLives__pfT(APlayerController* bpp__Player__pf)
+void UInGameHud_C__pf515974370::bpf__UpdatexLives__pfT_Implementation(APlayerController* bpp__Player__pf)
 {
 	b0l__K2Node_CustomEvent_Player1__pf = bpp__Player__pf;
-	bpf__ExecuteUbergraph_InGameHud__pf_1(50);
+	bpf__ExecuteUbergraph_InGameHud__pf_0(51);
 }
 void UInGameHud_C__pf515974370::bpf__DeterminexPlayer__pfT(AController* bpp__Playah__pf, /*out*/ bool& bpp__determination__pf)
 {
-	APlyrState_C__pf4061722237* bpfv__K2Node_DynamicCast_AsPlyr_State__pf{};
+	AUserData_C__pf4061722237* bpfv__K2Node_DynamicCast_AsUser_Data__pf{};
 	bool bpfv__K2Node_DynamicCast_bSuccess__pf{};
 	bool bpfv__CallFunc_EqualEqual_NameName_ReturnValue__pf{};
 	APlayerState*  __Local__100 = ((APlayerState*)nullptr);
-	bpfv__K2Node_DynamicCast_AsPlyr_State__pf = Cast<APlyrState_C__pf4061722237>(((::IsValid(bpp__Playah__pf)) ? (bpp__Playah__pf->PlayerState) : (__Local__100)));
-	bpfv__K2Node_DynamicCast_bSuccess__pf = (bpfv__K2Node_DynamicCast_AsPlyr_State__pf != nullptr);;
+	bpfv__K2Node_DynamicCast_AsUser_Data__pf = Cast<AUserData_C__pf4061722237>(((::IsValid(bpp__Playah__pf)) ? (bpp__Playah__pf->PlayerState) : (__Local__100)));
+	bpfv__K2Node_DynamicCast_bSuccess__pf = (bpfv__K2Node_DynamicCast_AsUser_Data__pf != nullptr);;
 	FName  __Local__101 = FName();
-	bpfv__CallFunc_EqualEqual_NameName_ReturnValue__pf = UKismetMathLibrary::EqualEqual_NameName(((::IsValid(bpfv__K2Node_DynamicCast_AsPlyr_State__pf)) ? (bpfv__K2Node_DynamicCast_AsPlyr_State__pf->bpv__PlyrxName__pfT) : (__Local__101)), FName(TEXT("Player One")));
+	bpfv__CallFunc_EqualEqual_NameName_ReturnValue__pf = UKismetMathLibrary::EqualEqual_NameName(((::IsValid(bpfv__K2Node_DynamicCast_AsUser_Data__pf)) ? (bpfv__K2Node_DynamicCast_AsUser_Data__pf->bpv__PlyrxName__pfT) : (__Local__101)), FName(TEXT("Player One")));
 	bpp__determination__pf = bpfv__CallFunc_EqualEqual_NameName_ReturnValue__pf;
 }
 PRAGMA_DISABLE_OPTIMIZATION
@@ -1534,18 +1541,19 @@ void UInGameHud_C__pf515974370::__StaticDependenciesAssets(TArray<FBlueprintDepe
 	{
 		{2, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/Engine.PointerToUberGraphFrame 
 		{3, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameStateBase 
-		{4, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.PlayerController 
-		{83, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.VerticalBox 
-		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetMathLibrary 
-		{84, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.Image 
-		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
-		{14, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetStringLibrary 
-		{85, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetTextLibrary 
-		{86, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.TextBlock 
+		{5, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.PlayerController 
+		{13, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetSystemLibrary 
+		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
+		{15, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetStringLibrary 
+		{83, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetTextLibrary 
+		{84, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.TextBlock 
+		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetMathLibrary 
+		{85, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.Image 
+		{86, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.VerticalBox 
 		{60, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/UMG.UserWidget 
-		{5, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.Controller 
-		{23, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugState.DebugState_C 
-		{25, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Player/PlyrState.PlyrState_C 
+		{4, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.Controller 
+		{23, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugMData.DebugMData_C 
+		{25, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Player/UserData.UserData_C 
 	};
 	for(const FCompactBlueprintDependencyData& CompactData : LocCompactBlueprintDependencyData)
 	{

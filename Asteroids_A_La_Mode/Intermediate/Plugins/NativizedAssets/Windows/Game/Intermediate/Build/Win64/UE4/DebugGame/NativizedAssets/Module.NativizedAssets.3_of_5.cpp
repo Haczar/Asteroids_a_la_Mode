@@ -4,7 +4,7 @@
 #include "C:\Users\Edward\Desktop\Asteroids_A_La_Mode\Intermediate\Plugins\NativizedAssets\Windows\Game\Source\NativizedAssets\Private\LoadingWidget__pf3166771619.cpp"
 #include "C:\Users\Edward\Desktop\Asteroids_A_La_Mode\Intermediate\Plugins\NativizedAssets\Windows\Game\Source\NativizedAssets\Private\MainScreen__pf1232574660.cpp"
 #include "C:\Users\Edward\Desktop\Asteroids_A_La_Mode\Intermediate\Plugins\NativizedAssets\Windows\Game\Source\NativizedAssets\Private\MenuBase__pf3166771619.cpp"
-#include "C:\Users\Edward\Desktop\Asteroids_A_La_Mode\Intermediate\Plugins\NativizedAssets\Windows\Game\Source\NativizedAssets\Private\MenuPawn__pf4061722237.cpp"
+#include "C:\Users\Edward\Desktop\Asteroids_A_La_Mode\Intermediate\Plugins\NativizedAssets\Windows\Game\Source\NativizedAssets\Private\MenuPawn__pf3752356522.cpp"
 #include "C:\Users\Edward\Desktop\Asteroids_A_La_Mode\Intermediate\Plugins\NativizedAssets\Windows\Game\Source\NativizedAssets\Private\NativizedAssets.cpp"
 #include "C:\Users\Edward\Desktop\Asteroids_A_La_Mode\Intermediate\Plugins\NativizedAssets\Windows\Game\Source\NativizedAssets\Private\NativizedAssets_Dependencies.cpp"
 #include "C:\Users\Edward\Desktop\Asteroids_A_La_Mode\Intermediate\Plugins\NativizedAssets\Windows\Game\Source\NativizedAssets\Private\Options__pf1232574660.cpp"

@@ -12,7 +12,7 @@ class UScrollBox;
 class UVerticalBox;
 class UButton;
 class UHorizontalBox;
-class UDebugInstance_C__pf4162722864;
+class UDebugManager_C__pf4162722864;
 #include "ServerList__pf1232574660.generated.h"
 UCLASS(config=Engine, Blueprintable, BlueprintType, meta=(ReplaceConverted="/Game/UserInterface/MainScreen/ServerList.ServerList_C", OverrideNativeName="ServerList_C"))
 class UServerList_C__pf1232574660 : public UMenuBase_C__pf3166771619
@@ -49,16 +49,16 @@ public:
 	E__EServerSel__pf bpv__ServerSel__pf;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Server Row Sel", Category="States", OverrideNativeName="ServerRowSel"))
 	int32 bpv__ServerRowSel__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_Instance"))
-	UDebugInstance_C__pf4162722864* b1l__K2Node_DynamicCast_AsDebug_Instance__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_Manager"))
+	UDebugManager_C__pf4162722864* b1l__K2Node_DynamicCast_AsDebug_Manager__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess"))
 	bool b1l__K2Node_DynamicCast_bSuccess__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_Create_ReturnValue"))
 	UServerRow_C__pf1232574660* b1l__CallFunc_Create_ReturnValue__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_int_Loop_Counter_Variable"))
 	int32 b1l__Temp_int_Loop_Counter_Variable__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_Instance1"))
-	UDebugInstance_C__pf4162722864* b1l__K2Node_DynamicCast_AsDebug_Instance1__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_Manager1"))
+	UDebugManager_C__pf4162722864* b1l__K2Node_DynamicCast_AsDebug_Manager1__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess1"))
 	bool b1l__K2Node_DynamicCast_bSuccess1__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_int_Variable"))
@@ -75,8 +75,8 @@ public:
 	FBlueprintSessionResult b1l__CallFunc_Array_Get_Item__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_int_Variable1"))
 	int32 b1l__Temp_int_Variable1__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_Instance2"))
-	UDebugInstance_C__pf4162722864* b1l__K2Node_DynamicCast_AsDebug_Instance2__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_Manager2"))
+	UDebugManager_C__pf4162722864* b1l__K2Node_DynamicCast_AsDebug_Manager2__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess3"))
 	bool b1l__K2Node_DynamicCast_bSuccess3__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsServer_Row1"))

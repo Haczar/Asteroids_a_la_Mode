@@ -367,9 +367,9 @@
 #include "Runtime/Engine/Classes/GameFramework/GameUserSettings.h"
 #include "Runtime/Engine/Classes/Engine/AssetManager.h"
 #include "Runtime/Engine/Classes/GameFramework/OnlineSession.h"
-#include "DebugInstance__pf4162722864.h"
-#include "DebugState__pf4162722864.h"
-#include "PlayerC_Regular__pf4061722237.h"
+#include "DebugManager__pf4162722864.h"
+#include "DebugMData__pf4162722864.h"
+#include "RegUser__pf4061722237.h"
 #include "Runtime/Engine/Classes/Kismet/KismetMathLibrary.h"
 #include "Runtime/Engine/Classes/Kismet/KismetNodeHelperLibrary.h"
 #include "Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h"
@@ -387,26 +387,26 @@
 #include "Runtime/Engine/Classes/Kismet/GameplayStaticsTypes.h"
 #include "Runtime/Engine/Classes/Engine/InputActionDelegateBinding.h"
 #include "Runtime/Engine/Classes/Engine/InputDelegateBinding.h"
-#include "PlyrState__pf4061722237.h"
+#include "UserData__pf4061722237.h"
 #include "DebugMode__pf4162722864.h"
-#include "InGameHud__pf515974370.h"
 #include "GameStart__pf3166771619.h"
+#include "InGameHud__pf515974370.h"
 #include "Runtime/Engine/Classes/Kismet/KismetStringLibrary.h"
 #include "PState__pf4061722237.h"
 #include "GameOver__pf3166771619.h"
 #include "Runtime/Engine/Classes/GameFramework/GameState.h"
 #include "Runtime/Engine/Classes/GameFramework/PlayerStart.h"
 #include "Spawn_Volume__pf2174024837.h"
-#include "Ship__pf3227778944.h"
-#include "Runtime/Engine/Classes/Kismet/KismetArrayLibrary.h"
+#include "Ship__pf668171628.h"
 #include "1979Rounds__pf2955639682.h"
+#include "Runtime/Engine/Classes/Kismet/KismetArrayLibrary.h"
 #include "Runtime/Engine/Classes/Engine/ComponentDelegateBinding.h"
-#include "BP_Projectile__pf3227778944.h"
+#include "BP_Projectile__pf668171628.h"
 #include "Alien__pf655108736.h"
 #include "Asteroid__pf2772898577.h"
-#include "SRotate__pf3227778944.h"
+#include "SRotate__pf668171628.h"
 #include "Runtime/Engine/Classes/GameFramework/GameMode.h"
-#include "MenuPawn__pf4061722237.h"
+#include "MenuPawn__pf3752356522.h"
 #include "Asteroid_Medium__pf2772898577.h"
 #include "Asteroid_Large__pf2772898577.h"
 #include "Runtime/UMG/Public/Blueprint/WidgetBlueprintLibrary.h"
@@ -473,9 +473,9 @@ void UMainScreen_C__pf1232574660::__CustomDynamicClassInitialization(UDynamicCla
 	InDynamicClass->ReferencedConvertedFields.Add(LoadObject<UEnum>(nullptr, TEXT("/Game/UserInterface/MainScreen/EMenSel.EMenSel")));
 	InDynamicClass->ReferencedConvertedFields.Add(LoadObject<UEnum>(nullptr, TEXT("/Game/Modes/Debug/DStates.DStates")));
 	// List of all referenced converted classes
-	InDynamicClass->ReferencedConvertedFields.Add(UDebugInstance_C__pf4162722864::StaticClass());
-	InDynamicClass->ReferencedConvertedFields.Add(ADebugState_C__pf4162722864::StaticClass());
-	InDynamicClass->ReferencedConvertedFields.Add(APlayerC_Regular_C__pf4061722237::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(UDebugManager_C__pf4162722864::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(ADebugMData_C__pf4162722864::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(ARegUser_C__pf4061722237::StaticClass());
 	InDynamicClass->ReferencedConvertedFields.Add(UCoop_C__pf1232574660::StaticClass());
 	InDynamicClass->ReferencedConvertedFields.Add(UOptions_C__pf1232574660::StaticClass());
 	FConvertedBlueprintsDependencies::FillUsedAssetsInDynamicClass(InDynamicClass, &__StaticDependencies_DirectlyUsedAssets);
@@ -838,8 +838,8 @@ void UMainScreen_C__pf1232574660::bpf__ExecuteUbergraph_MainScreen__pf_0(int32 b
 		case 14:
 			{
 				bpfv__CallFunc_GetGameInstance_ReturnValue__pf = UGameplayStatics::GetGameInstance(this);
-				b0l__K2Node_DynamicCast_AsDebug_Instance__pf = Cast<UDebugInstance_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue__pf);
-				b0l__K2Node_DynamicCast_bSuccess__pf = (b0l__K2Node_DynamicCast_AsDebug_Instance__pf != nullptr);;
+				b0l__K2Node_DynamicCast_AsDebug_Manager__pf = Cast<UDebugManager_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue__pf);
+				b0l__K2Node_DynamicCast_bSuccess__pf = (b0l__K2Node_DynamicCast_AsDebug_Manager__pf != nullptr);;
 				if (!b0l__K2Node_DynamicCast_bSuccess__pf)
 				{
 					__CurrentState = -1;
@@ -848,9 +848,9 @@ void UMainScreen_C__pf1232574660::bpf__ExecuteUbergraph_MainScreen__pf_0(int32 b
 			}
 		case 15:
 			{
-				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_Instance__pf))
+				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_Manager__pf))
 				{
-					b0l__K2Node_DynamicCast_AsDebug_Instance__pf->bpf__SetxDebugMxtoxArcade1979__pfTTT();
+					b0l__K2Node_DynamicCast_AsDebug_Manager__pf->bpf__SetxDebugMxtoxArcade1979__pfTTT();
 				}
 				__CurrentState = -1;
 				break;
@@ -858,8 +858,8 @@ void UMainScreen_C__pf1232574660::bpf__ExecuteUbergraph_MainScreen__pf_0(int32 b
 		case 16:
 			{
 				bpfv__CallFunc_GetPlayerController_ReturnValue2__pf = UGameplayStatics::GetPlayerController(this, 0);
-				b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf = Cast<APlayerC_Regular_C__pf4061722237>(bpfv__CallFunc_GetPlayerController_ReturnValue2__pf);
-				b0l__K2Node_DynamicCast_bSuccess4__pf = (b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf != nullptr);;
+				b0l__K2Node_DynamicCast_AsReg_User1__pf = Cast<ARegUser_C__pf4061722237>(bpfv__CallFunc_GetPlayerController_ReturnValue2__pf);
+				b0l__K2Node_DynamicCast_bSuccess4__pf = (b0l__K2Node_DynamicCast_AsReg_User1__pf != nullptr);;
 				if (!b0l__K2Node_DynamicCast_bSuccess4__pf)
 				{
 					__CurrentState = -1;
@@ -868,17 +868,17 @@ void UMainScreen_C__pf1232574660::bpf__ExecuteUbergraph_MainScreen__pf_0(int32 b
 			}
 		case 17:
 			{
-				if(::IsValid(b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf))
+				if(::IsValid(b0l__K2Node_DynamicCast_AsReg_User1__pf))
 				{
 					UUserWidget*  __Local__58 = ((UUserWidget*)nullptr);
-					b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf->bpf__RemovexWidget__pfT(((::IsValid(b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf)) ? (b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf->bpv__WidgetxRef__pfT) : (__Local__58)));
+					b0l__K2Node_DynamicCast_AsReg_User1__pf->bpf__RemovexWidget__pfT(((::IsValid(b0l__K2Node_DynamicCast_AsReg_User1__pf)) ? (b0l__K2Node_DynamicCast_AsReg_User1__pf->bpv__WidgetxRef__pfT) : (__Local__58)));
 				}
 			}
 		case 18:
 			{
-				if(::IsValid(b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf))
+				if(::IsValid(b0l__K2Node_DynamicCast_AsReg_User1__pf))
 				{
-					b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf->bpf__SpawnxWidget__pfT(UCoop_C__pf1232574660::StaticClass());
+					b0l__K2Node_DynamicCast_AsReg_User1__pf->bpf__SpawnxWidget__pfT(UCoop_C__pf1232574660::StaticClass());
 				}
 				__CurrentState = -1;
 				break;
@@ -886,22 +886,22 @@ void UMainScreen_C__pf1232574660::bpf__ExecuteUbergraph_MainScreen__pf_0(int32 b
 		case 19:
 			{
 				bpfv__CallFunc_GetPlayerController_ReturnValue1__pf = UGameplayStatics::GetPlayerController(this, 0);
-				b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf = Cast<APlayerC_Regular_C__pf4061722237>(bpfv__CallFunc_GetPlayerController_ReturnValue1__pf);
-				b0l__K2Node_DynamicCast_bSuccess3__pf = (b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf != nullptr);;
-				if(::IsValid(b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf))
+				b0l__K2Node_DynamicCast_AsReg_User__pf = Cast<ARegUser_C__pf4061722237>(bpfv__CallFunc_GetPlayerController_ReturnValue1__pf);
+				b0l__K2Node_DynamicCast_bSuccess3__pf = (b0l__K2Node_DynamicCast_AsReg_User__pf != nullptr);;
+				if(::IsValid(b0l__K2Node_DynamicCast_AsReg_User__pf))
 				{
 					UUserWidget*  __Local__59 = ((UUserWidget*)nullptr);
-					b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf->bpf__RemovexWidget__pfT(((::IsValid(b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf)) ? (b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf->bpv__WidgetxRef__pfT) : (__Local__59)));
+					b0l__K2Node_DynamicCast_AsReg_User__pf->bpf__RemovexWidget__pfT(((::IsValid(b0l__K2Node_DynamicCast_AsReg_User__pf)) ? (b0l__K2Node_DynamicCast_AsReg_User__pf->bpv__WidgetxRef__pfT) : (__Local__59)));
 				}
 			}
 		case 20:
 			{
 				bpfv__CallFunc_GetPlayerController_ReturnValue1__pf = UGameplayStatics::GetPlayerController(this, 0);
-				b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf = Cast<APlayerC_Regular_C__pf4061722237>(bpfv__CallFunc_GetPlayerController_ReturnValue1__pf);
-				b0l__K2Node_DynamicCast_bSuccess3__pf = (b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf != nullptr);;
-				if(::IsValid(b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf))
+				b0l__K2Node_DynamicCast_AsReg_User__pf = Cast<ARegUser_C__pf4061722237>(bpfv__CallFunc_GetPlayerController_ReturnValue1__pf);
+				b0l__K2Node_DynamicCast_bSuccess3__pf = (b0l__K2Node_DynamicCast_AsReg_User__pf != nullptr);;
+				if(::IsValid(b0l__K2Node_DynamicCast_AsReg_User__pf))
 				{
-					b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf->bpf__SpawnxWidget__pfT(UOptions_C__pf1232574660::StaticClass());
+					b0l__K2Node_DynamicCast_AsReg_User__pf->bpf__SpawnxWidget__pfT(UOptions_C__pf1232574660::StaticClass());
 				}
 				__CurrentState = -1;
 				break;
@@ -916,8 +916,8 @@ void UMainScreen_C__pf1232574660::bpf__ExecuteUbergraph_MainScreen__pf_0(int32 b
 		case 22:
 			{
 				bpfv__CallFunc_GetGameInstance_ReturnValue__pf = UGameplayStatics::GetGameInstance(this);
-				b0l__K2Node_DynamicCast_AsDebug_Instance1__pf = Cast<UDebugInstance_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue__pf);
-				b0l__K2Node_DynamicCast_bSuccess1__pf = (b0l__K2Node_DynamicCast_AsDebug_Instance1__pf != nullptr);;
+				b0l__K2Node_DynamicCast_AsDebug_Manager1__pf = Cast<UDebugManager_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue__pf);
+				b0l__K2Node_DynamicCast_bSuccess1__pf = (b0l__K2Node_DynamicCast_AsDebug_Manager1__pf != nullptr);;
 				if (!b0l__K2Node_DynamicCast_bSuccess1__pf)
 				{
 					__CurrentState = -1;
@@ -926,9 +926,9 @@ void UMainScreen_C__pf1232574660::bpf__ExecuteUbergraph_MainScreen__pf_0(int32 b
 			}
 		case 23:
 			{
-				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_Instance1__pf))
+				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_Manager1__pf))
 				{
-					b0l__K2Node_DynamicCast_AsDebug_Instance1__pf->bpf__SetxDebugMxtoxDebugMode__pfTTT();
+					b0l__K2Node_DynamicCast_AsDebug_Manager1__pf->bpf__SetxDebugMxtoxDebugMode__pfTTT();
 				}
 				__CurrentState = -1;
 				break;
@@ -1048,8 +1048,8 @@ void UMainScreen_C__pf1232574660::bpf__ExecuteUbergraph_MainScreen__pf_4(int32 b
 	(*(AccessPrivateProperty<TEnumAsByte<ESlateColorStylingMode::Type> >(&(b0l__K2Node_MakeStruct_SlateColor__pf), FSlateColor::__PPO__ColorUseRule() ))) = ESlateColorStylingMode::UseColor_Specified;
 	bpf__SetxObjxxColorxandxOpacity__pfT3TTT(/*out*/ bpv__TextxStartG__pfG, /*out*/ b0l__K2Node_MakeStruct_SlateColor__pf);
 	bpfv__CallFunc_GetGameState_ReturnValue__pf = UGameplayStatics::GetGameState(this);
-	b0l__K2Node_DynamicCast_AsDebug_State__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue__pf);
-	b0l__K2Node_DynamicCast_bSuccess2__pf = (b0l__K2Node_DynamicCast_AsDebug_State__pf != nullptr);;
+	b0l__K2Node_DynamicCast_AsDebug_MData__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue__pf);
+	b0l__K2Node_DynamicCast_bSuccess2__pf = (b0l__K2Node_DynamicCast_AsDebug_MData__pf != nullptr);;
 	if (!b0l__K2Node_DynamicCast_bSuccess2__pf)
 	{
 		return; //KCST_GotoReturnIfNot
@@ -1286,18 +1286,18 @@ void UMainScreen_C__pf1232574660::__StaticDependenciesAssets(TArray<FBlueprintDe
 		{8, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameInstance 
 		{88, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/SlateCore.SlateColor 
 		{3, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameStateBase 
-		{4, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.PlayerController 
-		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetMathLibrary 
-		{13, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetNodeHelperLibrary 
-		{12, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetSystemLibrary 
-		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
-		{86, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.TextBlock 
+		{5, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.PlayerController 
+		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetMathLibrary 
+		{10, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetNodeHelperLibrary 
+		{13, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetSystemLibrary 
+		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
+		{84, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.TextBlock 
 		{60, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/UMG.UserWidget 
-		{84, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.Image 
+		{85, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.Image 
 		{93, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/UMG.Button 
-		{27, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugInstance.DebugInstance_C 
-		{23, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugState.DebugState_C 
-		{24, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Player/PlayerC_Regular.PlayerC_Regular_C 
+		{28, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugManager.DebugManager_C 
+		{23, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugMData.DebugMData_C 
+		{24, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Player/RegUser.RegUser_C 
 		{91, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  WidgetBlueprintGeneratedClass /Game/UserInterface/MainScreen/Coop.Coop_C 
 		{96, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  WidgetBlueprintGeneratedClass /Game/UserInterface/MainScreen/Options.Options_C 
 		{97, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  UserDefinedEnum /Game/UserInterface/MainScreen/EMenSel.EMenSel 

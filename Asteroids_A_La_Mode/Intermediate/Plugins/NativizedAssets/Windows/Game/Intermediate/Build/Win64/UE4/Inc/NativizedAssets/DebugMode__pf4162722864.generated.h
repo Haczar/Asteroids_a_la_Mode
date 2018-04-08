@@ -8,8 +8,9 @@
 #include "ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class APlayerController;
+class ARegUser_C__pf4061722237;
 class AController;
+class APlayerController;
 class APlayerStart;
 struct FLinearColor;
 #ifdef NATIVIZEDASSETS_DebugMode__pf4162722864_generated_h
@@ -18,7 +19,8 @@ struct FLinearColor;
 #define NATIVIZEDASSETS_DebugMode__pf4162722864_generated_h
 
 #define Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_DebugMode__pf4162722864_h_23_RPC_WRAPPERS \
-	virtual void bpf__ShipxDestroyed__pfT_Implementation(APlayerController* bpp__ShipxOwner__pfT); \
+	virtual void bpf__StartxRound__pfT_Implementation(); \
+	virtual void bpf__ShipxDestroyed__pfT_Implementation(ARegUser_C__pf4061722237* bpp__ShipxOwner__pfT); \
 	virtual void bpf__StatexChanged__pfT_Implementation(); \
 	virtual void bpf__SpawnxShip__pfT_Implementation(APlayerController* bpp__PlayerxControllerxRef__pfTT, APlayerStart* bpp__PlayerxStartxRef__pfTT, FLinearColor bpp__Color__pf); \
  \
@@ -67,13 +69,13 @@ struct FLinearColor;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->bpf__StartxRound__pfT(); \
+		P_THIS->bpf__StartxRound__pfT_Implementation(); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execbpf__ShipxDestroyed__pfT) \
 	{ \
-		P_GET_OBJECT(APlayerController,Z_Param_bpp__ShipxOwner__pfT); \
+		P_GET_OBJECT(ARegUser_C__pf4061722237,Z_Param_bpp__ShipxOwner__pfT); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->bpf__ShipxDestroyed__pfT_Implementation(Z_Param_bpp__ShipxOwner__pfT); \
@@ -131,12 +133,22 @@ struct FLinearColor;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->bpf__SpawnxShip__pfT_Implementation(Z_Param_bpp__PlayerxControllerxRef__pfTT,Z_Param_bpp__PlayerxStartxRef__pfTT,Z_Param_bpp__Color__pf); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execbpf__ExecuteUbergraph_DebugMode__pf_1) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_bpp__EntryPoint__pf); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->bpf__ExecuteUbergraph_DebugMode__pf_1(Z_Param_bpp__EntryPoint__pf); \
 		P_NATIVE_END; \
 	}
 
 
 #define Asteroids_A_La_Mode_Intermediate_Plugins_NativizedAssets_Windows_Game_Source_NativizedAssets_Public_DebugMode__pf4162722864_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
-	virtual void bpf__ShipxDestroyed__pfT_Implementation(APlayerController* bpp__ShipxOwner__pfT); \
+	virtual void bpf__StartxRound__pfT_Implementation(); \
+	virtual void bpf__ShipxDestroyed__pfT_Implementation(ARegUser_C__pf4061722237* bpp__ShipxOwner__pfT); \
 	virtual void bpf__StatexChanged__pfT_Implementation(); \
 	virtual void bpf__SpawnxShip__pfT_Implementation(APlayerController* bpp__PlayerxControllerxRef__pfTT, APlayerStart* bpp__PlayerxStartxRef__pfTT, FLinearColor bpp__Color__pf); \
  \
@@ -185,13 +197,13 @@ struct FLinearColor;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->bpf__StartxRound__pfT(); \
+		P_THIS->bpf__StartxRound__pfT_Implementation(); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execbpf__ShipxDestroyed__pfT) \
 	{ \
-		P_GET_OBJECT(APlayerController,Z_Param_bpp__ShipxOwner__pfT); \
+		P_GET_OBJECT(ARegUser_C__pf4061722237,Z_Param_bpp__ShipxOwner__pfT); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->bpf__ShipxDestroyed__pfT_Implementation(Z_Param_bpp__ShipxOwner__pfT); \
@@ -249,6 +261,15 @@ struct FLinearColor;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->bpf__SpawnxShip__pfT_Implementation(Z_Param_bpp__PlayerxControllerxRef__pfTT,Z_Param_bpp__PlayerxStartxRef__pfTT,Z_Param_bpp__Color__pf); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execbpf__ExecuteUbergraph_DebugMode__pf_1) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_bpp__EntryPoint__pf); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->bpf__ExecuteUbergraph_DebugMode__pf_1(Z_Param_bpp__EntryPoint__pf); \
 		P_NATIVE_END; \
 	}
 
@@ -268,7 +289,7 @@ struct FLinearColor;
 	}; \
 	struct DebugMode_C__pf4162722864_eventbpf__ShipxDestroyed__pfT_Parms \
 	{ \
-		APlayerController* bpp__ShipxOwner__pfT; \
+		ARegUser_C__pf4061722237* bpp__ShipxOwner__pfT; \
 	}; \
 	struct DebugMode_C__pf4162722864_eventbpf__SpawnxShip__pfT_Parms \
 	{ \

@@ -6,8 +6,8 @@
 #include "Runtime/UMG/Public/Blueprint/UserWidget.h"
 class UTextBlock;
 class UButton;
-class UDebugInstance_C__pf4162722864;
-class APlayerC_Regular_C__pf4061722237;
+class UDebugManager_C__pf4162722864;
+class ARegUser_C__pf4061722237;
 #include "Coop__pf1232574660.generated.h"
 UCLASS(config=Engine, Blueprintable, BlueprintType, meta=(ReplaceConverted="/Game/UserInterface/MainScreen/Coop.Coop_C", OverrideNativeName="Coop_C"))
 class UCoop_C__pf1232574660 : public UUserWidget
@@ -30,20 +30,20 @@ public:
 	UTextBlock* bpv__TextxJoinGame__pfG;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Co Op Selection", Category="Default", OverrideNativeName="CoOp Selection"))
 	E__ECoOpSel__pf bpv__CoOpxSelection__pfT;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_Instance"))
-	UDebugInstance_C__pf4162722864* b0l__K2Node_DynamicCast_AsDebug_Instance__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_Manager"))
+	UDebugManager_C__pf4162722864* b0l__K2Node_DynamicCast_AsDebug_Manager__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess"))
 	bool b0l__K2Node_DynamicCast_bSuccess__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_MakeStruct_SlateColor"))
 	FSlateColor b0l__K2Node_MakeStruct_SlateColor__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsPlayer_C_Regular"))
-	APlayerC_Regular_C__pf4061722237* b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsReg_User"))
+	ARegUser_C__pf4061722237* b0l__K2Node_DynamicCast_AsReg_User__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess1"))
 	bool b0l__K2Node_DynamicCast_bSuccess1__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_SwitchEnum_CmpSuccess"))
 	bool b0l__K2Node_SwitchEnum_CmpSuccess__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsPlayer_C_Regular1"))
-	APlayerC_Regular_C__pf4061722237* b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsReg_User1"))
+	ARegUser_C__pf4061722237* b0l__K2Node_DynamicCast_AsReg_User1__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess2"))
 	bool b0l__K2Node_DynamicCast_bSuccess2__pf;
 	UCoop_C__pf1232574660(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());

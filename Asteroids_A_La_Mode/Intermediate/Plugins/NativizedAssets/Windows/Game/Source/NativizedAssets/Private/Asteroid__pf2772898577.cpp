@@ -358,7 +358,7 @@
 #include "Runtime/Engine/Classes/Components/ChildActorComponent.h"
 #include "Runtime/Engine/Classes/GameFramework/ProjectileMovementComponent.h"
 #include "DebugMode__pf4162722864.h"
-#include "BP_Projectile__pf3227778944.h"
+#include "BP_Projectile__pf668171628.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 #include "Runtime/Engine/Classes/Components/AudioComponent.h"
 #include "Runtime/Engine/Classes/GameFramework/ForceFeedbackAttenuation.h"
@@ -372,18 +372,19 @@
 #include "Runtime/Engine/Classes/Kismet/GameplayStaticsTypes.h"
 #include "Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h"
 #include "Runtime/Engine/Classes/Kismet/KismetMathLibrary.h"
-#include "Spawn_Volume__pf2174024837.h"
-#include "DebugState__pf4162722864.h"
-#include "PlayerC_Regular__pf4061722237.h"
-#include "PlyrState__pf4061722237.h"
+#include "DebugMData__pf4162722864.h"
+#include "RegUser__pf4061722237.h"
+#include "UserData__pf4061722237.h"
 #include "Runtime/Engine/Classes/GameFramework/PlayerStart.h"
-#include "Ship__pf3227778944.h"
-#include "DebugInstance__pf4162722864.h"
-#include "Runtime/Engine/Classes/Kismet/KismetArrayLibrary.h"
-#include "Runtime/Engine/Classes/Engine/CollisionProfile.h"
+#include "Spawn_Volume__pf2174024837.h"
+#include "Ship__pf668171628.h"
+#include "DebugManager__pf4162722864.h"
+#include "1979Rounds__pf2955639682.h"
+#include "Runtime/Engine/Classes/Kismet/KismetNodeHelperLibrary.h"
 #include "GameStart__pf3166771619.h"
 #include "InGameHud__pf515974370.h"
 #include "DStates__pf4162722864.h"
+#include "Runtime/Engine/Classes/Engine/CollisionProfile.h"
 #include "Runtime/Engine/Classes/Kismet/KismetStringLibrary.h"
 #include "Runtime/Engine/Classes/Engine/InputActionDelegateBinding.h"
 #include "Runtime/Engine/Classes/Engine/InputDelegateBinding.h"
@@ -394,12 +395,11 @@
 #include "LevelStart_Widget__pf515974370.h"
 #include "GameOver__pf3166771619.h"
 #include "Runtime/Engine/Classes/GameFramework/GameState.h"
-#include "1979Rounds__pf2955639682.h"
-#include "Runtime/Engine/Classes/Kismet/KismetNodeHelperLibrary.h"
+#include "Runtime/Engine/Classes/Kismet/KismetArrayLibrary.h"
 #include "Alien__pf655108736.h"
-#include "SRotate__pf3227778944.h"
+#include "SRotate__pf668171628.h"
 #include "Runtime/Engine/Classes/GameFramework/GameMode.h"
-#include "MenuPawn__pf4061722237.h"
+#include "MenuPawn__pf3752356522.h"
 #include "Asteroid_Medium__pf2772898577.h"
 #include "Asteroid_Large__pf2772898577.h"
 
@@ -473,7 +473,7 @@ void AAsteroid_C__pf2772898577::__CustomDynamicClassInitialization(UDynamicClass
 	InDynamicClass->AssembleReferenceTokenStream();
 	// List of all referenced converted classes
 	InDynamicClass->ReferencedConvertedFields.Add(ADebugMode_C__pf4162722864::StaticClass());
-	InDynamicClass->ReferencedConvertedFields.Add(ABP_Projectile_C__pf3227778944::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(ABP_Projectile_C__pf668171628::StaticClass());
 	FConvertedBlueprintsDependencies::FillUsedAssetsInDynamicClass(InDynamicClass, &__StaticDependencies_DirectlyUsedAssets);
 	auto __Local__0 = NewObject<UComponentDelegateBinding>(InDynamicClass, UComponentDelegateBinding::StaticClass(), TEXT("ComponentDelegateBinding_3"));
 	InDynamicClass->DynamicBindingObjects.Add(__Local__0);
@@ -521,7 +521,7 @@ void AAsteroid_C__pf2772898577::bpf__ExecuteUbergraph_Asteroid__pf_1(int32 bpp__
 {
 	check(bpp__EntryPoint__pf == 19);
 	// optimized KCST_UnconditionalGoto
-	b0l__K2Node_DynamicCast_AsBP_Projectile__pf = Cast<ABP_Projectile_C__pf3227778944>(b0l__K2Node_ComponentBoundEvent_OtherActor__pf);
+	b0l__K2Node_DynamicCast_AsBP_Projectile__pf = Cast<ABP_Projectile_C__pf668171628>(b0l__K2Node_ComponentBoundEvent_OtherActor__pf);
 	b0l__K2Node_DynamicCast_bSuccess2__pf = (b0l__K2Node_DynamicCast_AsBP_Projectile__pf != nullptr);;
 	if (!b0l__K2Node_DynamicCast_bSuccess2__pf)
 	{
@@ -648,20 +648,20 @@ void AAsteroid_C__pf2772898577::__StaticDependenciesAssets(TArray<FBlueprintDepe
 	const FCompactBlueprintDependencyData LocCompactBlueprintDependencyData[] =
 	{
 		{1, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/Engine.SceneComponent 
-		{35, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/Engine.StaticMeshComponent 
-		{40, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/Engine.ProjectileMovementComponent 
+		{36, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/Engine.StaticMeshComponent 
+		{41, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/Engine.ProjectileMovementComponent 
 		{2, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/Engine.PointerToUberGraphFrame 
-		{16, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameModeBase 
-		{36, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/Engine.HitResult 
+		{17, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameModeBase 
+		{37, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/Engine.HitResult 
 		{47, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.PrimitiveComponent 
 		{7, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.Actor 
-		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
-		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetMathLibrary 
-		{12, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetSystemLibrary 
-		{14, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetStringLibrary 
+		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
+		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetMathLibrary 
+		{13, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetSystemLibrary 
+		{15, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetStringLibrary 
 		{48, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.MovementComponent 
 		{49, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugMode.DebugMode_C 
-		{50, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Ship/BP_Projectile.BP_Projectile_C 
+		{50, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Pawns/Ship/BP_Projectile.BP_Projectile_C 
 	};
 	for(const FCompactBlueprintDependencyData& CompactData : LocCompactBlueprintDependencyData)
 	{

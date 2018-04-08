@@ -127,7 +127,7 @@ void EmptyLinkFunctionForGeneratedCodeAsteroid_Medium__pf2772898577() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_DYNAMIC_CLASS(AAsteroid_Medium_C__pf2772898577, TEXT("Asteroid_Medium_C"), 2220374637);
+	IMPLEMENT_DYNAMIC_CLASS(AAsteroid_Medium_C__pf2772898577, TEXT("Asteroid_Medium_C"), 1579591802);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AAsteroid_Medium_C__pf2772898577(Z_Construct_UClass_AAsteroid_Medium_C__pf2772898577, &AAsteroid_Medium_C__pf2772898577::StaticClass, TEXT("/Game/Obstacles/Asteroid_Medium"), TEXT("Asteroid_Medium_C"), true, TEXT("/Game/Obstacles/Asteroid_Medium"), TEXT("/Game/Obstacles/Asteroid_Medium.Asteroid_Medium_C"), nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAsteroid_Medium_C__pf2772898577);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

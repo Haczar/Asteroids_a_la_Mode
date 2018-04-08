@@ -11,8 +11,8 @@
 #include "MenuBase__pf3166771619.h"
 class UHorizontalBox;
 class UTextBlock;
-class APlayerC_Regular_C__pf4061722237;
-class UDebugInstance_C__pf4162722864;
+class ARegUser_C__pf4061722237;
+class UDebugManager_C__pf4162722864;
 #include "Options__pf1232574660.generated.h"
 UCLASS(config=Engine, Blueprintable, BlueprintType, meta=(ReplaceConverted="/Game/UserInterface/MainScreen/Options.Options_C", OverrideNativeName="Options_C"))
 class UOptions_C__pf1232574660 : public UMenuBase_C__pf3166771619
@@ -89,8 +89,8 @@ public:
 	float bpv__ElapsedTime__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_SwitchEnum_CmpSuccess"))
 	bool b1l__K2Node_SwitchEnum_CmpSuccess__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsPlayer_C_Regular"))
-	APlayerC_Regular_C__pf4061722237* b1l__K2Node_DynamicCast_AsPlayer_C_Regular__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsReg_User"))
+	ARegUser_C__pf4061722237* b1l__K2Node_DynamicCast_AsReg_User__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess"))
 	bool b1l__K2Node_DynamicCast_bSuccess__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_Event_MyGeometry"))
@@ -105,8 +105,8 @@ public:
 	bool b1l__K2Node_SwitchEnum3_CmpSuccess__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_SwitchEnum4_CmpSuccess"))
 	bool b1l__K2Node_SwitchEnum4_CmpSuccess__pf;
-	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_Instance"))
-	UDebugInstance_C__pf4162722864* b1l__K2Node_DynamicCast_AsDebug_Instance__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsDebug_Manager"))
+	UDebugManager_C__pf4162722864* b1l__K2Node_DynamicCast_AsDebug_Manager__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess1"))
 	bool b1l__K2Node_DynamicCast_bSuccess1__pf;
 	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_SwitchEnum5_CmpSuccess"))

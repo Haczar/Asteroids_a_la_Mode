@@ -26,7 +26,7 @@ void EmptyLinkFunctionForGeneratedCodeAsteroid__pf2772898577() {}
 	NATIVIZEDASSETS_API UFunction* Z_Construct_UFunction_AAsteroid_C__pf2772898577_bpf__ReceiveDestroyed__pf();
 	NATIVIZEDASSETS_API UFunction* Z_Construct_UFunction_AAsteroid_C__pf2772898577_bpf__ReceiveTick__pf();
 	NATIVIZEDASSETS_API UFunction* Z_Construct_UFunction_AAsteroid_C__pf2772898577_bpf__UserConstructionScript__pf();
-	NATIVIZEDASSETS_API UClass* Z_Construct_UClass_ABP_Projectile_C__pf3227778944_NoRegister();
+	NATIVIZEDASSETS_API UClass* Z_Construct_UClass_ABP_Projectile_C__pf668171628_NoRegister();
 	NATIVIZEDASSETS_API UClass* Z_Construct_UClass_ADebugMode_C__pf4162722864_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
@@ -142,7 +142,7 @@ void EmptyLinkFunctionForGeneratedCodeAsteroid__pf2772898577() {}
 				{ "OverrideNativeName", "Break" },
 			};
 #endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsteroid_C__pf2772898577, "Break", RF_Public|RF_Transient, nullptr, (EFunctionFlags)0x04220C40, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsteroid_C__pf2772898577, "Break", RF_Public|RF_Transient, nullptr, (EFunctionFlags)0x04220CC0, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
@@ -248,7 +248,7 @@ void EmptyLinkFunctionForGeneratedCodeAsteroid__pf2772898577() {}
 			};
 			static const FClassFunctionLinkInfo FuncInfo[] = {
 				{ &Z_Construct_UFunction_AAsteroid_C__pf2772898577_bpf__BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature__pf, "BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature" }, // 367770336
-				{ &Z_Construct_UFunction_AAsteroid_C__pf2772898577_bpf__Break__pf, "Break" }, // 2005910085
+				{ &Z_Construct_UFunction_AAsteroid_C__pf2772898577_bpf__Break__pf, "Break" }, // 3972692969
 				{ &Z_Construct_UFunction_AAsteroid_C__pf2772898577_bpf__ReceiveBeginPlay__pf, "ReceiveBeginPlay" }, // 181276912
 				{ &Z_Construct_UFunction_AAsteroid_C__pf2772898577_bpf__ReceiveDestroyed__pf, "ReceiveDestroyed" }, // 750882442
 				{ &Z_Construct_UFunction_AAsteroid_C__pf2772898577_bpf__ReceiveTick__pf, "ReceiveTick" }, // 4208249455
@@ -279,7 +279,7 @@ void EmptyLinkFunctionForGeneratedCodeAsteroid__pf2772898577() {}
 				{ "OverrideNativeName", "K2Node_DynamicCast_AsBP_Projectile" },
 			};
 #endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsBP_Projectile__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsBP_Projectile", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(AAsteroid_C__pf2772898577, b0l__K2Node_DynamicCast_AsBP_Projectile__pf), Z_Construct_UClass_ABP_Projectile_C__pf3227778944_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsBP_Projectile__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsBP_Projectile__pf_MetaData)) };
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_b0l__K2Node_DynamicCast_AsBP_Projectile__pf = { UE4CodeGen_Private::EPropertyClass::Object, "K2Node_DynamicCast_AsBP_Projectile", RF_Public|RF_Transient, 0x0010000000202000, 1, nullptr, STRUCT_OFFSET(AAsteroid_C__pf2772898577, b0l__K2Node_DynamicCast_AsBP_Projectile__pf), Z_Construct_UClass_ABP_Projectile_C__pf668171628_NoRegister, METADATA_PARAMS(NewProp_b0l__K2Node_DynamicCast_AsBP_Projectile__pf_MetaData, ARRAY_COUNT(NewProp_b0l__K2Node_DynamicCast_AsBP_Projectile__pf_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_b0l__K2Node_ComponentBoundEvent_SweepResult__pf_MetaData[] = {
 				{ "ModuleRelativePath", "Public/Asteroid__pf2772898577.h" },
@@ -463,7 +463,7 @@ void EmptyLinkFunctionForGeneratedCodeAsteroid__pf2772898577() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_DYNAMIC_CLASS(AAsteroid_C__pf2772898577, TEXT("Asteroid_C"), 3516779747);
+	IMPLEMENT_DYNAMIC_CLASS(AAsteroid_C__pf2772898577, TEXT("Asteroid_C"), 510483303);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AAsteroid_C__pf2772898577(Z_Construct_UClass_AAsteroid_C__pf2772898577, &AAsteroid_C__pf2772898577::StaticClass, TEXT("/Game/Obstacles/Asteroid"), TEXT("Asteroid_C"), true, TEXT("/Game/Obstacles/Asteroid"), TEXT("/Game/Obstacles/Asteroid.Asteroid_C"), nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAsteroid_C__pf2772898577);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

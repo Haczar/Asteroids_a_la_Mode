@@ -357,13 +357,15 @@
 #include "Runtime/Engine/Classes/Matinee/InterpData.h"
 #include "Runtime/Engine/Classes/Matinee/InterpGroupDirector.h"
 #include "Runtime/Engine/Classes/Components/ChildActorComponent.h"
-#include "Spawn_Volume__pf2174024837.h"
-#include "DebugState__pf4162722864.h"
-#include "PlayerC_Regular__pf4061722237.h"
-#include "PlyrState__pf4061722237.h"
+#include "DebugMData__pf4162722864.h"
+#include "RegUser__pf4061722237.h"
+#include "UserData__pf4061722237.h"
 #include "Runtime/Engine/Classes/GameFramework/PlayerStart.h"
-#include "Ship__pf3227778944.h"
-#include "DebugInstance__pf4162722864.h"
+#include "Spawn_Volume__pf2174024837.h"
+#include "Ship__pf668171628.h"
+#include "DebugManager__pf4162722864.h"
+#include "Runtime/Engine/Classes/Kismet/KismetMathLibrary.h"
+#include "Runtime/Engine/Classes/Kismet/KismetNodeHelperLibrary.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 #include "Runtime/Engine/Classes/Components/AudioComponent.h"
 #include "Runtime/Engine/Classes/GameFramework/ForceFeedbackAttenuation.h"
@@ -376,12 +378,10 @@
 #include "Runtime/Engine/Classes/GameFramework/SaveGame.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStaticsTypes.h"
 #include "Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h"
-#include "Runtime/Engine/Classes/Kismet/KismetArrayLibrary.h"
-#include "Runtime/Engine/Classes/Kismet/KismetMathLibrary.h"
-#include "Runtime/Engine/Classes/Engine/CollisionProfile.h"
 #include "GameStart__pf3166771619.h"
 #include "InGameHud__pf515974370.h"
 #include "DStates__pf4162722864.h"
+#include "Runtime/Engine/Classes/Engine/CollisionProfile.h"
 #include "Runtime/Engine/Classes/Kismet/KismetStringLibrary.h"
 #include "Runtime/Engine/Classes/Engine/InputActionDelegateBinding.h"
 #include "Runtime/Engine/Classes/Engine/InputDelegateBinding.h"
@@ -392,13 +392,13 @@
 #include "LevelStart_Widget__pf515974370.h"
 #include "GameOver__pf3166771619.h"
 #include "Runtime/Engine/Classes/GameFramework/GameState.h"
-#include "Runtime/Engine/Classes/Kismet/KismetNodeHelperLibrary.h"
+#include "Runtime/Engine/Classes/Kismet/KismetArrayLibrary.h"
 #include "Runtime/Engine/Classes/Engine/ComponentDelegateBinding.h"
-#include "BP_Projectile__pf3227778944.h"
+#include "BP_Projectile__pf668171628.h"
 #include "Alien__pf655108736.h"
 #include "Asteroid__pf2772898577.h"
-#include "SRotate__pf3227778944.h"
-#include "MenuPawn__pf4061722237.h"
+#include "SRotate__pf668171628.h"
+#include "MenuPawn__pf3752356522.h"
 #include "Asteroid_Medium__pf2772898577.h"
 #include "Asteroid_Large__pf2772898577.h"
 
@@ -433,9 +433,9 @@ ADebugMode_C__pf4162722864::ADebugMode_C__pf4162722864(const FObjectInitializer&
 	bpv__1979xAsteroidxCount__pfTT = 0;
 	bpv__1979xRoundxInxSession__pfTTT = false;
 	bHandleDedicatedServerReplays = false;
-	GameStateClass = ADebugState_C__pf4162722864::StaticClass();
-	PlayerControllerClass = APlayerC_Regular_C__pf4061722237::StaticClass();
-	PlayerStateClass = APlyrState_C__pf4061722237::StaticClass();
+	GameStateClass = ADebugMData_C__pf4162722864::StaticClass();
+	PlayerControllerClass = ARegUser_C__pf4061722237::StaticClass();
+	PlayerStateClass = AUserData_C__pf4061722237::StaticClass();
 	HUDClass = nullptr;
 	DefaultPawnClass = nullptr;
 }
@@ -461,13 +461,13 @@ void ADebugMode_C__pf4162722864::__CustomDynamicClassInitialization(UDynamicClas
 	// List of all referenced converted enums
 	InDynamicClass->ReferencedConvertedFields.Add(LoadObject<UEnum>(nullptr, TEXT("/Game/Modes/Arcade1979/1979Rounds.1979Rounds")));
 	// List of all referenced converted classes
+	InDynamicClass->ReferencedConvertedFields.Add(ADebugMData_C__pf4162722864::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(ARegUser_C__pf4061722237::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(AUserData_C__pf4061722237::StaticClass());
 	InDynamicClass->ReferencedConvertedFields.Add(ASpawn_Volume_C__pf2174024837::StaticClass());
-	InDynamicClass->ReferencedConvertedFields.Add(ADebugState_C__pf4162722864::StaticClass());
-	InDynamicClass->ReferencedConvertedFields.Add(APlayerC_Regular_C__pf4061722237::StaticClass());
-	InDynamicClass->ReferencedConvertedFields.Add(APlyrState_C__pf4061722237::StaticClass());
-	InDynamicClass->ReferencedConvertedFields.Add(AShip_C__pf3227778944::StaticClass());
-	InDynamicClass->ReferencedConvertedFields.Add(UDebugInstance_C__pf4162722864::StaticClass());
-	InDynamicClass->ReferencedConvertedFields.Add(AMenuPawn_C__pf4061722237::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(AShip_C__pf668171628::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(UDebugManager_C__pf4162722864::StaticClass());
+	InDynamicClass->ReferencedConvertedFields.Add(AMenuPawn_C__pf3752356522::StaticClass());
 	InDynamicClass->ReferencedConvertedFields.Add(AAsteroid_C__pf2772898577::StaticClass());
 	InDynamicClass->ReferencedConvertedFields.Add(AAsteroid_Medium_C__pf2772898577::StaticClass());
 	InDynamicClass->ReferencedConvertedFields.Add(AAsteroid_Large_C__pf2772898577::StaticClass());
@@ -477,18 +477,12 @@ PRAGMA_ENABLE_OPTIMIZATION
 void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_0(int32 bpp__EntryPoint__pf)
 {
 	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue__pf{};
-	int32 bpfv__CallFunc_GetNumPlayers_ReturnValue__pf{};
-	bool bpfv__CallFunc_Greater_IntInt_ReturnValue__pf{};
-	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue2__pf{};
-	bool bpfv__CallFunc_Greater_IntInt_ReturnValue3__pf{};
-	bool bpfv__CallFunc_Greater_IntInt_ReturnValue4__pf{};
-	bool bpfv__CallFunc_BooleanOR_ReturnValue__pf{};
-	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue4__pf{};
-	uint8 bpfv__CallFunc_Add_ByteByte_ReturnValue__pf{};
-	uint8 bpfv__CallFunc_GetValidValue_ReturnValue__pf{};
-	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue6__pf{};
-	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue7__pf{};
-	bool bpfv__CallFunc_Greater_IntInt_ReturnValue5__pf{};
+	int32 bpfv__CallFunc_Add_IntInt_ReturnValue__pf{};
+	FString bpfv__CallFunc_GetDisplayName_ReturnValue__pf{};
+	int32 bpfv__CallFunc_Array_Length_ReturnValue__pf{};
+	int32 bpfv__CallFunc_Array_Length_ReturnValue1__pf{};
+	bool bpfv__CallFunc_Less_IntInt_ReturnValue__pf{};
+	UGameInstance* bpfv__CallFunc_GetGameInstance_ReturnValue__pf{};
 	TArray< int32, TInlineAllocator<8> > __StateStack;
 
 	int32 __CurrentState = bpp__EntryPoint__pf;
@@ -496,268 +490,162 @@ void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_0(int32 bpp
 	{
 		switch( __CurrentState )
 		{
-		case 11:
-			{
-				if (!bpv__1979xRoundxInxSession__pfTTT)
-				{
-					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-					break;
-				}
-			}
-		case 12:
-			{
-				__StateStack.Push(14);
-				__StateStack.Push(18);
-			}
-		case 13:
-			{
-				bpfv__CallFunc_Greater_IntInt_ReturnValue5__pf = UKismetMathLibrary::Greater_IntInt(bpv__1979xAsteroidxCount__pfTT, 0);
-				if (!bpfv__CallFunc_Greater_IntInt_ReturnValue5__pf)
-				{
-					__CurrentState = 25;
-					break;
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 14:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue4__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State4__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue4__pf);
-				b0l__K2Node_DynamicCast_bSuccess7__pf = (b0l__K2Node_DynamicCast_AsDebug_State4__pf != nullptr);;
-				bool  __Local__0 = false;
-				if (!((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State4__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State4__pf->bpv__Player2Ready__pf) : (__Local__0)))
-				{
-					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-					break;
-				}
-			}
-		case 15:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue4__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State4__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue4__pf);
-				b0l__K2Node_DynamicCast_bSuccess7__pf = (b0l__K2Node_DynamicCast_AsDebug_State4__pf != nullptr);;
-				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_State4__pf))
-				{
-					b0l__K2Node_DynamicCast_AsDebug_State4__pf->bpf__AddxPlayer__pfT(false);
-				}
-			}
-		case 16:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue4__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State4__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue4__pf);
-				b0l__K2Node_DynamicCast_bSuccess7__pf = (b0l__K2Node_DynamicCast_AsDebug_State4__pf != nullptr);;
-				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_State4__pf))
-				{
-					b0l__K2Node_DynamicCast_AsDebug_State4__pf->bpv__Player2Ready__pf = false;
-				}
-			}
-		case 17:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue4__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State4__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue4__pf);
-				b0l__K2Node_DynamicCast_bSuccess7__pf = (b0l__K2Node_DynamicCast_AsDebug_State4__pf != nullptr);;
-				APlayerController*  __Local__1 = ((APlayerController*)nullptr);
-				b0l__K2Node_DynamicCast_AsPlayer_C_Regular2__pf = Cast<APlayerC_Regular_C__pf4061722237>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State4__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State4__pf->bpv__PlayerCx2xRef__pfTT) : (__Local__1)));
-				b0l__K2Node_DynamicCast_bSuccess9__pf = (b0l__K2Node_DynamicCast_AsPlayer_C_Regular2__pf != nullptr);;
-				if(::IsValid(b0l__K2Node_DynamicCast_AsPlayer_C_Regular2__pf))
-				{
-					b0l__K2Node_DynamicCast_AsPlayer_C_Regular2__pf->bpf__ChangeWidget_Locally__pf();
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 18:
-			{
-				bpfv__CallFunc_GetNumPlayers_ReturnValue__pf = GetNumPlayers();
-			}
-		case 19:
-			{
-				bpfv__CallFunc_Greater_IntInt_ReturnValue__pf = UKismetMathLibrary::Greater_IntInt(bpfv__CallFunc_GetNumPlayers_ReturnValue__pf, 1);
-				if (!bpfv__CallFunc_Greater_IntInt_ReturnValue__pf)
-				{
-					__CurrentState = 24;
-					break;
-				}
-			}
-		case 20:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue2__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State2__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue2__pf);
-				b0l__K2Node_DynamicCast_bSuccess4__pf = (b0l__K2Node_DynamicCast_AsDebug_State2__pf != nullptr);;
-				int32  __Local__2 = 0;
-				bpfv__CallFunc_Greater_IntInt_ReturnValue3__pf = UKismetMathLibrary::Greater_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State2__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State2__pf->bpv__LivesxLeftxP2__pfTT) : (__Local__2)), 0);
-				int32  __Local__3 = 0;
-				bpfv__CallFunc_Greater_IntInt_ReturnValue4__pf = UKismetMathLibrary::Greater_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State2__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State2__pf->bpv__LivesxLeftxP1__pfTT) : (__Local__3)), 0);
-				bpfv__CallFunc_BooleanOR_ReturnValue__pf = UKismetMathLibrary::BooleanOR(bpfv__CallFunc_Greater_IntInt_ReturnValue3__pf, bpfv__CallFunc_Greater_IntInt_ReturnValue4__pf);
-				if (!bpfv__CallFunc_BooleanOR_ReturnValue__pf)
-				{
-					__CurrentState = 21;
-					break;
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 21:
-			{
-				bpv__1979xRoundxInxSession__pfTTT = false;
-			}
-		case 22:
-			{
-				UKismetSystemLibrary::PrintString(this, FString(TEXT("Game Over")), true, true, FLinearColor(1.000000,0.000000,0.070606,1.000000), 1000.000000);
-			}
-		case 23:
+		case 4:
 			{
 				bpfv__CallFunc_GetGameState_ReturnValue__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue__pf);
-				b0l__K2Node_DynamicCast_bSuccess__pf = (b0l__K2Node_DynamicCast_AsDebug_State__pf != nullptr);;
-				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_State__pf))
-				{
-					b0l__K2Node_DynamicCast_AsDebug_State__pf->bpf__SendxPlayerxsxtoxGamexOverxScreen__pfTMTTTT();
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 24:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue2__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State2__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue2__pf);
-				b0l__K2Node_DynamicCast_bSuccess4__pf = (b0l__K2Node_DynamicCast_AsDebug_State2__pf != nullptr);;
-				int32  __Local__4 = 0;
-				bpfv__CallFunc_Greater_IntInt_ReturnValue4__pf = UKismetMathLibrary::Greater_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State2__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State2__pf->bpv__LivesxLeftxP1__pfTT) : (__Local__4)), 0);
-				if (!bpfv__CallFunc_Greater_IntInt_ReturnValue4__pf)
-				{
-					__CurrentState = 21;
-					break;
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 25:
-			{
-				bpfv__CallFunc_Add_ByteByte_ReturnValue__pf = UKismetMathLibrary::Add_ByteByte(static_cast<uint8>(bpv__1979xRounds__pfT), 1);
-				bpfv__CallFunc_GetValidValue_ReturnValue__pf = UKismetNodeHelperLibrary::GetValidValue(CastChecked<UEnum>(CastChecked<UDynamicClass>(ADebugMode_C__pf4162722864::StaticClass())->ReferencedConvertedFields[0]), bpfv__CallFunc_Add_ByteByte_ReturnValue__pf);
-				bpv__1979xRounds__pfT = static_cast<E__1979Rounds__pf>(bpfv__CallFunc_GetValidValue_ReturnValue__pf);
-			}
-		case 26:
-			{
-				bpf__StartxRound__pfT();
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 27:
-			{
-				bpf__StartxRound__pfT();
-			}
-		case 28:
-			{
-				bpv__1979xGameStarted__pfT = false;
-			}
-		case 29:
-			{
-				bpv__1979xRoundxInxSession__pfTTT = true;
-			}
-		case 30:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue6__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State6__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue6__pf);
-				b0l__K2Node_DynamicCast_bSuccess10__pf = (b0l__K2Node_DynamicCast_AsDebug_State6__pf != nullptr);;
-				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_State6__pf))
-				{
-					b0l__K2Node_DynamicCast_AsDebug_State6__pf->bpf__AddxPlayer__pfT(true);
-				}
-				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-				break;
-			}
-		case 31:
-			{
-				__StateStack.Push(11);
-			}
-		case 32:
-			{
-				if (!bpv__1979xGameStarted__pfT)
-				{
-					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-					break;
-				}
-				__CurrentState = 27;
-				break;
-			}
-		case 64:
-			{
-				__CurrentState = 65;
-				break;
-			}
-		case 65:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue7__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State7__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue7__pf);
-				b0l__K2Node_DynamicCast_bSuccess11__pf = (b0l__K2Node_DynamicCast_AsDebug_State7__pf != nullptr);;
-				if (!b0l__K2Node_DynamicCast_bSuccess11__pf)
+				b0l__K2Node_DynamicCast_AsDebug_MData__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue__pf);
+				b0l__K2Node_DynamicCast_bSuccess__pf = (b0l__K2Node_DynamicCast_AsDebug_MData__pf != nullptr);;
+				if (!b0l__K2Node_DynamicCast_bSuccess__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 			}
-		case 66:
+		case 5:
 			{
+				E__DStates__pf  __Local__0 = E__DStates__pf::NewEnumerator0;
+				b0l__K2Node_SwitchEnum_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData__pf->bpv__EDebugState__pf) : (__Local__0))), static_cast<uint8>(E__DStates__pf::NewEnumerator0));
+				if (!b0l__K2Node_SwitchEnum_CmpSuccess__pf)
+				{
+					__CurrentState = 6;
+					break;
+				}
+				E__DStates__pf  __Local__1 = E__DStates__pf::NewEnumerator0;
+				b0l__K2Node_SwitchEnum_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData__pf->bpv__EDebugState__pf) : (__Local__1))), static_cast<uint8>(E__DStates__pf::NewEnumerator1));
+				if (!b0l__K2Node_SwitchEnum_CmpSuccess__pf)
+				{
+					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+					break;
+				}
+				E__DStates__pf  __Local__2 = E__DStates__pf::NewEnumerator0;
+				b0l__K2Node_SwitchEnum_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData__pf->bpv__EDebugState__pf) : (__Local__2))), static_cast<uint8>(E__DStates__pf::NewEnumerator2));
+				if (!b0l__K2Node_SwitchEnum_CmpSuccess__pf)
+				{
+					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+					break;
+				}
+				E__DStates__pf  __Local__3 = E__DStates__pf::NewEnumerator0;
+				b0l__K2Node_SwitchEnum_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData__pf->bpv__EDebugState__pf) : (__Local__3))), static_cast<uint8>(E__DStates__pf::NewEnumerator3));
+				if (!b0l__K2Node_SwitchEnum_CmpSuccess__pf)
+				{
+					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+					break;
+				}
+				E__DStates__pf  __Local__4 = E__DStates__pf::NewEnumerator0;
+				b0l__K2Node_SwitchEnum_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData__pf->bpv__EDebugState__pf) : (__Local__4))), static_cast<uint8>(E__DStates__pf::NewEnumerator5));
+				if (!b0l__K2Node_SwitchEnum_CmpSuccess__pf)
+				{
+					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+					break;
+				}
 				E__DStates__pf  __Local__5 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State7__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State7__pf->bpv__EDebugState__pf) : (__Local__5))), static_cast<uint8>(E__DStates__pf::NewEnumerator0));
-				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
+				b0l__K2Node_SwitchEnum_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData__pf->bpv__EDebugState__pf) : (__Local__5))), static_cast<uint8>(E__DStates__pf::NewEnumerator4));
+				if (!b0l__K2Node_SwitchEnum_CmpSuccess__pf)
 				{
-					__CurrentState = 31;
+					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 				E__DStates__pf  __Local__6 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State7__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State7__pf->bpv__EDebugState__pf) : (__Local__6))), static_cast<uint8>(E__DStates__pf::NewEnumerator1));
-				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
+				b0l__K2Node_SwitchEnum_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData__pf->bpv__EDebugState__pf) : (__Local__6))), static_cast<uint8>(E__DStates__pf::NewEnumerator6));
+				if (!b0l__K2Node_SwitchEnum_CmpSuccess__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 				E__DStates__pf  __Local__7 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State7__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State7__pf->bpv__EDebugState__pf) : (__Local__7))), static_cast<uint8>(E__DStates__pf::NewEnumerator2));
-				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
-				{
-					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-					break;
-				}
-				E__DStates__pf  __Local__8 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State7__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State7__pf->bpv__EDebugState__pf) : (__Local__8))), static_cast<uint8>(E__DStates__pf::NewEnumerator3));
-				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
-				{
-					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-					break;
-				}
-				E__DStates__pf  __Local__9 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State7__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State7__pf->bpv__EDebugState__pf) : (__Local__9))), static_cast<uint8>(E__DStates__pf::NewEnumerator5));
-				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
-				{
-					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-					break;
-				}
-				E__DStates__pf  __Local__10 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State7__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State7__pf->bpv__EDebugState__pf) : (__Local__10))), static_cast<uint8>(E__DStates__pf::NewEnumerator4));
-				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
-				{
-					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-					break;
-				}
-				E__DStates__pf  __Local__11 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State7__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State7__pf->bpv__EDebugState__pf) : (__Local__11))), static_cast<uint8>(E__DStates__pf::NewEnumerator6));
-				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
-				{
-					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-					break;
-				}
-				E__DStates__pf  __Local__12 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State7__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State7__pf->bpv__EDebugState__pf) : (__Local__12))), static_cast<uint8>(E__DStates__pf::NewEnumerator7));
-				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
+				b0l__K2Node_SwitchEnum_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData__pf->bpv__EDebugState__pf) : (__Local__7))), static_cast<uint8>(E__DStates__pf::NewEnumerator7));
+				if (!b0l__K2Node_SwitchEnum_CmpSuccess__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 6:
+			{
+				(b0l__CallFunc_GetAllActorsOfClass_OutActors__pf).Reset();
+				UGameplayStatics::GetAllActorsOfClass(this, ASpawn_Volume_C__pf2174024837::StaticClass(), /*out*/ TArrayCaster<ASpawn_Volume_C__pf2174024837*>(b0l__CallFunc_GetAllActorsOfClass_OutActors__pf).Get<AActor*>());
+			}
+		case 7:
+			{
+				bpv__SpawnVolumes__pf = b0l__CallFunc_GetAllActorsOfClass_OutActors__pf;
+			}
+		case 8:
+			{
+				b0l__Temp_int_Loop_Counter_Variable__pf = 0;
+			}
+		case 9:
+			{
+				b0l__Temp_int_Array_Index_Variable__pf = 0;
+			}
+		case 10:
+			{
+				bpfv__CallFunc_Array_Length_ReturnValue__pf = FCustomThunkTemplates::Array_Length(bpv__SpawnVolumes__pf);
+				bpfv__CallFunc_Less_IntInt_ReturnValue__pf = UKismetMathLibrary::Less_IntInt(b0l__Temp_int_Loop_Counter_Variable__pf, bpfv__CallFunc_Array_Length_ReturnValue__pf);
+				if (!bpfv__CallFunc_Less_IntInt_ReturnValue__pf)
+				{
+					__CurrentState = 14;
+					break;
+				}
+			}
+		case 11:
+			{
+				b0l__Temp_int_Array_Index_Variable__pf = b0l__Temp_int_Loop_Counter_Variable__pf;
+			}
+		case 12:
+			{
+				__StateStack.Push(15);
+			}
+		case 13:
+			{
+				FCustomThunkTemplates::Array_Get(bpv__SpawnVolumes__pf, b0l__Temp_int_Array_Index_Variable__pf, /*out*/ b0l__CallFunc_Array_Get_Item__pf);
+				bpfv__CallFunc_GetDisplayName_ReturnValue__pf = UKismetSystemLibrary::GetDisplayName(b0l__CallFunc_Array_Get_Item__pf);
+				UKismetSystemLibrary::PrintString(this, bpfv__CallFunc_GetDisplayName_ReturnValue__pf, true, true, FLinearColor(0.000000,0.660000,1.000000,1.000000), 2.000000);
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 14:
+			{
+				bpfv__CallFunc_Array_Length_ReturnValue1__pf = FCustomThunkTemplates::Array_Length(bpv__SpawnVolumes__pf);
+				bpv__NumBounds__pf = bpfv__CallFunc_Array_Length_ReturnValue1__pf;
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 15:
+			{
+				bpfv__CallFunc_Add_IntInt_ReturnValue__pf = UKismetMathLibrary::Add_IntInt(b0l__Temp_int_Loop_Counter_Variable__pf, 1);
+				b0l__Temp_int_Loop_Counter_Variable__pf = bpfv__CallFunc_Add_IntInt_ReturnValue__pf;
+				__CurrentState = 10;
+				break;
+			}
+		case 62:
+			{
+				__CurrentState = 63;
+				break;
+			}
+		case 63:
+			{
+				bpfv__CallFunc_GetGameInstance_ReturnValue__pf = UGameplayStatics::GetGameInstance(this);
+				b0l__K2Node_DynamicCast_AsDebug_Manager__pf = Cast<UDebugManager_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue__pf);
+				b0l__K2Node_DynamicCast_bSuccess12__pf = (b0l__K2Node_DynamicCast_AsDebug_Manager__pf != nullptr);;
+				if (!b0l__K2Node_DynamicCast_bSuccess12__pf)
+				{
+					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+					break;
+				}
+			}
+		case 64:
+			{
+				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_Manager__pf))
+				{
+					b0l__K2Node_DynamicCast_AsDebug_Manager__pf->bpf__LoadxSettings__pfT();
+				}
+			}
+		case 65:
+			{
+				UKismetSystemLibrary::PrintString(this, FString(TEXT("BeginPlay called.")), true, true, FLinearColor(1.000000,0.000000,0.595111,1.000000), 1000.000000);
+				__CurrentState = 4;
 				break;
 			}
 		default:
@@ -768,13 +656,20 @@ void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_0(int32 bpp
 }
 void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_1(int32 bpp__EntryPoint__pf)
 {
-	int32 bpfv__CallFunc_Add_IntInt_ReturnValue__pf{};
-	FString bpfv__CallFunc_GetDisplayName_ReturnValue__pf{};
-	int32 bpfv__CallFunc_Array_Length_ReturnValue__pf{};
-	bool bpfv__CallFunc_Less_IntInt_ReturnValue__pf{};
-	int32 bpfv__CallFunc_Array_Length_ReturnValue1__pf{};
+	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue1__pf{};
+	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue2__pf{};
+	bool bpfv__CallFunc_Greater_IntInt_ReturnValue__pf{};
+	bool bpfv__CallFunc_Greater_IntInt_ReturnValue1__pf{};
+	int32 bpfv__CallFunc_GetNumPlayers_ReturnValue__pf{};
+	bool bpfv__CallFunc_BooleanOR_ReturnValue__pf{};
+	bool bpfv__CallFunc_Greater_IntInt_ReturnValue2__pf{};
+	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue4__pf{};
+	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue6__pf{};
+	uint8 bpfv__CallFunc_Add_ByteByte_ReturnValue__pf{};
+	uint8 bpfv__CallFunc_GetValidValue_ReturnValue__pf{};
 	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue8__pf{};
-	UGameInstance* bpfv__CallFunc_GetGameInstance_ReturnValue__pf{};
+	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue9__pf{};
+	bool bpfv__CallFunc_Greater_IntInt_ReturnValue5__pf{};
 	TArray< int32, TInlineAllocator<8> > __StateStack;
 
 	int32 __CurrentState = bpp__EntryPoint__pf;
@@ -784,152 +679,290 @@ void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_1(int32 bpp
 		{
 		case 1:
 			{
-				(b0l__CallFunc_GetAllActorsOfClass_OutActors__pf).Reset();
-				UGameplayStatics::GetAllActorsOfClass(this, ASpawn_Volume_C__pf2174024837::StaticClass(), /*out*/ TArrayCaster<ASpawn_Volume_C__pf2174024837*>(b0l__CallFunc_GetAllActorsOfClass_OutActors__pf).Get<AActor*>());
+				__CurrentState = 2;
+				break;
 			}
 		case 2:
 			{
-				bpv__SpawnVolumes__pf = b0l__CallFunc_GetAllActorsOfClass_OutActors__pf;
+				bpfv__CallFunc_Add_ByteByte_ReturnValue__pf = UKismetMathLibrary::Add_ByteByte(static_cast<uint8>(bpv__1979xRounds__pfT), 1);
+				bpfv__CallFunc_GetValidValue_ReturnValue__pf = UKismetNodeHelperLibrary::GetValidValue(CastChecked<UEnum>(CastChecked<UDynamicClass>(ADebugMode_C__pf4162722864::StaticClass())->ReferencedConvertedFields[0]), bpfv__CallFunc_Add_ByteByte_ReturnValue__pf);
+				bpv__1979xRounds__pfT = static_cast<E__1979Rounds__pf>(bpfv__CallFunc_GetValidValue_ReturnValue__pf);
 			}
 		case 3:
 			{
-				b0l__Temp_int_Loop_Counter_Variable__pf = 0;
-			}
-		case 4:
-			{
-				b0l__Temp_int_Array_Index_Variable__pf = 0;
-			}
-		case 5:
-			{
-				bpfv__CallFunc_Array_Length_ReturnValue__pf = FCustomThunkTemplates::Array_Length(bpv__SpawnVolumes__pf);
-				bpfv__CallFunc_Less_IntInt_ReturnValue__pf = UKismetMathLibrary::Less_IntInt(b0l__Temp_int_Loop_Counter_Variable__pf, bpfv__CallFunc_Array_Length_ReturnValue__pf);
-				if (!bpfv__CallFunc_Less_IntInt_ReturnValue__pf)
-				{
-					__CurrentState = 9;
-					break;
-				}
-			}
-		case 6:
-			{
-				b0l__Temp_int_Array_Index_Variable__pf = b0l__Temp_int_Loop_Counter_Variable__pf;
-			}
-		case 7:
-			{
-				__StateStack.Push(10);
-			}
-		case 8:
-			{
-				FCustomThunkTemplates::Array_Get(bpv__SpawnVolumes__pf, b0l__Temp_int_Array_Index_Variable__pf, /*out*/ b0l__CallFunc_Array_Get_Item__pf);
-				bpfv__CallFunc_GetDisplayName_ReturnValue__pf = UKismetSystemLibrary::GetDisplayName(b0l__CallFunc_Array_Get_Item__pf);
-				UKismetSystemLibrary::PrintString(this, bpfv__CallFunc_GetDisplayName_ReturnValue__pf, true, true, FLinearColor(0.000000,0.660000,1.000000,1.000000), 2.000000);
+				bpf__StartxRound__pfT();
 				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 				break;
 			}
-		case 9:
+		case 16:
 			{
-				bpfv__CallFunc_Array_Length_ReturnValue1__pf = FCustomThunkTemplates::Array_Length(bpv__SpawnVolumes__pf);
-				bpv__NumBounds__pf = bpfv__CallFunc_Array_Length_ReturnValue1__pf;
+				bpfv__CallFunc_GetGameState_ReturnValue1__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData1__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue1__pf);
+				b0l__K2Node_DynamicCast_bSuccess1__pf = (b0l__K2Node_DynamicCast_AsDebug_MData1__pf != nullptr);;
+				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData1__pf))
+				{
+					b0l__K2Node_DynamicCast_AsDebug_MData1__pf->bpf__SetxState__pfT(E__DStates__pf::NewEnumerator3);
+				}
+			}
+		case 17:
+			{
+				UKismetSystemLibrary::PrintString(this, FString(TEXT("Game Over")), true, true, FLinearColor(1.000000,0.000000,0.070606,1.000000), 1000.000000);
+			}
+		case 18:
+			{
+				bpfv__CallFunc_GetGameState_ReturnValue4__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData4__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue4__pf);
+				b0l__K2Node_DynamicCast_bSuccess5__pf = (b0l__K2Node_DynamicCast_AsDebug_MData4__pf != nullptr);;
+				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData4__pf))
+				{
+					b0l__K2Node_DynamicCast_AsDebug_MData4__pf->bpf__SendxPlayerxsxtoxGamexOverxScreen__pfTMTTTT();
+				}
 				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 				break;
 			}
-		case 10:
+		case 19:
 			{
-				bpfv__CallFunc_Add_IntInt_ReturnValue__pf = UKismetMathLibrary::Add_IntInt(b0l__Temp_int_Loop_Counter_Variable__pf, 1);
-				b0l__Temp_int_Loop_Counter_Variable__pf = bpfv__CallFunc_Add_IntInt_ReturnValue__pf;
-				__CurrentState = 5;
-				break;
+				bpf__StartxRound__pfT();
 			}
-		case 53:
+		case 20:
 			{
-				__CurrentState = 54;
-				break;
+				bpv__1979xGameStarted__pfT = false;
 			}
-		case 54:
+		case 21:
 			{
-				bpfv__CallFunc_GetGameInstance_ReturnValue__pf = UGameplayStatics::GetGameInstance(this);
-				b0l__K2Node_DynamicCast_AsDebug_Instance__pf = Cast<UDebugInstance_C__pf4162722864>(bpfv__CallFunc_GetGameInstance_ReturnValue__pf);
-				b0l__K2Node_DynamicCast_bSuccess13__pf = (b0l__K2Node_DynamicCast_AsDebug_Instance__pf != nullptr);;
-				if (!b0l__K2Node_DynamicCast_bSuccess13__pf)
-				{
-					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
-					break;
-				}
+				bpv__1979xRoundxInxSession__pfTTT = true;
 			}
-		case 55:
-			{
-				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_Instance__pf))
-				{
-					b0l__K2Node_DynamicCast_AsDebug_Instance__pf->bpf__LoadxSettings__pfT();
-				}
-			}
-		case 56:
-			{
-				UKismetSystemLibrary::PrintString(this, FString(TEXT("BeginPlay called.")), true, true, FLinearColor(1.000000,0.000000,0.595111,1.000000), 1000.000000);
-			}
-		case 57:
+		case 22:
 			{
 				bpfv__CallFunc_GetGameState_ReturnValue8__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State8__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue8__pf);
-				b0l__K2Node_DynamicCast_bSuccess12__pf = (b0l__K2Node_DynamicCast_AsDebug_State8__pf != nullptr);;
-				if (!b0l__K2Node_DynamicCast_bSuccess12__pf)
+				b0l__K2Node_DynamicCast_AsDebug_MData8__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue8__pf);
+				b0l__K2Node_DynamicCast_bSuccess10__pf = (b0l__K2Node_DynamicCast_AsDebug_MData8__pf != nullptr);;
+				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData8__pf))
+				{
+					b0l__K2Node_DynamicCast_AsDebug_MData8__pf->bpf__AddxPlayer__pfT(true);
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 23:
+			{
+				__StateStack.Push(25);
+			}
+		case 24:
+			{
+				if (!bpv__1979xGameStarted__pfT)
+				{
+					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+					break;
+				}
+				__CurrentState = 19;
+				break;
+			}
+		case 25:
+			{
+				if (!bpv__1979xRoundxInxSession__pfTTT)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 			}
-		case 58:
+		case 26:
+			{
+				__StateStack.Push(28);
+				__StateStack.Push(33);
+			}
+		case 27:
+			{
+				bpfv__CallFunc_Greater_IntInt_ReturnValue5__pf = UKismetMathLibrary::Greater_IntInt(bpv__1979xAsteroidxCount__pfTT, 0);
+				if (!bpfv__CallFunc_Greater_IntInt_ReturnValue5__pf)
+				{
+					__CurrentState = 38;
+					break;
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 28:
+			{
+				bpfv__CallFunc_GetGameState_ReturnValue6__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData6__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue6__pf);
+				b0l__K2Node_DynamicCast_bSuccess8__pf = (b0l__K2Node_DynamicCast_AsDebug_MData6__pf != nullptr);;
+				bool  __Local__8 = false;
+				if (!((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData6__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData6__pf->bpv__Player2Ready__pf) : (__Local__8)))
+				{
+					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+					break;
+				}
+			}
+		case 29:
+			{
+				bpfv__CallFunc_GetGameState_ReturnValue6__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData6__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue6__pf);
+				b0l__K2Node_DynamicCast_bSuccess8__pf = (b0l__K2Node_DynamicCast_AsDebug_MData6__pf != nullptr);;
+				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData6__pf))
+				{
+					b0l__K2Node_DynamicCast_AsDebug_MData6__pf->bpf__AddxPlayer__pfT(false);
+				}
+			}
+		case 30:
+			{
+				bpfv__CallFunc_GetGameState_ReturnValue6__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData6__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue6__pf);
+				b0l__K2Node_DynamicCast_bSuccess8__pf = (b0l__K2Node_DynamicCast_AsDebug_MData6__pf != nullptr);;
+				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData6__pf))
+				{
+					b0l__K2Node_DynamicCast_AsDebug_MData6__pf->AActor::FlushNetDormancy();
+				}
+			}
+		case 31:
+			{
+				bpfv__CallFunc_GetGameState_ReturnValue6__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData6__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue6__pf);
+				b0l__K2Node_DynamicCast_bSuccess8__pf = (b0l__K2Node_DynamicCast_AsDebug_MData6__pf != nullptr);;
+				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData6__pf))
+				{
+					b0l__K2Node_DynamicCast_AsDebug_MData6__pf->bpv__Player2Ready__pf = false;
+				}
+			}
+		case 32:
+			{
+				bpfv__CallFunc_GetGameState_ReturnValue6__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData6__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue6__pf);
+				b0l__K2Node_DynamicCast_bSuccess8__pf = (b0l__K2Node_DynamicCast_AsDebug_MData6__pf != nullptr);;
+				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData6__pf))
+				{
+					b0l__K2Node_DynamicCast_AsDebug_MData6__pf->bpf__OnRep_Player2Ready__pf();
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 33:
+			{
+				bpfv__CallFunc_GetNumPlayers_ReturnValue__pf = GetNumPlayers();
+			}
+		case 34:
+			{
+				bpfv__CallFunc_Greater_IntInt_ReturnValue2__pf = UKismetMathLibrary::Greater_IntInt(bpfv__CallFunc_GetNumPlayers_ReturnValue__pf, 1);
+				if (!bpfv__CallFunc_Greater_IntInt_ReturnValue2__pf)
+				{
+					__CurrentState = 37;
+					break;
+				}
+			}
+		case 35:
+			{
+				bpfv__CallFunc_GetGameState_ReturnValue2__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData2__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue2__pf);
+				b0l__K2Node_DynamicCast_bSuccess2__pf = (b0l__K2Node_DynamicCast_AsDebug_MData2__pf != nullptr);;
+				int32  __Local__9 = 0;
+				bpfv__CallFunc_Greater_IntInt_ReturnValue__pf = UKismetMathLibrary::Greater_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData2__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData2__pf->bpv__LivesxLeftxP2__pfTT) : (__Local__9)), 0);
+				int32  __Local__10 = 0;
+				bpfv__CallFunc_Greater_IntInt_ReturnValue1__pf = UKismetMathLibrary::Greater_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData2__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData2__pf->bpv__LivesxLeftxP1__pfTT) : (__Local__10)), 0);
+				bpfv__CallFunc_BooleanOR_ReturnValue__pf = UKismetMathLibrary::BooleanOR(bpfv__CallFunc_Greater_IntInt_ReturnValue__pf, bpfv__CallFunc_Greater_IntInt_ReturnValue1__pf);
+				if (!bpfv__CallFunc_BooleanOR_ReturnValue__pf)
+				{
+					__CurrentState = 36;
+					break;
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 36:
+			{
+				bpv__1979xRoundxInxSession__pfTTT = false;
+				__CurrentState = 16;
+				break;
+			}
+		case 37:
+			{
+				bpfv__CallFunc_GetGameState_ReturnValue2__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData2__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue2__pf);
+				b0l__K2Node_DynamicCast_bSuccess2__pf = (b0l__K2Node_DynamicCast_AsDebug_MData2__pf != nullptr);;
+				int32  __Local__11 = 0;
+				bpfv__CallFunc_Greater_IntInt_ReturnValue1__pf = UKismetMathLibrary::Greater_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData2__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData2__pf->bpv__LivesxLeftxP1__pfTT) : (__Local__11)), 0);
+				if (!bpfv__CallFunc_Greater_IntInt_ReturnValue1__pf)
+				{
+					__CurrentState = 36;
+					break;
+				}
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 38:
+			{
+				UKismetSystemLibrary::Delay(this, 3.000000, FLatentActionInfo(1, 312926139, TEXT("ExecuteUbergraph_DebugMode_1"), this));
+				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+				break;
+			}
+		case 71:
+			{
+				__CurrentState = 72;
+				break;
+			}
+		case 72:
+			{
+				bpfv__CallFunc_GetGameState_ReturnValue9__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData9__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue9__pf);
+				b0l__K2Node_DynamicCast_bSuccess11__pf = (b0l__K2Node_DynamicCast_AsDebug_MData9__pf != nullptr);;
+				if (!b0l__K2Node_DynamicCast_bSuccess11__pf)
+				{
+					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
+					break;
+				}
+			}
+		case 73:
 			{
 				E__DStates__pf  __Local__13 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State8__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State8__pf->bpv__EDebugState__pf) : (__Local__13))), static_cast<uint8>(E__DStates__pf::NewEnumerator0));
+				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData9__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData9__pf->bpv__EDebugState__pf) : (__Local__13))), static_cast<uint8>(E__DStates__pf::NewEnumerator0));
 				if (!b0l__K2Node_SwitchEnum3_CmpSuccess__pf)
 				{
-					__CurrentState = 1;
+					__CurrentState = 23;
 					break;
 				}
 				E__DStates__pf  __Local__14 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State8__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State8__pf->bpv__EDebugState__pf) : (__Local__14))), static_cast<uint8>(E__DStates__pf::NewEnumerator1));
+				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData9__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData9__pf->bpv__EDebugState__pf) : (__Local__14))), static_cast<uint8>(E__DStates__pf::NewEnumerator1));
 				if (!b0l__K2Node_SwitchEnum3_CmpSuccess__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 				E__DStates__pf  __Local__15 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State8__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State8__pf->bpv__EDebugState__pf) : (__Local__15))), static_cast<uint8>(E__DStates__pf::NewEnumerator2));
+				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData9__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData9__pf->bpv__EDebugState__pf) : (__Local__15))), static_cast<uint8>(E__DStates__pf::NewEnumerator2));
 				if (!b0l__K2Node_SwitchEnum3_CmpSuccess__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 				E__DStates__pf  __Local__16 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State8__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State8__pf->bpv__EDebugState__pf) : (__Local__16))), static_cast<uint8>(E__DStates__pf::NewEnumerator3));
+				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData9__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData9__pf->bpv__EDebugState__pf) : (__Local__16))), static_cast<uint8>(E__DStates__pf::NewEnumerator3));
 				if (!b0l__K2Node_SwitchEnum3_CmpSuccess__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 				E__DStates__pf  __Local__17 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State8__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State8__pf->bpv__EDebugState__pf) : (__Local__17))), static_cast<uint8>(E__DStates__pf::NewEnumerator5));
+				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData9__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData9__pf->bpv__EDebugState__pf) : (__Local__17))), static_cast<uint8>(E__DStates__pf::NewEnumerator5));
 				if (!b0l__K2Node_SwitchEnum3_CmpSuccess__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 				E__DStates__pf  __Local__18 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State8__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State8__pf->bpv__EDebugState__pf) : (__Local__18))), static_cast<uint8>(E__DStates__pf::NewEnumerator4));
+				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData9__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData9__pf->bpv__EDebugState__pf) : (__Local__18))), static_cast<uint8>(E__DStates__pf::NewEnumerator4));
 				if (!b0l__K2Node_SwitchEnum3_CmpSuccess__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 				E__DStates__pf  __Local__19 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State8__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State8__pf->bpv__EDebugState__pf) : (__Local__19))), static_cast<uint8>(E__DStates__pf::NewEnumerator6));
+				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData9__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData9__pf->bpv__EDebugState__pf) : (__Local__19))), static_cast<uint8>(E__DStates__pf::NewEnumerator6));
 				if (!b0l__K2Node_SwitchEnum3_CmpSuccess__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 				E__DStates__pf  __Local__20 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State8__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State8__pf->bpv__EDebugState__pf) : (__Local__20))), static_cast<uint8>(E__DStates__pf::NewEnumerator7));
+				b0l__K2Node_SwitchEnum3_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData9__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData9__pf->bpv__EDebugState__pf) : (__Local__20))), static_cast<uint8>(E__DStates__pf::NewEnumerator7));
 				if (!b0l__K2Node_SwitchEnum3_CmpSuccess__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
@@ -946,86 +979,86 @@ void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_1(int32 bpp
 }
 void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_2(int32 bpp__EntryPoint__pf)
 {
-	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue3__pf{};
+	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue5__pf{};
 	int32 __CurrentState = bpp__EntryPoint__pf;
 	do
 	{
 		switch( __CurrentState )
 		{
-		case 67:
+		case 74:
 			{
-				__CurrentState = 68;
+				__CurrentState = 75;
 				break;
 			}
-		case 68:
+		case 75:
 			{
 				UKismetSystemLibrary::PrintString(this, FString(TEXT("State change called.")), true, true, FLinearColor(1.000000,0.000000,0.595111,1.000000), 1000.000000);
 			}
-		case 69:
+		case 76:
 			{
-				bpfv__CallFunc_GetGameState_ReturnValue3__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State3__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue3__pf);
-				b0l__K2Node_DynamicCast_bSuccess5__pf = (b0l__K2Node_DynamicCast_AsDebug_State3__pf != nullptr);;
-				if (!b0l__K2Node_DynamicCast_bSuccess5__pf)
+				bpfv__CallFunc_GetGameState_ReturnValue5__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData5__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue5__pf);
+				b0l__K2Node_DynamicCast_bSuccess6__pf = (b0l__K2Node_DynamicCast_AsDebug_MData5__pf != nullptr);;
+				if (!b0l__K2Node_DynamicCast_bSuccess6__pf)
 				{
 					__CurrentState = -1;
 					break;
 				}
 			}
-		case 70:
+		case 77:
 			{
 				E__DStates__pf  __Local__21 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State3__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State3__pf->bpv__EDebugState__pf) : (__Local__21))), static_cast<uint8>(E__DStates__pf::NewEnumerator0));
-				if (!b0l__K2Node_SwitchEnum1_CmpSuccess__pf)
+				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData5__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData5__pf->bpv__EDebugState__pf) : (__Local__21))), static_cast<uint8>(E__DStates__pf::NewEnumerator0));
+				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
 				{
-					__CurrentState = 73;
+					__CurrentState = 80;
 					break;
 				}
 				E__DStates__pf  __Local__22 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State3__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State3__pf->bpv__EDebugState__pf) : (__Local__22))), static_cast<uint8>(E__DStates__pf::NewEnumerator1));
-				if (!b0l__K2Node_SwitchEnum1_CmpSuccess__pf)
+				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData5__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData5__pf->bpv__EDebugState__pf) : (__Local__22))), static_cast<uint8>(E__DStates__pf::NewEnumerator1));
+				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
 				{
 					__CurrentState = -1;
 					break;
 				}
 				E__DStates__pf  __Local__23 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State3__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State3__pf->bpv__EDebugState__pf) : (__Local__23))), static_cast<uint8>(E__DStates__pf::NewEnumerator2));
-				if (!b0l__K2Node_SwitchEnum1_CmpSuccess__pf)
+				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData5__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData5__pf->bpv__EDebugState__pf) : (__Local__23))), static_cast<uint8>(E__DStates__pf::NewEnumerator2));
+				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
 				{
 					__CurrentState = -1;
 					break;
 				}
 				E__DStates__pf  __Local__24 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State3__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State3__pf->bpv__EDebugState__pf) : (__Local__24))), static_cast<uint8>(E__DStates__pf::NewEnumerator3));
-				if (!b0l__K2Node_SwitchEnum1_CmpSuccess__pf)
+				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData5__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData5__pf->bpv__EDebugState__pf) : (__Local__24))), static_cast<uint8>(E__DStates__pf::NewEnumerator3));
+				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
 				{
 					__CurrentState = -1;
 					break;
 				}
 				E__DStates__pf  __Local__25 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State3__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State3__pf->bpv__EDebugState__pf) : (__Local__25))), static_cast<uint8>(E__DStates__pf::NewEnumerator5));
-				if (!b0l__K2Node_SwitchEnum1_CmpSuccess__pf)
+				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData5__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData5__pf->bpv__EDebugState__pf) : (__Local__25))), static_cast<uint8>(E__DStates__pf::NewEnumerator5));
+				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
 				{
 					__CurrentState = -1;
 					break;
 				}
 				E__DStates__pf  __Local__26 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State3__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State3__pf->bpv__EDebugState__pf) : (__Local__26))), static_cast<uint8>(E__DStates__pf::NewEnumerator4));
-				if (!b0l__K2Node_SwitchEnum1_CmpSuccess__pf)
+				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData5__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData5__pf->bpv__EDebugState__pf) : (__Local__26))), static_cast<uint8>(E__DStates__pf::NewEnumerator4));
+				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
 				{
-					__CurrentState = 72;
+					__CurrentState = 79;
 					break;
 				}
 				E__DStates__pf  __Local__27 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State3__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State3__pf->bpv__EDebugState__pf) : (__Local__27))), static_cast<uint8>(E__DStates__pf::NewEnumerator6));
-				if (!b0l__K2Node_SwitchEnum1_CmpSuccess__pf)
+				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData5__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData5__pf->bpv__EDebugState__pf) : (__Local__27))), static_cast<uint8>(E__DStates__pf::NewEnumerator6));
+				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
 				{
-					__CurrentState = 71;
+					__CurrentState = 78;
 					break;
 				}
 				E__DStates__pf  __Local__28 = E__DStates__pf::NewEnumerator0;
-				b0l__K2Node_SwitchEnum1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State3__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State3__pf->bpv__EDebugState__pf) : (__Local__28))), static_cast<uint8>(E__DStates__pf::NewEnumerator7));
-				if (!b0l__K2Node_SwitchEnum1_CmpSuccess__pf)
+				b0l__K2Node_SwitchEnum2_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData5__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData5__pf->bpv__EDebugState__pf) : (__Local__28))), static_cast<uint8>(E__DStates__pf::NewEnumerator7));
+				if (!b0l__K2Node_SwitchEnum2_CmpSuccess__pf)
 				{
 					__CurrentState = -1;
 					break;
@@ -1033,19 +1066,19 @@ void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_2(int32 bpp
 				__CurrentState = -1;
 				break;
 			}
-		case 71:
+		case 78:
 			{
 				bpf__SetupxMainMenu__pfT();
 				__CurrentState = -1;
 				break;
 			}
-		case 72:
+		case 79:
 			{
 				bpf__SetupxDebugMode__pfT();
 				__CurrentState = -1;
 				break;
 			}
-		case 73:
+		case 80:
 			{
 				bpf__SetupxArcade1979__pfT();
 				__CurrentState = -1;
@@ -1059,7 +1092,7 @@ void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_2(int32 bpp
 void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_3(int32 bpp__EntryPoint__pf)
 {
 	FString bpfv__CallFunc_Conv_ObjectToString_ReturnValue__pf{};
-	check(bpp__EntryPoint__pf == 59);
+	check(bpp__EntryPoint__pf == 66);
 	// optimized KCST_UnconditionalGoto
 	UKismetSystemLibrary::PrintString(this, FString(TEXT("Player: ")), true, true, FLinearColor(0.000000,0.660000,1.000000,1.000000), 2.000000);
 	bpfv__CallFunc_Conv_ObjectToString_ReturnValue__pf = UKismetStringLibrary::Conv_ObjectToString(b0l__K2Node_Event_ExitingController__pf);
@@ -1075,20 +1108,20 @@ void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_4(int32 bpp
 {
 	FTransform bpfv__CallFunc_GetTransform_ReturnValue__pf{};
 	AActor* bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf{};
-	AShip_C__pf3227778944* bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf{};
-	check(bpp__EntryPoint__pf == 81);
+	AShip_C__pf668171628* bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf{};
+	check(bpp__EntryPoint__pf == 88);
 	// optimized KCST_UnconditionalGoto
-	UKismetSystemLibrary::PrintString(this, FString(TEXT("Spawn Player")), true, true, FLinearColor(1.000000,0.000000,0.595111,1.000000), 1000.000000);
+	UKismetSystemLibrary::PrintString(this, FString(TEXT("Spawn Ship called.")), true, true, FLinearColor(1.000000,0.000000,0.595111,1.000000), 1000.000000);
 	if(::IsValid(b0l__K2Node_CustomEvent_Player_Start_Ref__pf))
 	{
 		bpfv__CallFunc_GetTransform_ReturnValue__pf = b0l__K2Node_CustomEvent_Player_Start_Ref__pf->AActor::GetTransform();
 	}
-	bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf = UGameplayStatics::BeginDeferredActorSpawnFromClass(this, AShip_C__pf3227778944::StaticClass(), bpfv__CallFunc_GetTransform_ReturnValue__pf, ESpawnActorCollisionHandlingMethod::Undefined, ((AActor*)nullptr));
+	bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf = UGameplayStatics::BeginDeferredActorSpawnFromClass(this, AShip_C__pf668171628::StaticClass(), bpfv__CallFunc_GetTransform_ReturnValue__pf, ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn, b0l__K2Node_CustomEvent_Player_Controller_Ref__pf);
 	if(::IsValid(b0l__K2Node_CustomEvent_Player_Start_Ref__pf))
 	{
 		bpfv__CallFunc_GetTransform_ReturnValue__pf = b0l__K2Node_CustomEvent_Player_Start_Ref__pf->AActor::GetTransform();
 	}
-	bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf = CastChecked<AShip_C__pf3227778944>(UGameplayStatics::FinishSpawningActor(bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf, bpfv__CallFunc_GetTransform_ReturnValue__pf), ECastCheckedType::NullAllowed);
+	bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf = CastChecked<AShip_C__pf668171628>(UGameplayStatics::FinishSpawningActor(bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf, bpfv__CallFunc_GetTransform_ReturnValue__pf), ECastCheckedType::NullAllowed);
 	if(::IsValid(bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf))
 	{
 		bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf->AActor::FlushNetDormancy();
@@ -1109,7 +1142,7 @@ void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_4(int32 bpp
 }
 void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_5(int32 bpp__EntryPoint__pf)
 {
-	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue5__pf{};
+	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue7__pf{};
 	TArray< int32, TInlineAllocator<8> > __StateStack;
 
 	int32 __CurrentState = bpp__EntryPoint__pf;
@@ -1117,54 +1150,54 @@ void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_5(int32 bpp
 	{
 		switch( __CurrentState )
 		{
-		case 74:
+		case 81:
 			{
-				__CurrentState = 75;
+				__CurrentState = 82;
 				break;
 			}
-		case 75:
+		case 82:
 			{
 				UKismetSystemLibrary::PrintString(this, FString(TEXT("OnPostLogin called.")), true, true, FLinearColor(1.000000,0.000000,0.595111,1.000000), 1000.000000);
 			}
-		case 76:
+		case 83:
 			{
-				__StateStack.Push(79);
+				__StateStack.Push(86);
 			}
-		case 77:
+		case 84:
 			{
-				bpfv__CallFunc_GetGameState_ReturnValue5__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State5__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue5__pf);
-				b0l__K2Node_DynamicCast_bSuccess8__pf = (b0l__K2Node_DynamicCast_AsDebug_State5__pf != nullptr);;
-				if (!b0l__K2Node_DynamicCast_bSuccess8__pf)
+				bpfv__CallFunc_GetGameState_ReturnValue7__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData7__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue7__pf);
+				b0l__K2Node_DynamicCast_bSuccess9__pf = (b0l__K2Node_DynamicCast_AsDebug_MData7__pf != nullptr);;
+				if (!b0l__K2Node_DynamicCast_bSuccess9__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 			}
-		case 78:
+		case 85:
 			{
-				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_State5__pf))
+				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData7__pf))
 				{
-					b0l__K2Node_DynamicCast_AsDebug_State5__pf->bpf__SetxPlayerxControllerxReference__pfTTT(b0l__K2Node_Event_NewPlayer__pf, /*out*/ b0l__CallFunc_Set_Player_Controller_Reference_Player_Set__pf);
+					b0l__K2Node_DynamicCast_AsDebug_MData7__pf->bpf__SetxPlayerxControllerxReference__pfTTT(b0l__K2Node_Event_NewPlayer__pf, /*out*/ b0l__CallFunc_Set_Player_Controller_Reference_Player_Set__pf);
 				}
 				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 				break;
 			}
-		case 79:
+		case 86:
 			{
-				b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf = Cast<APlayerC_Regular_C__pf4061722237>(b0l__K2Node_Event_NewPlayer__pf);
-				b0l__K2Node_DynamicCast_bSuccess6__pf = (b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf != nullptr);;
-				if (!b0l__K2Node_DynamicCast_bSuccess6__pf)
+				b0l__K2Node_DynamicCast_AsReg_User__pf = Cast<ARegUser_C__pf4061722237>(b0l__K2Node_Event_NewPlayer__pf);
+				b0l__K2Node_DynamicCast_bSuccess7__pf = (b0l__K2Node_DynamicCast_AsReg_User__pf != nullptr);;
+				if (!b0l__K2Node_DynamicCast_bSuccess7__pf)
 				{
 					__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 					break;
 				}
 			}
-		case 80:
+		case 87:
 			{
-				if(::IsValid(b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf))
+				if(::IsValid(b0l__K2Node_DynamicCast_AsReg_User__pf))
 				{
-					b0l__K2Node_DynamicCast_AsPlayer_C_Regular1__pf->bpf__OnPostLogin__pf();
+					b0l__K2Node_DynamicCast_AsReg_User__pf->bpf__OnPostLogin__pf();
 				}
 				__CurrentState = (__StateStack.Num() > 0) ? __StateStack.Pop(/*bAllowShrinking=*/ false) : -1;
 				break;
@@ -1177,94 +1210,103 @@ void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_5(int32 bpp
 }
 void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_6(int32 bpp__EntryPoint__pf)
 {
-	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue1__pf{};
-	bool bpfv__CallFunc_EqualEqual_NameName_ReturnValue__pf{};
-	bool bpfv__CallFunc_Greater_IntInt_ReturnValue1__pf{};
-	bool bpfv__CallFunc_Greater_IntInt_ReturnValue2__pf{};
 	int32 __CurrentState = bpp__EntryPoint__pf;
 	do
 	{
 		switch( __CurrentState )
 		{
-		case 45:
+		case 39:
 			{
-				__CurrentState = 46;
+				__CurrentState = 40;
 				break;
 			}
-		case 46:
+		case 40:
 			{
-				UKismetSystemLibrary::PrintString(this, FString(TEXT("Ship Destroyed called.")), true, true, FLinearColor(0.000000,0.660000,1.000000,1.000000), 2.000000);
+				UKismetSystemLibrary::PrintString(this, FString(TEXT("Round Starting.")), true, true, FLinearColor(0.000000,0.660000,1.000000,1.000000), 2.000000);
 			}
-		case 47:
+		case 41:
 			{
-				APlayerState*  __Local__29 = ((APlayerState*)nullptr);
-				b0l__K2Node_DynamicCast_AsPlyr_State__pf = Cast<APlyrState_C__pf4061722237>(((::IsValid(b0l__K2Node_CustomEvent_Ship_Owner__pf)) ? (b0l__K2Node_CustomEvent_Ship_Owner__pf->PlayerState) : (__Local__29)));
-				b0l__K2Node_DynamicCast_bSuccess2__pf = (b0l__K2Node_DynamicCast_AsPlyr_State__pf != nullptr);;
-				FName  __Local__30 = FName();
-				bpfv__CallFunc_EqualEqual_NameName_ReturnValue__pf = UKismetMathLibrary::EqualEqual_NameName(((::IsValid(b0l__K2Node_DynamicCast_AsPlyr_State__pf)) ? (b0l__K2Node_DynamicCast_AsPlyr_State__pf->bpv__PlyrxName__pfT) : (__Local__30)), FName(TEXT("Player One")));
-				if (!bpfv__CallFunc_EqualEqual_NameName_ReturnValue__pf)
+				b0l__K2Node_SwitchEnum1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(bpv__1979xRounds__pfT), static_cast<uint8>(E__1979Rounds__pf::NewEnumerator0));
+				if (!b0l__K2Node_SwitchEnum1_CmpSuccess__pf)
 				{
-					__CurrentState = 51;
+					__CurrentState = 46;
 					break;
 				}
-			}
-		case 48:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue1__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State1__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue1__pf);
-				b0l__K2Node_DynamicCast_bSuccess3__pf = (b0l__K2Node_DynamicCast_AsDebug_State1__pf != nullptr);;
-				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_State1__pf))
+				b0l__K2Node_SwitchEnum1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(bpv__1979xRounds__pfT), static_cast<uint8>(E__1979Rounds__pf::NewEnumerator1));
+				if (!b0l__K2Node_SwitchEnum1_CmpSuccess__pf)
 				{
-					b0l__K2Node_DynamicCast_AsDebug_State1__pf->bpf__TakexPlayerxLife__pfTT(true, 1);
-				}
-			}
-		case 49:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue1__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State1__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue1__pf);
-				b0l__K2Node_DynamicCast_bSuccess3__pf = (b0l__K2Node_DynamicCast_AsDebug_State1__pf != nullptr);;
-				int32  __Local__31 = 0;
-				bpfv__CallFunc_Greater_IntInt_ReturnValue2__pf = UKismetMathLibrary::Greater_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State1__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State1__pf->bpv__LivesxLeftxP1__pfTT) : (__Local__31)), 0);
-				if (!bpfv__CallFunc_Greater_IntInt_ReturnValue2__pf)
-				{
-					__CurrentState = -1;
+					__CurrentState = 44;
 					break;
 				}
-			}
-		case 50:
-			{
-				b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf = Cast<APlayerC_Regular_C__pf4061722237>(b0l__K2Node_CustomEvent_Ship_Owner__pf);
-				b0l__K2Node_DynamicCast_bSuccess1__pf = (b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf != nullptr);;
-				if(::IsValid(b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf))
+				b0l__K2Node_SwitchEnum1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(bpv__1979xRounds__pfT), static_cast<uint8>(E__1979Rounds__pf::NewEnumerator2));
+				if (!b0l__K2Node_SwitchEnum1_CmpSuccess__pf)
 				{
-					b0l__K2Node_DynamicCast_AsPlayer_C_Regular__pf->bpf__SpawnxPlayer__pfT();
+					__CurrentState = 42;
+					break;
+				}
+				b0l__K2Node_SwitchEnum1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(bpv__1979xRounds__pfT), static_cast<uint8>(E__1979Rounds__pf::NewEnumerator3));
+				if (!b0l__K2Node_SwitchEnum1_CmpSuccess__pf)
+				{
+					__CurrentState = 48;
+					break;
+				}
+				b0l__K2Node_SwitchEnum1_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(bpv__1979xRounds__pfT), static_cast<uint8>(E__1979Rounds__pf::NewEnumerator4));
+				if (!b0l__K2Node_SwitchEnum1_CmpSuccess__pf)
+				{
+					__CurrentState = 50;
+					break;
 				}
 				__CurrentState = -1;
 				break;
 			}
+		case 42:
+			{
+				UKismetSystemLibrary::PrintString(this, FString(TEXT("Round 3 Started")), true, true, FLinearColor(0.000000,1.000000,0.977967,1.000000), 1000.000000);
+			}
+		case 43:
+			{
+				bpf__SpawnxAsteroids__pfT(8);
+				__CurrentState = -1;
+				break;
+			}
+		case 44:
+			{
+				UKismetSystemLibrary::PrintString(this, FString(TEXT("Round 2 Started")), true, true, FLinearColor(0.000000,1.000000,0.977967,1.000000), 1000.000000);
+			}
+		case 45:
+			{
+				bpf__SpawnxAsteroids__pfT(6);
+				__CurrentState = -1;
+				break;
+			}
+		case 46:
+			{
+				UKismetSystemLibrary::PrintString(this, FString(TEXT("Round 1 Started")), true, true, FLinearColor(0.000000,1.000000,0.977967,1.000000), 1000.000000);
+			}
+		case 47:
+			{
+				bpf__SpawnxAsteroids__pfT(4);
+				__CurrentState = -1;
+				break;
+			}
+		case 48:
+			{
+				UKismetSystemLibrary::PrintString(this, FString(TEXT("Round 4 Started")), true, true, FLinearColor(0.000000,1.000000,0.977967,1.000000), 1000.000000);
+			}
+		case 49:
+			{
+				bpf__SpawnxAsteroids__pfT(10);
+				__CurrentState = -1;
+				break;
+			}
+		case 50:
+			{
+				UKismetSystemLibrary::PrintString(this, FString(TEXT("Round 5 Started")), true, true, FLinearColor(0.000000,1.000000,0.977967,1.000000), 1000.000000);
+			}
 		case 51:
 			{
-				bpfv__CallFunc_GetGameState_ReturnValue1__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State1__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue1__pf);
-				b0l__K2Node_DynamicCast_bSuccess3__pf = (b0l__K2Node_DynamicCast_AsDebug_State1__pf != nullptr);;
-				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_State1__pf))
-				{
-					b0l__K2Node_DynamicCast_AsDebug_State1__pf->bpf__TakexPlayerxLife__pfTT(false, 1);
-				}
-			}
-		case 52:
-			{
-				bpfv__CallFunc_GetGameState_ReturnValue1__pf = UGameplayStatics::GetGameState(this);
-				b0l__K2Node_DynamicCast_AsDebug_State1__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue1__pf);
-				b0l__K2Node_DynamicCast_bSuccess3__pf = (b0l__K2Node_DynamicCast_AsDebug_State1__pf != nullptr);;
-				int32  __Local__32 = 0;
-				bpfv__CallFunc_Greater_IntInt_ReturnValue1__pf = UKismetMathLibrary::Greater_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_State1__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_State1__pf->bpv__LivesxLeftxP2__pfTT) : (__Local__32)), 0);
-				if (!bpfv__CallFunc_Greater_IntInt_ReturnValue1__pf)
-				{
-					__CurrentState = -1;
-					break;
-				}
-				__CurrentState = 50;
+				bpf__SpawnxAsteroids__pfT(11);
+				__CurrentState = -1;
 				break;
 			}
 		default:
@@ -1274,98 +1316,103 @@ void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_6(int32 bpp
 }
 void ADebugMode_C__pf4162722864::bpf__ExecuteUbergraph_DebugMode__pf_7(int32 bpp__EntryPoint__pf)
 {
+	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue3__pf{};
+	bool bpfv__CallFunc_EqualEqual_NameName_ReturnValue__pf{};
+	bool bpfv__CallFunc_Greater_IntInt_ReturnValue3__pf{};
+	bool bpfv__CallFunc_Greater_IntInt_ReturnValue4__pf{};
 	int32 __CurrentState = bpp__EntryPoint__pf;
 	do
 	{
 		switch( __CurrentState )
 		{
-		case 33:
+		case 52:
 			{
-				__CurrentState = 34;
+				__CurrentState = 53;
 				break;
 			}
-		case 34:
+		case 53:
 			{
-				b0l__K2Node_SwitchEnum_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(bpv__1979xRounds__pfT), static_cast<uint8>(E__1979Rounds__pf::NewEnumerator0));
-				if (!b0l__K2Node_SwitchEnum_CmpSuccess__pf)
+				UKismetSystemLibrary::PrintString(this, FString(TEXT("Ship Destroyed called.")), true, true, FLinearColor(0.000000,0.660000,1.000000,1.000000), 2.000000);
+			}
+		case 54:
+			{
+				APlayerState*  __Local__29 = ((APlayerState*)nullptr);
+				b0l__K2Node_DynamicCast_AsUser_Data__pf = Cast<AUserData_C__pf4061722237>(((::IsValid(b0l__K2Node_CustomEvent_Ship_Owner__pf)) ? (b0l__K2Node_CustomEvent_Ship_Owner__pf->PlayerState) : (__Local__29)));
+				b0l__K2Node_DynamicCast_bSuccess3__pf = (b0l__K2Node_DynamicCast_AsUser_Data__pf != nullptr);;
+				FName  __Local__30 = FName();
+				bpfv__CallFunc_EqualEqual_NameName_ReturnValue__pf = UKismetMathLibrary::EqualEqual_NameName(((::IsValid(b0l__K2Node_DynamicCast_AsUser_Data__pf)) ? (b0l__K2Node_DynamicCast_AsUser_Data__pf->bpv__PlyrxName__pfT) : (__Local__30)), FName(TEXT("Player One")));
+				if (!bpfv__CallFunc_EqualEqual_NameName_ReturnValue__pf)
 				{
-					__CurrentState = 39;
+					__CurrentState = 59;
 					break;
 				}
-				b0l__K2Node_SwitchEnum_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(bpv__1979xRounds__pfT), static_cast<uint8>(E__1979Rounds__pf::NewEnumerator1));
-				if (!b0l__K2Node_SwitchEnum_CmpSuccess__pf)
+			}
+		case 55:
+			{
+				bpfv__CallFunc_GetGameState_ReturnValue3__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData3__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue3__pf);
+				b0l__K2Node_DynamicCast_bSuccess4__pf = (b0l__K2Node_DynamicCast_AsDebug_MData3__pf != nullptr);;
+				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData3__pf))
 				{
-					__CurrentState = 37;
+					b0l__K2Node_DynamicCast_AsDebug_MData3__pf->bpf__TakexPlayerxLife__pfTT(true, 1);
+				}
+			}
+		case 56:
+			{
+				bpfv__CallFunc_GetGameState_ReturnValue3__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData3__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue3__pf);
+				b0l__K2Node_DynamicCast_bSuccess4__pf = (b0l__K2Node_DynamicCast_AsDebug_MData3__pf != nullptr);;
+				int32  __Local__31 = 0;
+				bpfv__CallFunc_Greater_IntInt_ReturnValue4__pf = UKismetMathLibrary::Greater_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData3__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData3__pf->bpv__LivesxLeftxP1__pfTT) : (__Local__31)), 0);
+				if (!bpfv__CallFunc_Greater_IntInt_ReturnValue4__pf)
+				{
+					__CurrentState = 58;
 					break;
 				}
-				b0l__K2Node_SwitchEnum_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(bpv__1979xRounds__pfT), static_cast<uint8>(E__1979Rounds__pf::NewEnumerator2));
-				if (!b0l__K2Node_SwitchEnum_CmpSuccess__pf)
+			}
+		case 57:
+			{
+				if(::IsValid(b0l__K2Node_CustomEvent_Ship_Owner__pf))
 				{
-					__CurrentState = 35;
-					break;
-				}
-				b0l__K2Node_SwitchEnum_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(bpv__1979xRounds__pfT), static_cast<uint8>(E__1979Rounds__pf::NewEnumerator3));
-				if (!b0l__K2Node_SwitchEnum_CmpSuccess__pf)
-				{
-					__CurrentState = 41;
-					break;
-				}
-				b0l__K2Node_SwitchEnum_CmpSuccess__pf = UKismetMathLibrary::NotEqual_ByteByte(static_cast<uint8>(bpv__1979xRounds__pfT), static_cast<uint8>(E__1979Rounds__pf::NewEnumerator4));
-				if (!b0l__K2Node_SwitchEnum_CmpSuccess__pf)
-				{
-					__CurrentState = 43;
-					break;
+					b0l__K2Node_CustomEvent_Ship_Owner__pf->bpf__SpawnxPlayer__pfT();
 				}
 				__CurrentState = -1;
 				break;
 			}
-		case 35:
+		case 58:
 			{
-				UKismetSystemLibrary::PrintString(this, FString(TEXT("Round 3 Started")), true, true, FLinearColor(0.000000,1.000000,0.977967,1.000000), 1000.000000);
-			}
-		case 36:
-			{
-				bpf__SpawnxAsteroids__pfT(8);
+				UKismetSystemLibrary::PrintString(this, FString(TEXT("Player 1 did not have enough life to spawn again.")), true, true, FLinearColor(1.000000,0.000000,0.083783,1.000000), 10.000000);
 				__CurrentState = -1;
 				break;
 			}
-		case 37:
+		case 59:
 			{
-				UKismetSystemLibrary::PrintString(this, FString(TEXT("Round 2 Started")), true, true, FLinearColor(0.000000,1.000000,0.977967,1.000000), 1000.000000);
+				bpfv__CallFunc_GetGameState_ReturnValue3__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData3__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue3__pf);
+				b0l__K2Node_DynamicCast_bSuccess4__pf = (b0l__K2Node_DynamicCast_AsDebug_MData3__pf != nullptr);;
+				if(::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData3__pf))
+				{
+					b0l__K2Node_DynamicCast_AsDebug_MData3__pf->bpf__TakexPlayerxLife__pfTT(false, 1);
+				}
 			}
-		case 38:
+		case 60:
 			{
-				bpf__SpawnxAsteroids__pfT(6);
-				__CurrentState = -1;
+				bpfv__CallFunc_GetGameState_ReturnValue3__pf = UGameplayStatics::GetGameState(this);
+				b0l__K2Node_DynamicCast_AsDebug_MData3__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue3__pf);
+				b0l__K2Node_DynamicCast_bSuccess4__pf = (b0l__K2Node_DynamicCast_AsDebug_MData3__pf != nullptr);;
+				int32  __Local__32 = 0;
+				bpfv__CallFunc_Greater_IntInt_ReturnValue3__pf = UKismetMathLibrary::Greater_IntInt(((::IsValid(b0l__K2Node_DynamicCast_AsDebug_MData3__pf)) ? (b0l__K2Node_DynamicCast_AsDebug_MData3__pf->bpv__LivesxLeftxP2__pfTT) : (__Local__32)), 0);
+				if (!bpfv__CallFunc_Greater_IntInt_ReturnValue3__pf)
+				{
+					__CurrentState = 61;
+					break;
+				}
+				__CurrentState = 57;
 				break;
 			}
-		case 39:
+		case 61:
 			{
-				UKismetSystemLibrary::PrintString(this, FString(TEXT("Round 1 Started")), true, true, FLinearColor(0.000000,1.000000,0.977967,1.000000), 1000.000000);
-			}
-		case 40:
-			{
-				bpf__SpawnxAsteroids__pfT(4);
-				__CurrentState = -1;
-				break;
-			}
-		case 41:
-			{
-				UKismetSystemLibrary::PrintString(this, FString(TEXT("Round 4 Started")), true, true, FLinearColor(0.000000,1.000000,0.977967,1.000000), 1000.000000);
-			}
-		case 42:
-			{
-				bpf__SpawnxAsteroids__pfT(10);
-				__CurrentState = -1;
-				break;
-			}
-		case 43:
-			{
-				UKismetSystemLibrary::PrintString(this, FString(TEXT("Round 5 Started")), true, true, FLinearColor(0.000000,1.000000,0.977967,1.000000), 1000.000000);
-			}
-		case 44:
-			{
-				bpf__SpawnxAsteroids__pfT(11);
+				UKismetSystemLibrary::PrintString(this, FString(TEXT("Player 2 did not have enough life to spawn again.")), true, true, FLinearColor(1.000000,0.000000,0.080462,1.000000), 10.000000);
 				__CurrentState = -1;
 				break;
 			}
@@ -1379,39 +1426,39 @@ void ADebugMode_C__pf4162722864::bpf__SpawnxShip__pfT_Implementation(APlayerCont
 	b0l__K2Node_CustomEvent_Player_Controller_Ref__pf = bpp__PlayerxControllerxRef__pfTT;
 	b0l__K2Node_CustomEvent_Player_Start_Ref__pf = bpp__PlayerxStartxRef__pfTT;
 	b0l__K2Node_CustomEvent_Color__pf = bpp__Color__pf;
-	bpf__ExecuteUbergraph_DebugMode__pf_4(81);
+	bpf__ExecuteUbergraph_DebugMode__pf_4(88);
 }
 void ADebugMode_C__pf4162722864::bpf__K2_PostLogin__pf(APlayerController* bpp__NewPlayer__pf)
 {
 	b0l__K2Node_Event_NewPlayer__pf = bpp__NewPlayer__pf;
-	bpf__ExecuteUbergraph_DebugMode__pf_5(74);
+	bpf__ExecuteUbergraph_DebugMode__pf_5(81);
 }
 void ADebugMode_C__pf4162722864::bpf__StatexChanged__pfT_Implementation()
 {
-	bpf__ExecuteUbergraph_DebugMode__pf_2(67);
+	bpf__ExecuteUbergraph_DebugMode__pf_2(74);
 }
 void ADebugMode_C__pf4162722864::bpf__ReceiveTick__pf(float bpp__DeltaSeconds__pf)
 {
 	b0l__K2Node_Event_DeltaSeconds__pf = bpp__DeltaSeconds__pf;
-	bpf__ExecuteUbergraph_DebugMode__pf_0(64);
+	bpf__ExecuteUbergraph_DebugMode__pf_1(71);
 }
 void ADebugMode_C__pf4162722864::bpf__K2_OnLogout__pf(AController* bpp__ExitingController__pf)
 {
 	b0l__K2Node_Event_ExitingController__pf = bpp__ExitingController__pf;
-	bpf__ExecuteUbergraph_DebugMode__pf_3(59);
+	bpf__ExecuteUbergraph_DebugMode__pf_3(66);
 }
 void ADebugMode_C__pf4162722864::bpf__ReceiveBeginPlay__pf()
 {
-	bpf__ExecuteUbergraph_DebugMode__pf_1(53);
+	bpf__ExecuteUbergraph_DebugMode__pf_0(62);
 }
-void ADebugMode_C__pf4162722864::bpf__ShipxDestroyed__pfT_Implementation(APlayerController* bpp__ShipxOwner__pfT)
+void ADebugMode_C__pf4162722864::bpf__ShipxDestroyed__pfT_Implementation(ARegUser_C__pf4061722237* bpp__ShipxOwner__pfT)
 {
 	b0l__K2Node_CustomEvent_Ship_Owner__pf = bpp__ShipxOwner__pfT;
-	bpf__ExecuteUbergraph_DebugMode__pf_6(45);
+	bpf__ExecuteUbergraph_DebugMode__pf_7(52);
 }
-void ADebugMode_C__pf4162722864::bpf__StartxRound__pfT()
+void ADebugMode_C__pf4162722864::bpf__StartxRound__pfT_Implementation()
 {
-	bpf__ExecuteUbergraph_DebugMode__pf_7(33);
+	bpf__ExecuteUbergraph_DebugMode__pf_6(39);
 }
 void ADebugMode_C__pf4162722864::bpf__UserConstructionScript__pf()
 {
@@ -1426,11 +1473,11 @@ void ADebugMode_C__pf4162722864::bpf__SetupxMainMenu__pfT()
 {
 	AGameStateBase* bpfv__CallFunc_GetGameState_ReturnValue__pf{};
 	APlayerController* bpfv__CallFunc_GetPlayerController_ReturnValue__pf{};
-	ADebugState_C__pf4162722864* bpfv__K2Node_DynamicCast_AsDebug_State__pf{};
+	ADebugMData_C__pf4162722864* bpfv__K2Node_DynamicCast_AsDebug_MData__pf{};
 	bool bpfv__K2Node_DynamicCast_bSuccess__pf{};
 	FTransform bpfv__CallFunc_GetTransform_ReturnValue__pf{};
 	AActor* bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf{};
-	AMenuPawn_C__pf4061722237* bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf{};
+	AMenuPawn_C__pf3752356522* bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf{};
 	int32 __CurrentState = 1;
 	do
 	{
@@ -1443,8 +1490,8 @@ void ADebugMode_C__pf4162722864::bpf__SetupxMainMenu__pfT()
 		case 2:
 			{
 				bpfv__CallFunc_GetGameState_ReturnValue__pf = UGameplayStatics::GetGameState(this);
-				bpfv__K2Node_DynamicCast_AsDebug_State__pf = Cast<ADebugState_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue__pf);
-				bpfv__K2Node_DynamicCast_bSuccess__pf = (bpfv__K2Node_DynamicCast_AsDebug_State__pf != nullptr);;
+				bpfv__K2Node_DynamicCast_AsDebug_MData__pf = Cast<ADebugMData_C__pf4162722864>(bpfv__CallFunc_GetGameState_ReturnValue__pf);
+				bpfv__K2Node_DynamicCast_bSuccess__pf = (bpfv__K2Node_DynamicCast_AsDebug_MData__pf != nullptr);;
 				if (!bpfv__K2Node_DynamicCast_bSuccess__pf)
 				{
 					__CurrentState = -1;
@@ -1453,19 +1500,19 @@ void ADebugMode_C__pf4162722864::bpf__SetupxMainMenu__pfT()
 			}
 		case 3:
 			{
-				if(::IsValid(bpfv__K2Node_DynamicCast_AsDebug_State__pf) && ::IsValid(bpfv__K2Node_DynamicCast_AsDebug_State__pf->bpv__PlayerStartx1xRef__pfTT))
+				if(::IsValid(bpfv__K2Node_DynamicCast_AsDebug_MData__pf) && ::IsValid(bpfv__K2Node_DynamicCast_AsDebug_MData__pf->bpv__PlayerStartx1xRef__pfTT))
 				{
-					bpfv__CallFunc_GetTransform_ReturnValue__pf = bpfv__K2Node_DynamicCast_AsDebug_State__pf->bpv__PlayerStartx1xRef__pfTT->AActor::GetTransform();
+					bpfv__CallFunc_GetTransform_ReturnValue__pf = bpfv__K2Node_DynamicCast_AsDebug_MData__pf->bpv__PlayerStartx1xRef__pfTT->AActor::GetTransform();
 				}
-				bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf = UGameplayStatics::BeginDeferredActorSpawnFromClass(this, AMenuPawn_C__pf4061722237::StaticClass(), bpfv__CallFunc_GetTransform_ReturnValue__pf, ESpawnActorCollisionHandlingMethod::Undefined, ((AActor*)nullptr));
+				bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf = UGameplayStatics::BeginDeferredActorSpawnFromClass(this, AMenuPawn_C__pf3752356522::StaticClass(), bpfv__CallFunc_GetTransform_ReturnValue__pf, ESpawnActorCollisionHandlingMethod::Undefined, ((AActor*)nullptr));
 			}
 		case 4:
 			{
-				if(::IsValid(bpfv__K2Node_DynamicCast_AsDebug_State__pf) && ::IsValid(bpfv__K2Node_DynamicCast_AsDebug_State__pf->bpv__PlayerStartx1xRef__pfTT))
+				if(::IsValid(bpfv__K2Node_DynamicCast_AsDebug_MData__pf) && ::IsValid(bpfv__K2Node_DynamicCast_AsDebug_MData__pf->bpv__PlayerStartx1xRef__pfTT))
 				{
-					bpfv__CallFunc_GetTransform_ReturnValue__pf = bpfv__K2Node_DynamicCast_AsDebug_State__pf->bpv__PlayerStartx1xRef__pfTT->AActor::GetTransform();
+					bpfv__CallFunc_GetTransform_ReturnValue__pf = bpfv__K2Node_DynamicCast_AsDebug_MData__pf->bpv__PlayerStartx1xRef__pfTT->AActor::GetTransform();
 				}
-				bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf = CastChecked<AMenuPawn_C__pf4061722237>(UGameplayStatics::FinishSpawningActor(bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf, bpfv__CallFunc_GetTransform_ReturnValue__pf), ECastCheckedType::NullAllowed);
+				bpfv__CallFunc_FinishSpawningActor_ReturnValue__pf = CastChecked<AMenuPawn_C__pf3752356522>(UGameplayStatics::FinishSpawningActor(bpfv__CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue__pf, bpfv__CallFunc_GetTransform_ReturnValue__pf), ECastCheckedType::NullAllowed);
 			}
 		case 5:
 			{
@@ -1567,35 +1614,36 @@ void ADebugMode_C__pf4162722864::__StaticDependenciesAssets(TArray<FBlueprintDep
 		{1, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, true, false)},  //  Class /Script/Engine.SceneComponent 
 		{2, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/Engine.PointerToUberGraphFrame 
 		{3, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameStateBase 
-		{4, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.PlayerController 
-		{5, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.Controller 
+		{4, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.Controller 
+		{5, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.PlayerController 
 		{6, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.PlayerStart 
 		{7, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.Actor 
 		{8, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameInstance 
-		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
-		{10, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetArrayLibrary 
-		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetMathLibrary 
-		{12, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetSystemLibrary 
-		{13, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetNodeHelperLibrary 
-		{14, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetStringLibrary 
-		{15, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameMode 
-		{16, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameModeBase 
-		{17, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Asteroid_Small_C /Game/Obstacles/Asteroid_Small.Default__Asteroid_Small_C 
-		{18, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.EngineMessage 
-		{19, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameSession 
-		{20, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.SpectatorPawn 
-		{21, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.ServerStatReplicator 
-		{22, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Levels/Assets/Colliders/Spawn_Volume.Spawn_Volume_C 
-		{23, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugState.DebugState_C 
-		{24, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Player/PlayerC_Regular.PlayerC_Regular_C 
-		{25, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Player/PlyrState.PlyrState_C 
-		{26, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Ship/Ship.Ship_C 
-		{27, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugInstance.DebugInstance_C 
-		{28, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Player/MenuPawn.MenuPawn_C 
-		{29, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Obstacles/Asteroid.Asteroid_C 
-		{30, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Obstacles/Asteroid_Medium.Asteroid_Medium_C 
-		{31, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Obstacles/Asteroid_Large.Asteroid_Large_C 
-		{32, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  UserDefinedEnum /Game/Modes/Arcade1979/1979Rounds.1979Rounds 
+		{9, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetMathLibrary 
+		{10, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetNodeHelperLibrary 
+		{11, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameplayStatics 
+		{12, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetArrayLibrary 
+		{13, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetSystemLibrary 
+		{14, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  ScriptStruct /Script/Engine.LatentActionInfo 
+		{15, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.KismetStringLibrary 
+		{16, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameMode 
+		{17, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameModeBase 
+		{18, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Asteroid_Small_C /Game/Obstacles/Asteroid_Small.Default__Asteroid_Small_C 
+		{19, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.EngineMessage 
+		{20, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.GameSession 
+		{21, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.SpectatorPawn 
+		{22, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  Class /Script/Engine.ServerStatReplicator 
+		{23, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugMData.DebugMData_C 
+		{24, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Player/RegUser.RegUser_C 
+		{25, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Player/UserData.UserData_C 
+		{26, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Levels/Assets/Colliders/Spawn_Volume.Spawn_Volume_C 
+		{27, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Pawns/Ship/Ship.Ship_C 
+		{28, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Modes/Debug/DebugManager.DebugManager_C 
+		{29, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Pawns/MenuPawn.MenuPawn_C 
+		{30, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Obstacles/Asteroid.Asteroid_C 
+		{31, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Obstacles/Asteroid_Medium.Asteroid_Medium_C 
+		{32, FBlueprintDependencyType(false, true, false, false), FBlueprintDependencyType(false, false, false, false)},  //  BlueprintGeneratedClass /Game/Obstacles/Asteroid_Large.Asteroid_Large_C 
+		{33, FBlueprintDependencyType(true, false, false, false), FBlueprintDependencyType(false, false, false, false)},  //  UserDefinedEnum /Game/Modes/Arcade1979/1979Rounds.1979Rounds 
 	};
 	for(const FCompactBlueprintDependencyData& CompactData : LocCompactBlueprintDependencyData)
 	{
