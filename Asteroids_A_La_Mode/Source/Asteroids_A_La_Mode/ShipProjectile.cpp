@@ -11,12 +11,10 @@ AShipProjectile::AShipProjectile()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-
-
-	setupSProjectile	   ();   //Performs proper setup for this object at construction.
+	setupSProjectile       ();   //Performs proper setup for this object at construction.
 	setupMovementAndPhysics();
 
-	sceneRoot	  ->SetupAttachment(RootComponent);
+	sceneRoot     ->SetupAttachment(RootComponent);
 	projectileMesh->SetupAttachment(RootComponent);
 }
 
@@ -48,15 +46,15 @@ void AShipProjectile::Tick(float DeltaTime)
 void AShipProjectile::setupSProjectile()
 {
 	//Native component creation.
-	sceneRoot	   = CreateDefaultSubobject<USceneComponent				>(TEXT("Projectile Root"	));
-	projectileMesh = CreateDefaultSubobject<UStaticMeshComponent		>(TEXT("Projectile SMesh"	));
+	sceneRoot      = CreateDefaultSubobject<USceneComponent		    >(TEXT("Projectile Root"	));
+	projectileMesh = CreateDefaultSubobject<UStaticMeshComponent	    >(TEXT("Projectile SMesh"	));
 	projMoveComp   = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement"));
 }
 
 void AShipProjectile::setupMovementAndPhysics()
 {
-	projMoveComp->InitialSpeed			 = 2000.0;
-	projMoveComp->ProjectileGravityScale =		0;
+	projMoveComp->InitialSpeed	     = 2000.0;
+	projMoveComp->ProjectileGravityScale =	    0;
 
 	projMoveComp->Velocity.Set(0.0, 0.0, -1.0);
 }
