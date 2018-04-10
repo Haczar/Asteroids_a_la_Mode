@@ -7,7 +7,10 @@
 		{
 			"Name": "Asteroids_A_La_Mode",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
 		}
 	]
 }

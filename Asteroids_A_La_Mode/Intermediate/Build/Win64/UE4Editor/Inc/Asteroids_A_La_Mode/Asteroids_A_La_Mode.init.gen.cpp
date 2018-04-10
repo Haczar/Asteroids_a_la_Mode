@@ -19,8 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeAsteroids_A_La_Mode_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Asteroids_A_La_Mode",
 				PKG_CompiledIn | 0x00000000,
-				0x660D710C,
-				0x481FB06B,
+				0xA988D617,
+				0xF872074B,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};
